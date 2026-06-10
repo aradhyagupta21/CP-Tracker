@@ -3042,8 +3042,8 @@
     "_id": "s_mq884kkdwxvbb",
     "userId": "u_mq884b5h5viwe",
     "platform": "LeetCode",
-    "currentRating": 1500,
-    "maxRating": 1500,
+    "currentRating": 0,
+    "maxRating": 0,
     "contestsCount": 0,
     "solvedCount": 52,
     "solvedByTopic": {
@@ -3214,9 +3214,9 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:21.470Z",
+    "lastUpdated": "2026-06-10T20:02:22.216Z",
     "createdAt": "2026-06-10T15:28:50.461Z",
-    "updatedAt": "2026-06-10T18:50:21.470Z"
+    "updatedAt": "2026-06-10T20:02:22.216Z"
   },
   {
     "_id": "s_mq884l27m2n28",
@@ -3353,7 +3353,7 @@
         "problemName": "Chef and Dynamic Programming",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-08T18:50:22.883Z",
+        "submittedAt": "2026-06-08T20:02:24.687Z",
         "difficulty": "Medium",
         "tags": [
           "DP"
@@ -3363,16 +3363,16 @@
         "problemName": "Array Queries",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-06T18:50:22.883Z",
+        "submittedAt": "2026-06-06T20:02:24.687Z",
         "difficulty": "Easy",
         "tags": [
           "Arrays"
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:22.885Z",
+    "lastUpdated": "2026-06-10T20:02:24.688Z",
     "createdAt": "2026-06-10T15:28:51.103Z",
-    "updatedAt": "2026-06-10T18:50:22.885Z"
+    "updatedAt": "2026-06-10T20:02:24.688Z"
   },
   {
     "_id": "s_mq884l3ypnn82",
@@ -3611,9 +3611,9 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:22.232Z",
+    "lastUpdated": "2026-06-10T20:02:24.366Z",
     "createdAt": "2026-06-10T15:28:51.166Z",
-    "updatedAt": "2026-06-10T18:50:22.232Z"
+    "updatedAt": "2026-06-10T20:02:24.366Z"
   },
   {
     "_id": "s_mq88vgd1695uk",
@@ -3659,7 +3659,7 @@
         "problemName": "LeetCode Problem #245",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-09T00:00:00.000Z",
+        "submittedAt": "2026-06-10T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "Arrays"
@@ -3669,7 +3669,7 @@
         "problemName": "LeetCode Problem #246",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-06T00:00:00.000Z",
+        "submittedAt": "2026-06-09T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "DP"
@@ -3679,7 +3679,7 @@
         "problemName": "LeetCode Problem #247",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-05T00:00:00.000Z",
+        "submittedAt": "2026-06-06T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "Graphs"
@@ -3689,7 +3689,7 @@
         "problemName": "LeetCode Problem #248",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-04T00:00:00.000Z",
+        "submittedAt": "2026-06-05T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "Greedy"
@@ -3699,7 +3699,7 @@
         "problemName": "LeetCode Problem #249",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-03T00:00:00.000Z",
+        "submittedAt": "2026-06-04T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "Trees"
@@ -3709,7 +3709,7 @@
         "problemName": "LeetCode Problem #250",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-02T00:00:00.000Z",
+        "submittedAt": "2026-06-03T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "Arrays"
@@ -3719,7 +3719,7 @@
         "problemName": "LeetCode Problem #251",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-26T00:00:00.000Z",
+        "submittedAt": "2026-06-02T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "DP"
@@ -3729,7 +3729,7 @@
         "problemName": "LeetCode Problem #252",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-25T00:00:00.000Z",
+        "submittedAt": "2026-05-26T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "Graphs"
@@ -3739,7 +3739,7 @@
         "problemName": "LeetCode Problem #253",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-12T00:00:00.000Z",
+        "submittedAt": "2026-05-25T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "Greedy"
@@ -3749,7 +3749,7 @@
         "problemName": "LeetCode Problem #254",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-10T00:00:00.000Z",
+        "submittedAt": "2026-05-12T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "Trees"
@@ -3759,7 +3759,7 @@
         "problemName": "LeetCode Problem #255",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-09T00:00:00.000Z",
+        "submittedAt": "2026-05-10T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "Arrays"
@@ -3769,7 +3769,7 @@
         "problemName": "LeetCode Problem #256",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-05T00:00:00.000Z",
+        "submittedAt": "2026-05-09T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "DP"
@@ -3779,7 +3779,7 @@
         "problemName": "LeetCode Problem #257",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-03T00:00:00.000Z",
+        "submittedAt": "2026-05-05T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "Graphs"
@@ -3789,7 +3789,7 @@
         "problemName": "LeetCode Problem #258",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-04-28T00:00:00.000Z",
+        "submittedAt": "2026-05-03T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "Greedy"
@@ -3799,16 +3799,16 @@
         "problemName": "LeetCode Problem #259",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-04-27T00:00:00.000Z",
+        "submittedAt": "2026-04-28T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "Trees"
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:23.334Z",
+    "lastUpdated": "2026-06-10T20:02:02.449Z",
     "createdAt": "2026-06-10T15:49:44.725Z",
-    "updatedAt": "2026-06-10T18:50:23.334Z"
+    "updatedAt": "2026-06-10T20:02:02.449Z"
   },
   {
     "_id": "s_mq88vhbhyh2yt",
@@ -4196,9 +4196,9 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:24.317Z",
+    "lastUpdated": "2026-06-10T20:02:03.311Z",
     "createdAt": "2026-06-10T15:49:45.965Z",
-    "updatedAt": "2026-06-10T18:50:24.317Z"
+    "updatedAt": "2026-06-10T20:02:03.311Z"
   },
   {
     "_id": "s_mq88vhojjtyav",
@@ -4461,7 +4461,7 @@
         "problemName": "Chef and Dynamic Programming",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-08T18:50:23.378Z",
+        "submittedAt": "2026-06-08T20:02:02.432Z",
         "difficulty": "Medium",
         "tags": [
           "DP"
@@ -4471,16 +4471,16 @@
         "problemName": "Array Queries",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-06T18:50:23.378Z",
+        "submittedAt": "2026-06-06T20:02:02.432Z",
         "difficulty": "Easy",
         "tags": [
           "Arrays"
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:23.380Z",
+    "lastUpdated": "2026-06-10T20:02:02.433Z",
     "createdAt": "2026-06-10T15:49:46.435Z",
-    "updatedAt": "2026-06-10T18:50:23.380Z"
+    "updatedAt": "2026-06-10T20:02:02.433Z"
   },
   {
     "_id": "s_mq8aqxm4l5yia",
@@ -4526,7 +4526,7 @@
         "problemName": "LeetCode Problem #245",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-09T00:00:00.000Z",
+        "submittedAt": "2026-06-10T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "Arrays"
@@ -4536,7 +4536,7 @@
         "problemName": "LeetCode Problem #246",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-06T00:00:00.000Z",
+        "submittedAt": "2026-06-09T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "DP"
@@ -4546,7 +4546,7 @@
         "problemName": "LeetCode Problem #247",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-05T00:00:00.000Z",
+        "submittedAt": "2026-06-06T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "Graphs"
@@ -4556,7 +4556,7 @@
         "problemName": "LeetCode Problem #248",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-04T00:00:00.000Z",
+        "submittedAt": "2026-06-05T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "Greedy"
@@ -4566,7 +4566,7 @@
         "problemName": "LeetCode Problem #249",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-03T00:00:00.000Z",
+        "submittedAt": "2026-06-04T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "Trees"
@@ -4576,7 +4576,7 @@
         "problemName": "LeetCode Problem #250",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-06-02T00:00:00.000Z",
+        "submittedAt": "2026-06-03T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "Arrays"
@@ -4586,7 +4586,7 @@
         "problemName": "LeetCode Problem #251",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-26T00:00:00.000Z",
+        "submittedAt": "2026-06-02T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "DP"
@@ -4596,7 +4596,7 @@
         "problemName": "LeetCode Problem #252",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-25T00:00:00.000Z",
+        "submittedAt": "2026-05-26T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "Graphs"
@@ -4606,7 +4606,7 @@
         "problemName": "LeetCode Problem #253",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-12T00:00:00.000Z",
+        "submittedAt": "2026-05-25T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "Greedy"
@@ -4616,7 +4616,7 @@
         "problemName": "LeetCode Problem #254",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-10T00:00:00.000Z",
+        "submittedAt": "2026-05-12T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "Trees"
@@ -4626,7 +4626,7 @@
         "problemName": "LeetCode Problem #255",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-09T00:00:00.000Z",
+        "submittedAt": "2026-05-10T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "Arrays"
@@ -4636,7 +4636,7 @@
         "problemName": "LeetCode Problem #256",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-05T00:00:00.000Z",
+        "submittedAt": "2026-05-09T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "DP"
@@ -4646,7 +4646,7 @@
         "problemName": "LeetCode Problem #257",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-05-03T00:00:00.000Z",
+        "submittedAt": "2026-05-05T00:00:00.000Z",
         "difficulty": "Easy",
         "tags": [
           "Graphs"
@@ -4656,7 +4656,7 @@
         "problemName": "LeetCode Problem #258",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-04-28T00:00:00.000Z",
+        "submittedAt": "2026-05-03T00:00:00.000Z",
         "difficulty": "Medium",
         "tags": [
           "Greedy"
@@ -4666,16 +4666,16 @@
         "problemName": "LeetCode Problem #259",
         "problemUrl": "https://leetcode.com/problemset/all/",
         "verdict": "OK",
-        "submittedAt": "2026-04-27T00:00:00.000Z",
+        "submittedAt": "2026-04-28T00:00:00.000Z",
         "difficulty": "Hard",
         "tags": [
           "Trees"
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:24.754Z",
+    "lastUpdated": "2026-06-10T20:02:03.757Z",
     "createdAt": "2026-06-10T16:42:13.036Z",
-    "updatedAt": "2026-06-10T18:50:24.754Z"
+    "updatedAt": "2026-06-10T20:02:03.757Z"
   },
   {
     "_id": "s_mq8aqykhkpeen",
@@ -5063,9 +5063,9 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:25.675Z",
+    "lastUpdated": "2026-06-10T20:02:04.436Z",
     "createdAt": "2026-06-10T16:42:14.273Z",
-    "updatedAt": "2026-06-10T18:50:25.675Z"
+    "updatedAt": "2026-06-10T20:02:04.436Z"
   },
   {
     "_id": "s_mq8aqyv3hsung",
@@ -5328,7 +5328,7 @@
         "problemName": "Chef and Dynamic Programming",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-08T18:50:24.822Z",
+        "submittedAt": "2026-06-08T20:02:03.703Z",
         "difficulty": "Medium",
         "tags": [
           "DP"
@@ -5338,15 +5338,15 @@
         "problemName": "Array Queries",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-06T18:50:24.822Z",
+        "submittedAt": "2026-06-06T20:02:03.703Z",
         "difficulty": "Easy",
         "tags": [
           "Arrays"
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T18:50:24.824Z",
+    "lastUpdated": "2026-06-10T20:02:03.704Z",
     "createdAt": "2026-06-10T16:42:14.656Z",
-    "updatedAt": "2026-06-10T18:50:24.824Z"
+    "updatedAt": "2026-06-10T20:02:03.704Z"
   }
 ]

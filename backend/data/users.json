@@ -56,7 +56,9 @@
     "codeforcesHandle": "pratham_2502",
     "codechefHandle": "pratham_2502",
     "leetcodeHandle": "pratham_2502",
-    "friends": [],
+    "friends": [
+      "Aradhya Gupta"
+    ],
     "credentials": [
       {
         "platform": "Codeforces",
@@ -66,6 +68,6 @@
       }
     ],
     "createdAt": "2026-06-10T16:41:48.810Z",
-    "updatedAt": "2026-06-10T16:42:12.119Z"
+    "updatedAt": "2026-06-10T19:55:23.676Z"
   }
 ]
