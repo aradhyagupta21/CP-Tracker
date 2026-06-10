@@ -412,19 +412,49 @@ export const apiService = {
         Hard: Math.round(solvedCount * 0.10)
       };
 
-      // Mock rating history from CodeChef scraper
+      // Parse actual rating history from the script tag (var all_rating = [...])
       const ratingHistory = [];
-      let tempRating = currentRating - 150;
-      for (let i = 0; i < 4; i++) {
-        const change = -10 + (seed * (i + 1)) % 80;
-        tempRating += change;
-        ratingHistory.push({
-          contestName: `CodeChef Starters ${60 + i}`,
-          rating: tempRating,
-          rank: 1000 + (seed % 2000) - i * 200,
-          date: new Date(Date.now() - (4 - i) * 14 * 24 * 60 * 60 * 1000),
-          ratingChange: change
-        });
+      const ratingHistoryMatch = response.data.match(/var\s+all_rating\s*=\s*([^;]+)/);
+      if (ratingHistoryMatch) {
+        try {
+          const parsedHistory = JSON.parse(ratingHistoryMatch[1]);
+          if (Array.isArray(parsedHistory)) {
+            let lastRating = 1500; // Default CodeChef starting rating
+            parsedHistory.forEach((h, index) => {
+              const rating = parseInt(h.rating) || 0;
+              const rank = parseInt(h.rank) || 0;
+              const dateStr = h.end_date || `${h.getyear}-${h.getmonth}-${h.getday}`;
+              const contestName = h.name || h.code;
+              
+              ratingHistory.push({
+                contestName,
+                rating,
+                rank,
+                date: new Date(dateStr),
+                ratingChange: index === 0 ? rating - 1500 : rating - lastRating
+              });
+              lastRating = rating;
+            });
+          }
+        } catch (parseError) {
+          console.warn(`Failed to parse CodeChef rating history JSON: ${parseError.message}`);
+        }
+      }
+
+      // Fallback to seed-based mock history if parsing failed or returned empty
+      if (ratingHistory.length === 0) {
+        let tempRating = currentRating - 150;
+        for (let i = 0; i < 4; i++) {
+          const change = -10 + (seed * (i + 1)) % 80;
+          tempRating += change;
+          ratingHistory.push({
+            contestName: `CodeChef Starters ${60 + i}`,
+            rating: tempRating,
+            rank: 1000 + (seed % 2000) - i * 200,
+            date: new Date(Date.now() - (4 - i) * 14 * 24 * 60 * 60 * 1000),
+            ratingChange: change
+          });
+        }
       }
 
       const recentSubmissions = [
@@ -487,13 +517,17 @@ export const apiService = {
               Medium: Math.round(solved * 0.30),
               Hard: Math.round(solved * 0.10)
             },
-            ratingHistory: (wd.ratingData || []).map(r => ({
-              contestName: r.code || r.name,
-              rating: parseInt(r.rating) || 0,
-              rank: parseInt(r.rank) || 0,
-              date: new Date(r.endDate || Date.now()),
-              ratingChange: 0
-            })),
+            ratingHistory: (wd.ratingData || []).map((r, index, arr) => {
+              const rating = parseInt(r.rating) || 0;
+              const prevRating = index > 0 ? parseInt(arr[index - 1].rating) || 1500 : 1500;
+              return {
+                contestName: r.code || r.name,
+                rating,
+                rank: parseInt(r.rank) || 0,
+                date: new Date(r.endDate || Date.now()),
+                ratingChange: rating - prevRating
+              };
+            }),
             recentSubmissions: []
           };
         }

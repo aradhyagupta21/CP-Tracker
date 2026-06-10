@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const BACKEND_URL = 'http://localhost:5000/api';
 
-export default function AuthPage({ onAuthSuccess, connError, onRetryConnection }) {
+export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, isCancelable, onCancel }) {
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -75,10 +75,11 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection }
   };
 
   return (
-    <div className="min-h-screen bg-dark-950 flex flex-col justify-center items-center p-6 relative overflow-hidden font-sans">
-      {/* Decorative Blur Backgrounds */}
-      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-brand-cyan/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-purple/5 rounded-full blur-3xl"></div>
+    <div className="min-h-screen bg-dark-950 flex flex-col justify-center items-center p-6 relative overflow-hidden font-sans transition-colors duration-300">
+      {/* Background Elements for Glassmorphic Glow */}
+      <div className="glow-bg glow-bg-1"></div>
+      <div className="glow-bg glow-bg-2"></div>
+      <div className="glow-bg glow-bg-3"></div>
 
       <div className="w-full max-w-md space-y-6 z-10">
         {/* Brand Header */}
@@ -222,6 +223,16 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection }
             </svg>
             <span>Continue with Google</span>
           </button>
+
+          {isCancelable && (
+            <button
+              type="button"
+              onClick={onCancel}
+              className="w-full bg-slate-950 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-slate-350 py-2 rounded-xl text-xs font-semibold transition mt-3 flex items-center justify-center"
+            >
+              Cancel and Return
+            </button>
+          )}
         </div>
       </div>
     </div>

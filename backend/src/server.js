@@ -6,6 +6,7 @@ import userRoutes from './routes/userRoutes.js';
 import statRoutes from './routes/statRoutes.js';
 import goalRoutes from './routes/goalRoutes.js';
 import aiRoutes from './routes/aiRoutes.js';
+import contestRoutes from './routes/contestRoutes.js';
 
 dotenv.config();
 
@@ -35,6 +36,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/stats', statRoutes);
 app.use('/api/goals', goalRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/contests', contestRoutes);
 
 import { dbHelper } from './config/dbHelper.js';
 import { apiService } from './services/apiService.js';

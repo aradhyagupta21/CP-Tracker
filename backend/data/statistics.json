@@ -3214,9 +3214,9 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T15:44:06.625Z",
+    "lastUpdated": "2026-06-10T18:50:21.470Z",
     "createdAt": "2026-06-10T15:28:50.461Z",
-    "updatedAt": "2026-06-10T15:44:06.625Z"
+    "updatedAt": "2026-06-10T18:50:21.470Z"
   },
   {
     "_id": "s_mq884l27m2n28",
@@ -3224,7 +3224,7 @@
     "platform": "CodeChef",
     "currentRating": 1398,
     "maxRating": 1433,
-    "contestsCount": 4,
+    "contestsCount": 15,
     "solvedCount": 54,
     "solvedByTopic": {
       "Arrays": 22,
@@ -3243,32 +3243,109 @@
     },
     "ratingHistory": [
       {
-        "contestName": "CodeChef Starters 60",
-        "rating": 1254,
-        "rank": 2056,
-        "date": "2026-04-15T15:44:07.691Z",
-        "ratingChange": 6
+        "contestName": "Starters 205 (Rated)",
+        "rating": 1103,
+        "rank": 6568,
+        "date": "2025-09-24T16:30:06.000Z",
+        "ratingChange": -397
       },
       {
-        "contestName": "CodeChef Starters 61",
-        "rating": 1276,
-        "rank": 1856,
-        "date": "2026-04-29T15:44:07.691Z",
-        "ratingChange": 22
+        "contestName": "Starters 206 (Rated)",
+        "rating": 1213,
+        "rank": 4258,
+        "date": "2025-10-01T16:30:06.000Z",
+        "ratingChange": 110
       },
       {
-        "contestName": "CodeChef Starters 62",
-        "rating": 1314,
-        "rank": 1656,
-        "date": "2026-05-13T15:44:07.691Z",
+        "contestName": "Starters 207 (Rated)",
+        "rating": 1249,
+        "rank": 7511,
+        "date": "2025-10-08T16:30:06.000Z",
+        "ratingChange": 36
+      },
+      {
+        "contestName": "Starters 208 (Rated)",
+        "rating": 1298,
+        "rank": 7565,
+        "date": "2025-10-15T16:30:06.000Z",
+        "ratingChange": 49
+      },
+      {
+        "contestName": "Starters 209 (Rated)",
+        "rating": 1388,
+        "rank": 743,
+        "date": "2025-10-22T16:30:06.000Z",
+        "ratingChange": 90
+      },
+      {
+        "contestName": "Starters 210 (Rated)",
+        "rating": 1423,
+        "rank": 3081,
+        "date": "2025-10-29T16:30:06.000Z",
+        "ratingChange": 35
+      },
+      {
+        "contestName": "Starters 213 (Rated)",
+        "rating": 1433,
+        "rank": 1518,
+        "date": "2025-11-19T16:30:04.000Z",
+        "ratingChange": 10
+      },
+      {
+        "contestName": "Starters 216 (Rated)",
+        "rating": 1427,
+        "rank": 1733,
+        "date": "2025-12-10T16:30:04.000Z",
+        "ratingChange": -6
+      },
+      {
+        "contestName": "Starters 221 (Rated)",
+        "rating": 1430,
+        "rank": 2047,
+        "date": "2026-01-14T16:30:04.000Z",
+        "ratingChange": 3
+      },
+      {
+        "contestName": "Starters 222 (Rated)",
+        "rating": 1411,
+        "rank": 3417,
+        "date": "2026-01-21T16:30:04.000Z",
+        "ratingChange": -19
+      },
+      {
+        "contestName": "Starters 224 (Rated)",
+        "rating": 1380,
+        "rank": 3864,
+        "date": "2026-02-04T16:30:04.000Z",
+        "ratingChange": -31
+      },
+      {
+        "contestName": "Starters 225 (Rated)",
+        "rating": 1418,
+        "rank": 2970,
+        "date": "2026-02-11T16:30:06.000Z",
         "ratingChange": 38
       },
       {
-        "contestName": "CodeChef Starters 63",
-        "rating": 1368,
-        "rank": 1456,
-        "date": "2026-05-27T15:44:07.691Z",
-        "ratingChange": 54
+        "contestName": "Starters 226 (Rated)",
+        "rating": 1412,
+        "rank": 3003,
+        "date": "2026-02-18T16:30:04.000Z",
+        "ratingChange": -6
+      },
+      {
+        "contestName": "Starters 230 (Rated)",
+        "rating": 1393,
+        "rank": 3502,
+        "date": "2026-03-18T16:30:04.000Z",
+        "ratingChange": -19
+      },
+      {
+        "contestName": "Starters 231 (Rated)",
+        "rating": 1398,
+        "rank": 7095,
+        "date": "2026-03-25T16:30:06.000Z",
+        "ratingChange": 5
       }
     ],
     "recentSubmissions": [
@@ -3276,7 +3353,7 @@
         "problemName": "Chef and Dynamic Programming",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-08T15:44:07.691Z",
+        "submittedAt": "2026-06-08T18:50:22.883Z",
         "difficulty": "Medium",
         "tags": [
           "DP"
@@ -3286,16 +3363,16 @@
         "problemName": "Array Queries",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-06T15:44:07.691Z",
+        "submittedAt": "2026-06-06T18:50:22.883Z",
         "difficulty": "Easy",
         "tags": [
           "Arrays"
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T15:44:07.694Z",
+    "lastUpdated": "2026-06-10T18:50:22.885Z",
     "createdAt": "2026-06-10T15:28:51.103Z",
-    "updatedAt": "2026-06-10T15:44:07.694Z"
+    "updatedAt": "2026-06-10T18:50:22.885Z"
   },
   {
     "_id": "s_mq884l3ypnn82",
@@ -3534,9 +3611,9 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T15:44:07.480Z",
+    "lastUpdated": "2026-06-10T18:50:22.232Z",
     "createdAt": "2026-06-10T15:28:51.166Z",
-    "updatedAt": "2026-06-10T15:44:07.480Z"
+    "updatedAt": "2026-06-10T18:50:22.232Z"
   },
   {
     "_id": "s_mq88vgd1695uk",
@@ -3729,9 +3806,9 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T15:49:44.725Z",
+    "lastUpdated": "2026-06-10T18:50:23.334Z",
     "createdAt": "2026-06-10T15:49:44.725Z",
-    "updatedAt": "2026-06-10T15:49:44.725Z"
+    "updatedAt": "2026-06-10T18:50:23.334Z"
   },
   {
     "_id": "s_mq88vhbhyh2yt",
@@ -4119,17 +4196,17 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T15:49:45.965Z",
+    "lastUpdated": "2026-06-10T18:50:24.317Z",
     "createdAt": "2026-06-10T15:49:45.965Z",
-    "updatedAt": "2026-06-10T15:49:45.965Z"
+    "updatedAt": "2026-06-10T18:50:24.317Z"
   },
   {
     "_id": "s_mq88vhojjtyav",
     "userId": "u_mq88sjrrcilas",
     "platform": "CodeChef",
-    "currentRating": 1539,
+    "currentRating": 1542,
     "maxRating": 1565,
-    "contestsCount": 4,
+    "contestsCount": 33,
     "solvedCount": 112,
     "solvedByTopic": {
       "Arrays": 45,
@@ -4148,32 +4225,235 @@
     },
     "ratingHistory": [
       {
-        "contestName": "CodeChef Starters 60",
-        "rating": 1384,
-        "rank": 2045,
-        "date": "2026-04-15T15:49:46.433Z",
-        "ratingChange": -5
+        "contestName": "Starters 173 (Rated upto < 2700)",
+        "rating": 1230,
+        "rank": 4171,
+        "date": "2025-02-12T17:00:06.000Z",
+        "ratingChange": -270
       },
       {
-        "contestName": "CodeChef Starters 61",
-        "rating": 1384,
-        "rank": 1845,
-        "date": "2026-04-29T15:49:46.433Z",
-        "ratingChange": 0
+        "contestName": "Starters 174 (Rated)",
+        "rating": 1484,
+        "rank": 562,
+        "date": "2025-02-19T16:45:06.000Z",
+        "ratingChange": 254
       },
       {
-        "contestName": "CodeChef Starters 62",
-        "rating": 1389,
-        "rank": 1645,
-        "date": "2026-05-13T15:49:46.433Z",
-        "ratingChange": 5
+        "contestName": "Starters 175 (Rated)",
+        "rating": 1492,
+        "rank": 1321,
+        "date": "2025-02-26T16:30:04.000Z",
+        "ratingChange": 8
       },
       {
-        "contestName": "CodeChef Starters 63",
-        "rating": 1399,
-        "rank": 1445,
-        "date": "2026-05-27T15:49:46.433Z",
-        "ratingChange": 10
+        "contestName": "Starters 176 (Rated)",
+        "rating": 1527,
+        "rank": 963,
+        "date": "2025-03-05T16:30:04.000Z",
+        "ratingChange": 35
+      },
+      {
+        "contestName": "Starters 177 (Rated)",
+        "rating": 1483,
+        "rank": 2674,
+        "date": "2025-03-12T16:30:04.000Z",
+        "ratingChange": -44
+      },
+      {
+        "contestName": "Starters 178 (Rated)",
+        "rating": 1520,
+        "rank": 932,
+        "date": "2025-03-19T16:45:04.000Z",
+        "ratingChange": 37
+      },
+      {
+        "contestName": "Starters 180 (Rated)",
+        "rating": 1536,
+        "rank": 1104,
+        "date": "2025-04-02T16:30:04.000Z",
+        "ratingChange": 16
+      },
+      {
+        "contestName": "Starters 181 (Rated)",
+        "rating": 1550,
+        "rank": 973,
+        "date": "2025-04-09T17:00:04.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Starters 182 (Rated)",
+        "rating": 1561,
+        "rank": 969,
+        "date": "2025-04-16T16:30:04.000Z",
+        "ratingChange": 11
+      },
+      {
+        "contestName": "Starters 184 (Rated)",
+        "rating": 1536,
+        "rank": 1251,
+        "date": "2025-04-30T16:30:04.000Z",
+        "ratingChange": -25
+      },
+      {
+        "contestName": "Starters 186 (Rated)",
+        "rating": 1542,
+        "rank": 946,
+        "date": "2025-05-14T17:00:04.000Z",
+        "ratingChange": 6
+      },
+      {
+        "contestName": "Starters 189 (Rated)",
+        "rating": 1558,
+        "rank": 798,
+        "date": "2025-06-04T16:30:04.000Z",
+        "ratingChange": 16
+      },
+      {
+        "contestName": "Starters 191 (Rated)",
+        "rating": 1559,
+        "rank": 1323,
+        "date": "2025-06-18T16:30:04.000Z",
+        "ratingChange": 1
+      },
+      {
+        "contestName": "Starters 192 (Rated)",
+        "rating": 1556,
+        "rank": 1455,
+        "date": "2025-06-25T16:30:04.000Z",
+        "ratingChange": -3
+      },
+      {
+        "contestName": "Starters 196 (Rated)",
+        "rating": 1540,
+        "rank": 1889,
+        "date": "2025-07-23T16:30:04.000Z",
+        "ratingChange": -16
+      },
+      {
+        "contestName": "Starters 200 (Rated)",
+        "rating": 1515,
+        "rank": 2622,
+        "date": "2025-08-20T17:30:04.000Z",
+        "ratingChange": -25
+      },
+      {
+        "contestName": "Starters 201 (Rated)",
+        "rating": 1493,
+        "rank": 2396,
+        "date": "2025-08-27T16:30:04.000Z",
+        "ratingChange": -22
+      },
+      {
+        "contestName": "Starters 202 (Rated)",
+        "rating": 1506,
+        "rank": 1229,
+        "date": "2025-09-03T16:30:04.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Starters 206 (Rated)",
+        "rating": 1494,
+        "rank": 1930,
+        "date": "2025-10-01T16:30:04.000Z",
+        "ratingChange": -12
+      },
+      {
+        "contestName": "Starters 207 (Rated)",
+        "rating": 1502,
+        "rank": 1615,
+        "date": "2025-10-08T16:30:04.000Z",
+        "ratingChange": 8
+      },
+      {
+        "contestName": "Starters 209 (Rated)",
+        "rating": 1541,
+        "rank": 69,
+        "date": "2025-10-22T16:30:04.000Z",
+        "ratingChange": 39
+      },
+      {
+        "contestName": "Starters 211 (Rated)",
+        "rating": 1524,
+        "rank": 2394,
+        "date": "2025-11-05T16:30:04.000Z",
+        "ratingChange": -17
+      },
+      {
+        "contestName": "Starters 212 (Rated)",
+        "rating": 1539,
+        "rank": 996,
+        "date": "2025-11-12T16:30:04.000Z",
+        "ratingChange": 15
+      },
+      {
+        "contestName": "Starters 213 (Rated)",
+        "rating": 1552,
+        "rank": 799,
+        "date": "2025-11-19T16:30:04.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Starters 216 (Rated)",
+        "rating": 1565,
+        "rank": 749,
+        "date": "2025-12-10T16:30:04.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Starters 219 (Rated)",
+        "rating": 1528,
+        "rank": 2255,
+        "date": "2025-12-31T16:30:04.000Z",
+        "ratingChange": -37
+      },
+      {
+        "contestName": "Starters 221 (Rated)",
+        "rating": 1516,
+        "rank": 1964,
+        "date": "2026-01-14T16:30:04.000Z",
+        "ratingChange": -12
+      },
+      {
+        "contestName": "Starters 222 (Rated)",
+        "rating": 1519,
+        "rank": 1871,
+        "date": "2026-01-21T16:30:04.000Z",
+        "ratingChange": 3
+      },
+      {
+        "contestName": "Starters 226 (Rated)",
+        "rating": 1512,
+        "rank": 2373,
+        "date": "2026-02-18T16:30:04.000Z",
+        "ratingChange": -7
+      },
+      {
+        "contestName": "Starters 228 (Rated)",
+        "rating": 1479,
+        "rank": 3555,
+        "date": "2026-03-04T16:30:04.000Z",
+        "ratingChange": -33
+      },
+      {
+        "contestName": "Starters 229 (Rated)",
+        "rating": 1509,
+        "rank": 851,
+        "date": "2026-03-11T16:30:04.000Z",
+        "ratingChange": 30
+      },
+      {
+        "contestName": "Starters 230 (Rated)",
+        "rating": 1513,
+        "rank": 1902,
+        "date": "2026-03-18T16:30:04.000Z",
+        "ratingChange": 4
+      },
+      {
+        "contestName": "Starters 241 (Rated)",
+        "rating": 1542,
+        "rank": 543,
+        "date": "2026-06-03T16:30:04.000Z",
+        "ratingChange": 29
       }
     ],
     "recentSubmissions": [
@@ -4181,7 +4461,7 @@
         "problemName": "Chef and Dynamic Programming",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-08T15:49:46.433Z",
+        "submittedAt": "2026-06-08T18:50:23.378Z",
         "difficulty": "Medium",
         "tags": [
           "DP"
@@ -4191,15 +4471,882 @@
         "problemName": "Array Queries",
         "problemUrl": "https://www.codechef.com/",
         "verdict": "OK",
-        "submittedAt": "2026-06-06T15:49:46.433Z",
+        "submittedAt": "2026-06-06T18:50:23.378Z",
         "difficulty": "Easy",
         "tags": [
           "Arrays"
         ]
       }
     ],
-    "lastUpdated": "2026-06-10T15:49:46.435Z",
+    "lastUpdated": "2026-06-10T18:50:23.380Z",
     "createdAt": "2026-06-10T15:49:46.435Z",
-    "updatedAt": "2026-06-10T15:49:46.435Z"
+    "updatedAt": "2026-06-10T18:50:23.380Z"
+  },
+  {
+    "_id": "s_mq8aqxm4l5yia",
+    "userId": "u_mq8aqex6gnuov",
+    "platform": "LeetCode",
+    "currentRating": 1540,
+    "maxRating": 1540,
+    "contestsCount": 2,
+    "solvedCount": 261,
+    "solvedByTopic": {
+      "Arrays": 91,
+      "Graphs": 21,
+      "DP": 31,
+      "Trees": 26,
+      "Greedy": 26,
+      "Binary Search": 39,
+      "Math": 13,
+      "Strings": 13
+    },
+    "difficultyDistribution": {
+      "Easy": 179,
+      "Medium": 78,
+      "Hard": 4
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Biweekly Contest 149",
+        "rating": 1495,
+        "rank": 14259,
+        "date": "2025-02-01T14:30:00.000Z",
+        "ratingChange": -5
+      },
+      {
+        "contestName": "Biweekly Contest 169",
+        "rating": 1540,
+        "rank": 6553,
+        "date": "2025-11-08T14:30:00.000Z",
+        "ratingChange": 45
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "LeetCode Problem #245",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-09T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #246",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-06T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #247",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-05T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #248",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-04T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #249",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-03T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Trees"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #250",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-02T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #251",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-26T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #252",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-25T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #253",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-12T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #254",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-10T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Trees"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #255",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-09T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #256",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-05T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #257",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-03T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #258",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-28T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #259",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-27T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Trees"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T18:50:24.754Z",
+    "createdAt": "2026-06-10T16:42:13.036Z",
+    "updatedAt": "2026-06-10T18:50:24.754Z"
+  },
+  {
+    "_id": "s_mq8aqykhkpeen",
+    "userId": "u_mq8aqex6gnuov",
+    "platform": "Codeforces",
+    "currentRating": 1122,
+    "maxRating": 1207,
+    "contestsCount": 28,
+    "solvedCount": 140,
+    "solvedByTopic": {
+      "Strings": 17,
+      "Math": 99,
+      "Greedy": 56,
+      "Arrays": 4,
+      "DP": 5,
+      "Binary Search": 6,
+      "Graphs": 4,
+      "Trees": 1
+    },
+    "difficultyDistribution": {
+      "Easy": 132,
+      "Medium": 8,
+      "Hard": 0
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Educational Codeforces Round 170 (Rated for Div. 2)",
+        "rating": 382,
+        "rank": 14553,
+        "date": "2024-10-14T16:35:00.000Z",
+        "ratingChange": 382
+      },
+      {
+        "contestName": "Codeforces Round 979 (Div. 2)",
+        "rating": 645,
+        "rank": 12218,
+        "date": "2024-10-19T16:20:00.000Z",
+        "ratingChange": 263
+      },
+      {
+        "contestName": "Codeforces Round 980 (Div. 2)",
+        "rating": 827,
+        "rank": 9109,
+        "date": "2024-10-20T11:05:00.000Z",
+        "ratingChange": 182
+      },
+      {
+        "contestName": "Codeforces Round 981 (Div. 3)",
+        "rating": 935,
+        "rank": 12604,
+        "date": "2024-10-24T16:50:00.000Z",
+        "ratingChange": 108
+      },
+      {
+        "contestName": "Codeforces Round 982 (Div. 2)",
+        "rating": 961,
+        "rank": 11275,
+        "date": "2024-10-26T16:35:00.000Z",
+        "ratingChange": 26
+      },
+      {
+        "contestName": "Educational Codeforces Round 171 (Rated for Div. 2)",
+        "rating": 1019,
+        "rank": 8788,
+        "date": "2024-10-28T16:35:00.000Z",
+        "ratingChange": 58
+      },
+      {
+        "contestName": "Refact.ai Match 1 (Codeforces Round 985)",
+        "rating": 1051,
+        "rank": 4792,
+        "date": "2024-11-09T17:35:00.000Z",
+        "ratingChange": 32
+      },
+      {
+        "contestName": "Codeforces Round 986 (Div. 2)",
+        "rating": 1048,
+        "rank": 5940,
+        "date": "2024-11-10T17:35:00.000Z",
+        "ratingChange": -3
+      },
+      {
+        "contestName": "Codeforces Round 987 (Div. 2)",
+        "rating": 991,
+        "rank": 9626,
+        "date": "2024-11-15T14:35:00.000Z",
+        "ratingChange": -57
+      },
+      {
+        "contestName": "CodeTON Round 9 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 925,
+        "rank": 8515,
+        "date": "2024-11-23T17:35:00.000Z",
+        "ratingChange": -66
+      },
+      {
+        "contestName": "Codeforces Round 993 (Div. 4)",
+        "rating": 980,
+        "rank": 7817,
+        "date": "2024-12-15T16:50:00.000Z",
+        "ratingChange": 55
+      },
+      {
+        "contestName": "Codeforces Round 994 (Div. 2)",
+        "rating": 981,
+        "rank": 10314,
+        "date": "2024-12-20T16:35:00.000Z",
+        "ratingChange": 1
+      },
+      {
+        "contestName": "Codeforces Round 996 (Div. 2)",
+        "rating": 957,
+        "rank": 15008,
+        "date": "2025-01-12T16:35:00.000Z",
+        "ratingChange": -24
+      },
+      {
+        "contestName": "Codeforces Round 998 (Div. 3)",
+        "rating": 1136,
+        "rank": 2501,
+        "date": "2025-01-19T17:05:00.000Z",
+        "ratingChange": 179
+      },
+      {
+        "contestName": "Codeforces Round 1000 (Div. 2)",
+        "rating": 1019,
+        "rank": 16002,
+        "date": "2025-01-22T14:05:00.000Z",
+        "ratingChange": -117
+      },
+      {
+        "contestName": "Codeforces Round 1005 (Div. 2)",
+        "rating": 1193,
+        "rank": 2614,
+        "date": "2025-02-16T16:35:00.000Z",
+        "ratingChange": 174
+      },
+      {
+        "contestName": "Educational Codeforces Round 174 (Rated for Div. 2)",
+        "rating": 1070,
+        "rank": 14761,
+        "date": "2025-02-18T16:35:00.000Z",
+        "ratingChange": -123
+      },
+      {
+        "contestName": "Codeforces Round 1006 (Div. 3)",
+        "rating": 1083,
+        "rank": 9778,
+        "date": "2025-02-25T16:50:00.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Educational Codeforces Round 175 (Rated for Div. 2)",
+        "rating": 1103,
+        "rank": 7903,
+        "date": "2025-02-27T16:35:00.000Z",
+        "ratingChange": 20
+      },
+      {
+        "contestName": "Codeforces Round 1007 (Div. 2)",
+        "rating": 1068,
+        "rank": 10976,
+        "date": "2025-02-28T16:50:00.000Z",
+        "ratingChange": -35
+      },
+      {
+        "contestName": "Codeforces Round 1009 (Div. 3)",
+        "rating": 1132,
+        "rank": 5566,
+        "date": "2025-03-11T17:05:00.000Z",
+        "ratingChange": 64
+      },
+      {
+        "contestName": "Codeforces Round 1013 (Div. 3)",
+        "rating": 1109,
+        "rank": 11178,
+        "date": "2025-03-25T16:50:00.000Z",
+        "ratingChange": -23
+      },
+      {
+        "contestName": "Educational Codeforces Round 177 (Rated for Div. 2)",
+        "rating": 1103,
+        "rank": 9266,
+        "date": "2025-04-03T16:35:00.000Z",
+        "ratingChange": -6
+      },
+      {
+        "contestName": "Codeforces Round 1016 (Div. 3)",
+        "rating": 1138,
+        "rank": 6664,
+        "date": "2025-04-08T16:50:00.000Z",
+        "ratingChange": 35
+      },
+      {
+        "contestName": "Codeforces Round 1017 (Div. 4)",
+        "rating": 1152,
+        "rank": 6272,
+        "date": "2025-04-13T17:50:00.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Codeforces Round 1023 (Div. 2)",
+        "rating": 1207,
+        "rank": 3894,
+        "date": "2025-05-05T16:50:00.000Z",
+        "ratingChange": 55
+      },
+      {
+        "contestName": "Codeforces Round 1037 (Div. 3)",
+        "rating": 1141,
+        "rank": 14459,
+        "date": "2025-07-17T16:50:00.000Z",
+        "ratingChange": -66
+      },
+      {
+        "contestName": "Codeforces Round 1074 (Div. 4)",
+        "rating": 1122,
+        "rank": 9863,
+        "date": "2026-01-18T16:50:00.000Z",
+        "ratingChange": -19
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Swap and Delete",
+        "problemUrl": "https://codeforces.com/contest/1913/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-04-08T10:00:58.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T17:39:55.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-03-07T17:36:05.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-03-07T17:34:49.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "cAPS lOCK",
+        "problemUrl": "https://codeforces.com/contest/131/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T08:06:38.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Expression",
+        "problemUrl": "https://codeforces.com/contest/479/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:54:32.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Lucky Division",
+        "problemUrl": "https://codeforces.com/contest/122/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:43:57.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "number theory"
+        ]
+      },
+      {
+        "problemName": "Bad Boy",
+        "problemUrl": "https://codeforces.com/contest/1537/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T18:58:36.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "constructive algorithms",
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Three Indices",
+        "problemUrl": "https://codeforces.com/contest/1380/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T18:45:50.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "data structures"
+        ]
+      },
+      {
+        "problemName": "Three Indices",
+        "problemUrl": "https://codeforces.com/contest/1380/problem/A",
+        "verdict": "TIME_LIMIT_EXCEEDED",
+        "submittedAt": "2026-02-05T18:42:24.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "data structures"
+        ]
+      },
+      {
+        "problemName": "Sum of Medians",
+        "problemUrl": "https://codeforces.com/contest/1440/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T18:24:58.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Sum of Medians",
+        "problemUrl": "https://codeforces.com/contest/1440/problem/B",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-02-05T18:24:02.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Mainak and Array",
+        "problemUrl": "https://codeforces.com/contest/1726/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-02-05T17:45:18.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Mocha and Math",
+        "problemUrl": "https://codeforces.com/contest/1559/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-01-19T16:55:54.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "bitmasks",
+          "constructive algorithms",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Shifted MEX",
+        "problemUrl": "https://codeforces.com/contest/2185/problem/C",
+        "verdict": "OK",
+        "submittedAt": "2026-01-18T14:53:57.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "sortings"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T18:50:25.675Z",
+    "createdAt": "2026-06-10T16:42:14.273Z",
+    "updatedAt": "2026-06-10T18:50:25.675Z"
+  },
+  {
+    "_id": "s_mq8aqyv3hsung",
+    "userId": "u_mq8aqex6gnuov",
+    "platform": "CodeChef",
+    "currentRating": 1542,
+    "maxRating": 1565,
+    "contestsCount": 33,
+    "solvedCount": 112,
+    "solvedByTopic": {
+      "Arrays": 45,
+      "Graphs": 6,
+      "DP": 11,
+      "Trees": 6,
+      "Greedy": 17,
+      "Binary Search": 11,
+      "Math": 11,
+      "Strings": 6
+    },
+    "difficultyDistribution": {
+      "Easy": 67,
+      "Medium": 34,
+      "Hard": 11
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Starters 173 (Rated upto < 2700)",
+        "rating": 1230,
+        "rank": 4171,
+        "date": "2025-02-12T17:00:06.000Z",
+        "ratingChange": -270
+      },
+      {
+        "contestName": "Starters 174 (Rated)",
+        "rating": 1484,
+        "rank": 562,
+        "date": "2025-02-19T16:45:06.000Z",
+        "ratingChange": 254
+      },
+      {
+        "contestName": "Starters 175 (Rated)",
+        "rating": 1492,
+        "rank": 1321,
+        "date": "2025-02-26T16:30:04.000Z",
+        "ratingChange": 8
+      },
+      {
+        "contestName": "Starters 176 (Rated)",
+        "rating": 1527,
+        "rank": 963,
+        "date": "2025-03-05T16:30:04.000Z",
+        "ratingChange": 35
+      },
+      {
+        "contestName": "Starters 177 (Rated)",
+        "rating": 1483,
+        "rank": 2674,
+        "date": "2025-03-12T16:30:04.000Z",
+        "ratingChange": -44
+      },
+      {
+        "contestName": "Starters 178 (Rated)",
+        "rating": 1520,
+        "rank": 932,
+        "date": "2025-03-19T16:45:04.000Z",
+        "ratingChange": 37
+      },
+      {
+        "contestName": "Starters 180 (Rated)",
+        "rating": 1536,
+        "rank": 1104,
+        "date": "2025-04-02T16:30:04.000Z",
+        "ratingChange": 16
+      },
+      {
+        "contestName": "Starters 181 (Rated)",
+        "rating": 1550,
+        "rank": 973,
+        "date": "2025-04-09T17:00:04.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Starters 182 (Rated)",
+        "rating": 1561,
+        "rank": 969,
+        "date": "2025-04-16T16:30:04.000Z",
+        "ratingChange": 11
+      },
+      {
+        "contestName": "Starters 184 (Rated)",
+        "rating": 1536,
+        "rank": 1251,
+        "date": "2025-04-30T16:30:04.000Z",
+        "ratingChange": -25
+      },
+      {
+        "contestName": "Starters 186 (Rated)",
+        "rating": 1542,
+        "rank": 946,
+        "date": "2025-05-14T17:00:04.000Z",
+        "ratingChange": 6
+      },
+      {
+        "contestName": "Starters 189 (Rated)",
+        "rating": 1558,
+        "rank": 798,
+        "date": "2025-06-04T16:30:04.000Z",
+        "ratingChange": 16
+      },
+      {
+        "contestName": "Starters 191 (Rated)",
+        "rating": 1559,
+        "rank": 1323,
+        "date": "2025-06-18T16:30:04.000Z",
+        "ratingChange": 1
+      },
+      {
+        "contestName": "Starters 192 (Rated)",
+        "rating": 1556,
+        "rank": 1455,
+        "date": "2025-06-25T16:30:04.000Z",
+        "ratingChange": -3
+      },
+      {
+        "contestName": "Starters 196 (Rated)",
+        "rating": 1540,
+        "rank": 1889,
+        "date": "2025-07-23T16:30:04.000Z",
+        "ratingChange": -16
+      },
+      {
+        "contestName": "Starters 200 (Rated)",
+        "rating": 1515,
+        "rank": 2622,
+        "date": "2025-08-20T17:30:04.000Z",
+        "ratingChange": -25
+      },
+      {
+        "contestName": "Starters 201 (Rated)",
+        "rating": 1493,
+        "rank": 2396,
+        "date": "2025-08-27T16:30:04.000Z",
+        "ratingChange": -22
+      },
+      {
+        "contestName": "Starters 202 (Rated)",
+        "rating": 1506,
+        "rank": 1229,
+        "date": "2025-09-03T16:30:04.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Starters 206 (Rated)",
+        "rating": 1494,
+        "rank": 1930,
+        "date": "2025-10-01T16:30:04.000Z",
+        "ratingChange": -12
+      },
+      {
+        "contestName": "Starters 207 (Rated)",
+        "rating": 1502,
+        "rank": 1615,
+        "date": "2025-10-08T16:30:04.000Z",
+        "ratingChange": 8
+      },
+      {
+        "contestName": "Starters 209 (Rated)",
+        "rating": 1541,
+        "rank": 69,
+        "date": "2025-10-22T16:30:04.000Z",
+        "ratingChange": 39
+      },
+      {
+        "contestName": "Starters 211 (Rated)",
+        "rating": 1524,
+        "rank": 2394,
+        "date": "2025-11-05T16:30:04.000Z",
+        "ratingChange": -17
+      },
+      {
+        "contestName": "Starters 212 (Rated)",
+        "rating": 1539,
+        "rank": 996,
+        "date": "2025-11-12T16:30:04.000Z",
+        "ratingChange": 15
+      },
+      {
+        "contestName": "Starters 213 (Rated)",
+        "rating": 1552,
+        "rank": 799,
+        "date": "2025-11-19T16:30:04.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Starters 216 (Rated)",
+        "rating": 1565,
+        "rank": 749,
+        "date": "2025-12-10T16:30:04.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Starters 219 (Rated)",
+        "rating": 1528,
+        "rank": 2255,
+        "date": "2025-12-31T16:30:04.000Z",
+        "ratingChange": -37
+      },
+      {
+        "contestName": "Starters 221 (Rated)",
+        "rating": 1516,
+        "rank": 1964,
+        "date": "2026-01-14T16:30:04.000Z",
+        "ratingChange": -12
+      },
+      {
+        "contestName": "Starters 222 (Rated)",
+        "rating": 1519,
+        "rank": 1871,
+        "date": "2026-01-21T16:30:04.000Z",
+        "ratingChange": 3
+      },
+      {
+        "contestName": "Starters 226 (Rated)",
+        "rating": 1512,
+        "rank": 2373,
+        "date": "2026-02-18T16:30:04.000Z",
+        "ratingChange": -7
+      },
+      {
+        "contestName": "Starters 228 (Rated)",
+        "rating": 1479,
+        "rank": 3555,
+        "date": "2026-03-04T16:30:04.000Z",
+        "ratingChange": -33
+      },
+      {
+        "contestName": "Starters 229 (Rated)",
+        "rating": 1509,
+        "rank": 851,
+        "date": "2026-03-11T16:30:04.000Z",
+        "ratingChange": 30
+      },
+      {
+        "contestName": "Starters 230 (Rated)",
+        "rating": 1513,
+        "rank": 1902,
+        "date": "2026-03-18T16:30:04.000Z",
+        "ratingChange": 4
+      },
+      {
+        "contestName": "Starters 241 (Rated)",
+        "rating": 1542,
+        "rank": 543,
+        "date": "2026-06-03T16:30:04.000Z",
+        "ratingChange": 29
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Chef and Dynamic Programming",
+        "problemUrl": "https://www.codechef.com/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-08T18:50:24.822Z",
+        "difficulty": "Medium",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "Array Queries",
+        "problemUrl": "https://www.codechef.com/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-06T18:50:24.822Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Arrays"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T18:50:24.824Z",
+    "createdAt": "2026-06-10T16:42:14.656Z",
+    "updatedAt": "2026-06-10T18:50:24.824Z"
   }
 ]

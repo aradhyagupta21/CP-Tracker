@@ -4,12 +4,7 @@ import axios from 'axios';
 
 const BACKEND_URL = 'http://localhost:5000/api';
 
-export default function Dashboard({ currentUser, stats, goals, onSync, isLoading, allUsers, onUserSelect, onUserRegister, onUserUpdate }) {
-  const [newUsername, setNewUsername] = useState('');
-  const [cfHandle, setCfHandle] = useState('');
-  const [ccHandle, setCcHandle] = useState('');
-  const [lcHandle, setLcHandle] = useState('');
-  const [showReg, setShowReg] = useState(false);
+export default function Dashboard({ currentUser, stats, goals, onSync, isLoading, allUsers, onUserSelect, onUserUpdate, onAddAccount }) {
   const [error, setError] = useState('');
 
   // Editing state for active profiles handles
@@ -38,108 +33,99 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
 
 
   // Streak calculations (based on submissions list)
-  const calculateStreak = () => {
-    const dates = new Set();
-    stats.forEach(s => {
-      (s.recentSubmissions || []).forEach(sub => {
+  const calculateStreakPerPlatform = () => {
+    const toLocalDateStr = (dateInput) => {
+      const date = new Date(dateInput);
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    };
+
+    const getDayDiff = (d1, d2) => {
+      const t1 = Date.parse(d1 + 'T00:00:00Z');
+      const t2 = Date.parse(d2 + 'T00:00:00Z');
+      return Math.round(Math.abs(t1 - t2) / (1000 * 60 * 60 * 24));
+    };
+
+    // Core streak engine — works on any array of submissions
+    const computeStreaks = (submissions) => {
+      const activityMap = {};
+      (submissions || []).forEach(sub => {
         if (sub.verdict === 'OK' || sub.verdict === 'Accepted') {
-          const dateStr = new Date(sub.submittedAt).toDateString();
-          dates.add(dateStr);
+          const dateStr = toLocalDateStr(sub.submittedAt);
+          activityMap[dateStr] = (activityMap[dateStr] || 0) + 1;
         }
       });
-    });
 
-    const sortedDates = Array.from(dates).map(d => new Date(d)).sort((a, b) => b - a);
-    if (sortedDates.length === 0) return { current: 0, longest: 0 };
+      const dates = Object.keys(activityMap).sort((a, b) => new Date(a) - new Date(b));
+      if (dates.length === 0) return { current: 0, longest: 0 };
 
-    let current = 0;
-    let longest = 0;
-    let temp = 0;
-    
-    // Check if coded today or yesterday
-    const today = new Date();
-    today.setHours(0,0,0,0);
-    const yesterday = new Date(today);
-    yesterday.setDate(yesterday.getDate() - 1);
-
-    const firstDate = sortedDates[0];
-    firstDate.setHours(0,0,0,0);
-
-    const isCodingRecently = (firstDate.getTime() === today.getTime() || firstDate.getTime() === yesterday.getTime());
-    
-    if (isCodingRecently) {
-      current = 1;
-      let checkDate = new Date(firstDate);
-      
-      for (let i = 1; i < sortedDates.length; i++) {
-        const nextDate = sortedDates[i];
-        nextDate.setHours(0,0,0,0);
-        
-        const diffTime = Math.abs(checkDate - nextDate);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        
-        if (diffDays === 1) {
-          current++;
-          checkDate = nextDate;
-        } else if (diffDays > 1) {
-          break; // Streak broken
+      // Longest (max) streak
+      let temp = 1;
+      let longest = 1;
+      for (let i = 1; i < dates.length; i++) {
+        const diff = getDayDiff(dates[i], dates[i - 1]);
+        if (diff === 1) {
+          temp++;
+        } else if (diff > 1) {
+          longest = Math.max(longest, temp);
+          temp = 1;
         }
       }
-    }
+      longest = Math.max(longest, temp);
 
-    // Longest streak
-    let currentTemp = 0;
-    let checkDateLong = null;
-    
-    const sortedDatesAsc = [...sortedDates].sort((a,b) => a - b);
-    sortedDatesAsc.forEach(date => {
-      date.setHours(0,0,0,0);
-      if (!checkDateLong) {
-        currentTemp = 1;
-        checkDateLong = date;
-      } else {
-        const diffTime = Math.abs(date - checkDateLong);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        if (diffDays === 1) {
-          currentTemp++;
-        } else if (diffDays > 1) {
-          longest = Math.max(longest, currentTemp);
-          currentTemp = 1;
+      // Current active streak
+      const todayStr = toLocalDateStr(new Date());
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate() - 1);
+      const yesterdayStr = toLocalDateStr(yesterday);
+
+      let current = 0;
+      const hasToday = !!activityMap[todayStr];
+      const hasYesterday = !!activityMap[yesterdayStr];
+
+      if (hasToday || hasYesterday) {
+        current = 1;
+        let check = hasToday ? todayStr : yesterdayStr;
+        while (true) {
+          const d = new Date(check + 'T00:00:00Z');
+          d.setUTCDate(d.getUTCDate() - 1);
+          const prev = d.toISOString().split('T')[0];
+          if (activityMap[prev]) {
+            current++;
+            check = prev;
+          } else break;
         }
-        checkDateLong = date;
       }
-    });
-    longest = Math.max(longest, currentTemp);
 
-    return { current, longest: Math.max(longest, current) };
+      return { current, longest: Math.max(longest, current) };
+    };
+
+    // Calculate per-platform streaks independently
+    const perPlatform = stats.map(s => ({
+      platform: s.platform,
+      ...computeStreaks(s.recentSubmissions || [])
+    }));
+
+    // Platform with the highest ACTIVE (current) streak
+    const bestCurrent = perPlatform.reduce(
+      (best, p) => p.current > best.current ? p : best,
+      { platform: '', current: 0, longest: 0 }
+    );
+
+    // Platform with the highest EVER (longest) streak
+    const bestLongest = perPlatform.reduce(
+      (best, p) => p.longest > best.longest ? p : best,
+      { platform: '', current: 0, longest: 0 }
+    );
+
+    return { perPlatform, bestCurrent, bestLongest };
   };
 
-  const streak = calculateStreak();
+  const streakData = calculateStreakPerPlatform();
 
-  const handleRegisterSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
-    if (!newUsername.trim()) {
-      setError('Username is required');
-      return;
-    }
-    try {
-      const res = await axios.post(`${BACKEND_URL}/users/register`, {
-        username: newUsername.trim(),
-        codeforcesHandle: cfHandle.trim(),
-        codechefHandle: ccHandle.trim(),
-        leetcodeHandle: lcHandle.trim()
-      });
-      onUserRegister(res.data);
-      setNewUsername('');
-      setCfHandle('');
-      setCcHandle('');
-      setLcHandle('');
-      setShowReg(false);
-    } catch (err) {
-      setError(err.response?.data?.error || 'Failed to register user');
-    }
-  };
+
 
   const handleStartEdit = () => {
     setEditCfHandle(currentUser?.codeforcesHandle || '');
@@ -256,10 +242,10 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
           </div>
 
           <button
-            onClick={() => setShowReg(!showReg)}
+            onClick={onAddAccount}
             className="flex items-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-purple hover:opacity-95 text-slate-100 px-4 py-2 rounded-xl text-sm font-semibold transition"
           >
-            <Plus className="w-4 h-4" /> Add Profile
+            <Plus className="w-4 h-4" /> Add Account
           </button>
 
           {currentUser && (
@@ -283,71 +269,6 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
           )}
         </div>
       </div>
-
-      {/* Profile register modal/form */}
-      {showReg && (
-        <form onSubmit={handleRegisterSubmit} className="glass-panel p-6 rounded-2xl border border-slate-700 max-w-xl mx-auto space-y-4 glow-indigo">
-          <h2 className="text-xl font-bold text-slate-100">Register CP Profile</h2>
-          {error && <div className="p-3 bg-red-900/30 border border-red-500/40 rounded-lg text-red-300 text-sm">{error}</div>}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">Username *</label>
-              <input 
-                type="text" 
-                value={newUsername} 
-                onChange={(e) => setNewUsername(e.target.value)}
-                placeholder="e.g. aradhya"
-                className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-cyan"
-              />
-            </div>
-            <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">Codeforces Handle</label>
-              <input 
-                type="text" 
-                value={cfHandle} 
-                onChange={(e) => setCfHandle(e.target.value)}
-                placeholder="e.g. Tourist"
-                className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-cyan"
-              />
-            </div>
-            <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">CodeChef Handle</label>
-              <input 
-                type="text" 
-                value={ccHandle} 
-                onChange={(e) => setCcHandle(e.target.value)}
-                placeholder="e.g. genghis_khan"
-                className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-cyan"
-              />
-            </div>
-            <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">LeetCode Handle</label>
-              <input 
-                type="text" 
-                value={lcHandle} 
-                onChange={(e) => setLcHandle(e.target.value)}
-                placeholder="e.g. aradhya_1"
-                className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-cyan"
-              />
-            </div>
-          </div>
-          <div className="flex justify-end gap-3 pt-2">
-            <button 
-              type="button" 
-              onClick={() => setShowReg(false)}
-              className="px-4 py-2 border border-slate-700 rounded-lg text-slate-400 text-sm hover:bg-dark-900 transition"
-            >
-              Cancel
-            </button>
-            <button 
-              type="submit" 
-              className="px-4 py-2 bg-gradient-to-r from-brand-indigo to-brand-purple rounded-lg text-slate-100 text-sm font-semibold transition hover:opacity-95"
-            >
-              Create
-            </button>
-          </div>
-        </form>
-      )}
 
       {/* Edit handles modal/form */}
       {showEditHandles && (
@@ -535,14 +456,34 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
               </div>
             </div>
 
-            <div className="glass-panel glass-panel-hover p-6 rounded-2xl flex items-center gap-5 border border-slate-700">
-              <div className="p-3 bg-brand-purple/10 rounded-xl text-brand-purple">
-                <Flame className="w-7 h-7 animate-pulse" />
+            <div className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-700">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 bg-brand-purple/10 rounded-xl text-brand-purple shrink-0">
+                  <Flame className="w-6 h-6 animate-pulse" />
+                </div>
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Coding Streaks</p>
               </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Active Streak</p>
-                <h3 className="text-3xl font-extrabold text-slate-100 mt-1">{streak.current} Days</h3>
-                <p className="text-xs text-brand-purple mt-1 font-medium">Max Streak: {streak.longest} days</p>
+              <div className="grid grid-cols-2 gap-4 pt-3 border-t border-slate-800/60">
+                <div>
+                  <p className="text-[10px] text-slate-500 uppercase font-bold tracking-wider mb-1">Active Streak</p>
+                  <h3 className="text-2xl font-extrabold text-slate-100">
+                    {streakData.bestCurrent.current}
+                    <span className="text-sm font-semibold text-slate-400 ml-1">days</span>
+                  </h3>
+                  <p className="text-[10px] font-bold text-brand-purple mt-1">
+                    {streakData.bestCurrent.current > 0 ? streakData.bestCurrent.platform : '—'}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[10px] text-slate-500 uppercase font-bold tracking-wider mb-1">Max Streak</p>
+                  <h3 className="text-2xl font-extrabold text-slate-100">
+                    {streakData.bestLongest.longest}
+                    <span className="text-sm font-semibold text-slate-400 ml-1">days</span>
+                  </h3>
+                  <p className="text-[10px] font-bold text-brand-cyan mt-1">
+                    {streakData.bestLongest.longest > 0 ? streakData.bestLongest.platform : '—'}
+                  </p>
+                </div>
               </div>
             </div>
 

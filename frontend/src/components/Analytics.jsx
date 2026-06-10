@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, PieChart, Pie, Cell } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, PieChart, Pie, Cell, ReferenceArea } from 'recharts';
 import { BarChart, Bar } from 'recharts';
 import { Award, Compass, PieChart as PieIcon, HelpCircle } from 'lucide-react';
 
@@ -45,6 +45,7 @@ export default function Analytics({ stats }) {
         const history = s.ratingHistory.map(h => ({
           ...h,
           platform: s.platform,
+          timestamp: new Date(h.date).getTime(),
           displayDate: new Date(h.date).toLocaleDateString(undefined, { month: 'short', year: '2-digit' })
         }));
         ratingHistoryCombined = [...ratingHistoryCombined, ...history];
@@ -64,8 +65,8 @@ export default function Analytics({ stats }) {
       value: difficultyMap[diff]
     })).filter(d => d.value > 0);
 
-    // Format rating history (sorted by date)
-    ratingHistoryCombined.sort((a, b) => new Date(a.date) - new Date(b.date));
+    // Format rating history (sorted by date chronologically using timestamp)
+    ratingHistoryCombined.sort((a, b) => a.timestamp - b.timestamp);
 
     return { radarData, pieData, ratingHistory: ratingHistoryCombined };
   };
@@ -77,6 +78,35 @@ export default function Analytics({ stats }) {
     'Easy': '#00f2fe',
     'Medium': '#4facfe',
     'Hard': '#8a2be2'
+  };
+
+  const renderRatingBands = () => {
+    if (selectedPlatform === 'Codeforces') {
+      return (
+        <>
+          <ReferenceArea y1={0} y2={1200} fill="rgba(150, 150, 150, 0.1)" isFront={false} />
+          <ReferenceArea y1={1200} y2={1400} fill="rgba(0, 200, 0, 0.1)" isFront={false} />
+          <ReferenceArea y1={1400} y2={1600} fill="rgba(0, 200, 200, 0.08)" isFront={false} />
+          <ReferenceArea y1={1600} y2={1900} fill="rgba(0, 0, 250, 0.08)" isFront={false} />
+          <ReferenceArea y1={1900} y2={2100} fill="rgba(180, 0, 180, 0.08)" isFront={false} />
+          <ReferenceArea y1={2100} y2={2300} fill="rgba(255, 140, 0, 0.08)" isFront={false} />
+          <ReferenceArea y1={2300} y2={4000} fill="rgba(255, 0, 0, 0.08)" isFront={false} />
+        </>
+      );
+    } else if (selectedPlatform === 'CodeChef') {
+      return (
+        <>
+          <ReferenceArea y1={0} y2={1400} fill="rgba(150, 150, 150, 0.1)" isFront={false} />
+          <ReferenceArea y1={1400} y2={1600} fill="rgba(0, 200, 0, 0.1)" isFront={false} />
+          <ReferenceArea y1={1600} y2={1800} fill="rgba(0, 0, 250, 0.08)" isFront={false} />
+          <ReferenceArea y1={1800} y2={2000} fill="rgba(180, 0, 180, 0.08)" isFront={false} />
+          <ReferenceArea y1={2000} y2={2200} fill="rgba(255, 215, 0, 0.08)" isFront={false} />
+          <ReferenceArea y1={2200} y2={2500} fill="rgba(255, 140, 0, 0.08)" isFront={false} />
+          <ReferenceArea y1={2500} y2={4000} fill="rgba(255, 0, 0, 0.08)" isFront={false} />
+        </>
+      );
+    }
+    return null;
   };
 
   return (
@@ -126,11 +156,27 @@ export default function Analytics({ stats }) {
               <div className="h-80 w-full">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={ratingHistory} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                    <defs>
+                      <linearGradient id="colorRating" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#00f2fe" />
+                        <stop offset="50%" stopColor="#4facfe" />
+                        <stop offset="100%" stopColor="#8a2be2" />
+                      </linearGradient>
+                    </defs>
+                    {renderRatingBands()}
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
                     <XAxis 
-                      dataKey="displayDate" 
+                      dataKey="timestamp" 
+                      type="number"
+                      domain={['dataMin', 'dataMax']}
+                      tickFormatter={(tick) => {
+                        const d = new Date(tick);
+                        const day = String(d.getDate()).padStart(2, '0');
+                        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                        return `${day} ${months[d.getMonth()]} ${d.getFullYear()}`;
+                      }}
                       stroke="#64748b" 
-                      fontSize={11}
+                      fontSize={10}
                       tickLine={false}
                     />
                     <YAxis 
@@ -163,13 +209,6 @@ export default function Analytics({ stats }) {
                       strokeWidth={3}
                       activeDot={{ r: 8, stroke: '#00f2fe', strokeWidth: 2 }}
                     />
-                    <defs>
-                      <linearGradient id="colorRating" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="#00f2fe" />
-                        <stop offset="50%" stopColor="#4facfe" />
-                        <stop offset="100%" stopColor="#8a2be2" />
-                      </linearGradient>
-                    </defs>
                   </LineChart>
                 </ResponsiveContainer>
               </div>
