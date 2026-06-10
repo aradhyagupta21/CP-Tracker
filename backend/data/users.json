@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "u_mq884b5h5viwe",
+    "username": "Aradhya Gupta",
+    "password": "1533ec485526efd4661ab7cabefae16bb0f6e95147cd8a0553ec60658ab56d6b",
+    "codeforcesHandle": "GuptaAradhya",
+    "codechefHandle": "fair_joy_77",
+    "leetcodeHandle": "aradhyagupta2108",
+    "friends": [
+      "Pratham"
+    ],
+    "credentials": [
+      {
+        "platform": "Codeforces",
+        "handle": "GuptaAradhya",
+        "token": "enc_Q29kZWZvcmNlczpH",
+        "linkedAt": "2026-06-10T15:28:49.551Z"
+      },
+      {
+        "platform": "CodeChef",
+        "handle": "fair_joy_77",
+        "token": "enc_Q29kZUNoZWY6ZmFp",
+        "linkedAt": "2026-06-10T15:29:19.308Z"
+      },
+      {
+        "platform": "LeetCode",
+        "handle": "aradhyagupta2108",
+        "token": "enc_TGVldENvZGU6YXJh",
+        "linkedAt": "2026-06-10T15:29:33.039Z"
+      }
+    ],
+    "createdAt": "2026-06-10T15:28:38.261Z",
+    "updatedAt": "2026-06-10T15:56:06.929Z"
+  },
+  {
+    "_id": "u_mq88sjrrcilas",
+    "username": "Pratham",
+    "password": "7b1fbb461062ca51833fdcce98f720a235a7945bbdddc934445d9426067e6f1e",
+    "codeforcesHandle": "pratham_2502",
+    "codechefHandle": "pratham_2502",
+    "leetcodeHandle": "pratham_2502",
+    "friends": [],
+    "credentials": [
+      {
+        "platform": "LeetCode",
+        "handle": "pratham_2502",
+        "token": "enc_TGVldENvZGU6cHJh",
+        "linkedAt": "2026-06-10T15:49:43.945Z"
+      }
+    ],
+    "createdAt": "2026-06-10T15:47:29.175Z",
+    "updatedAt": "2026-06-10T15:49:43.945Z"
+  }
+]

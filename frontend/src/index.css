@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-950 text-slate-100 font-sans antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.06) 0%, transparent 45%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+/* Custom Premium Glassmorphism Panel styles */
+.glass-panel {
+  background: rgba(21, 32, 53, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(21, 32, 53, 0.65);
+  border-color: rgba(79, 172, 254, 0.25);
+  box-shadow: 0 12px 30px -10px rgba(0, 242, 254, 0.15);
+  transform: translateY(-2px);
+}
+
+.glow-indigo {
+  box-shadow: 0 0 40px -5px rgba(79, 172, 254, 0.15);
+}
+
+.glow-purple {
+  box-shadow: 0 0 40px -5px rgba(138, 43, 226, 0.15);
+}
+
+/* Recharts Tooltip Styling Override */
+.recharts-default-tooltip {
+  background-color: rgba(11, 17, 32, 0.9) !important;
+  border: 1px solid rgba(79, 172, 254, 0.3) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Calendar Heatmap Cell animation */
+.heatmap-cell {
+  transition: all 0.2s ease;
+}
+.heatmap-cell:hover {
+  transform: scale(1.25);
+  z-index: 10;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060913;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2d4a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4facfe;
+}

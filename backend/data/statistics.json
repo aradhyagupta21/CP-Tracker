@@ -1,0 +1,4205 @@
+[
+  {
+    "_id": "s_mq87zpgodkmzg",
+    "userId": "u_mq87wvd3rppnb",
+    "platform": "Codeforces",
+    "currentRating": 1053,
+    "maxRating": 1059,
+    "contestsCount": 7,
+    "solvedCount": 104,
+    "solvedByTopic": {
+      "DP": 3,
+      "Math": 62,
+      "Strings": 11,
+      "Greedy": 40,
+      "Graphs": 1,
+      "Arrays": 3
+    },
+    "difficultyDistribution": {
+      "Easy": 104,
+      "Medium": 0,
+      "Hard": 0
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Codeforces Round 1062 (Div. 4)",
+        "rating": 455,
+        "rank": 8160,
+        "date": "2025-10-28T16:50:00.000Z",
+        "ratingChange": 455
+      },
+      {
+        "contestName": "Codeforces Round 1065 (Div. 3)",
+        "rating": 724,
+        "rank": 9559,
+        "date": "2025-11-20T17:05:00.000Z",
+        "ratingChange": 269
+      },
+      {
+        "contestName": "Hello 2026",
+        "rating": 945,
+        "rank": 9933,
+        "date": "2026-01-07T17:35:00.000Z",
+        "ratingChange": 221
+      },
+      {
+        "contestName": "Codeforces Round 1072 (Div. 3)",
+        "rating": 1014,
+        "rank": 18019,
+        "date": "2026-01-12T16:50:00.000Z",
+        "ratingChange": 69
+      },
+      {
+        "contestName": "Codeforces Round 1074 (Div. 4)",
+        "rating": 1052,
+        "rank": 14398,
+        "date": "2026-01-18T16:50:00.000Z",
+        "ratingChange": 38
+      },
+      {
+        "contestName": "Codeforces Round 1075 (Div. 2)",
+        "rating": 1059,
+        "rank": 12489,
+        "date": "2026-01-23T16:35:00.000Z",
+        "ratingChange": 7
+      },
+      {
+        "contestName": "Codeforces Round 1076 (Div. 3)",
+        "rating": 1053,
+        "rank": 13133,
+        "date": "2026-01-25T16:50:00.000Z",
+        "ratingChange": -6
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Raspberries",
+        "problemUrl": "https://codeforces.com/contest/1883/problem/C",
+        "verdict": "OK",
+        "submittedAt": "2026-04-08T13:09:35.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "dp",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Swap and Delete",
+        "problemUrl": "https://codeforces.com/contest/1913/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-04-08T09:40:31.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Dragons",
+        "problemUrl": "https://codeforces.com/contest/230/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T09:42:42.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "sortings"
+        ]
+      },
+      {
+        "problemName": "cAPS lOCK",
+        "problemUrl": "https://codeforces.com/contest/131/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T08:24:08.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "cAPS lOCK",
+        "problemUrl": "https://codeforces.com/contest/131/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-03-07T08:11:18.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Expression",
+        "problemUrl": "https://codeforces.com/contest/479/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:52:02.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Lucky Division",
+        "problemUrl": "https://codeforces.com/contest/122/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:36:39.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "number theory"
+        ]
+      },
+      {
+        "problemName": "Chat room",
+        "problemUrl": "https://codeforces.com/contest/58/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:16:28.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "String Task",
+        "problemUrl": "https://codeforces.com/contest/118/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-06T09:57:05.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Young Physicist",
+        "problemUrl": "https://codeforces.com/contest/69/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-06T09:08:20.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-02-06T18:55:34.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-02-06T18:54:01.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Deletive Editing",
+        "problemUrl": "https://codeforces.com/contest/1666/problem/D",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T20:08:15.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy"
+        ]
+      },
+      {
+        "problemName": "Strange Partition",
+        "problemUrl": "https://codeforces.com/contest/1471/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T18:51:29.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math",
+          "number theory"
+        ]
+      },
+      {
+        "problemName": "Strange Partition",
+        "problemUrl": "https://codeforces.com/contest/1471/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-02-05T18:50:01.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math",
+          "number theory"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:25:03.528Z",
+    "createdAt": "2026-06-10T15:25:03.528Z",
+    "updatedAt": "2026-06-10T15:25:03.528Z"
+  },
+  {
+    "_id": "s_mq87zpsfbhdbj",
+    "userId": "u_mq87xgx71hfx9",
+    "platform": "CodeChef",
+    "currentRating": 1146,
+    "maxRating": 1152,
+    "contestsCount": 4,
+    "solvedCount": 1,
+    "solvedByTopic": {
+      "Arrays": 0,
+      "Graphs": 0,
+      "DP": 0,
+      "Trees": 0,
+      "Greedy": 0,
+      "Binary Search": 0,
+      "Math": 0,
+      "Strings": 0
+    },
+    "difficultyDistribution": {
+      "Easy": 1,
+      "Medium": 0,
+      "Hard": 0
+    },
+    "ratingHistory": [
+      {
+        "contestName": "CodeChef Starters 60",
+        "rating": 1040,
+        "rank": 2254,
+        "date": "2026-04-15T15:25:03.951Z",
+        "ratingChange": 44
+      },
+      {
+        "contestName": "CodeChef Starters 61",
+        "rating": 1058,
+        "rank": 2054,
+        "date": "2026-04-29T15:25:03.951Z",
+        "ratingChange": 18
+      },
+      {
+        "contestName": "CodeChef Starters 62",
+        "rating": 1050,
+        "rank": 1854,
+        "date": "2026-05-13T15:25:03.951Z",
+        "ratingChange": -8
+      },
+      {
+        "contestName": "CodeChef Starters 63",
+        "rating": 1096,
+        "rank": 1654,
+        "date": "2026-05-27T15:25:03.951Z",
+        "ratingChange": 46
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Chef and Dynamic Programming",
+        "problemUrl": "https://www.codechef.com/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-08T15:25:03.951Z",
+        "difficulty": "Medium",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "Array Queries",
+        "problemUrl": "https://www.codechef.com/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-06T15:25:03.951Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Arrays"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:25:03.951Z",
+    "createdAt": "2026-06-10T15:25:03.951Z",
+    "updatedAt": "2026-06-10T15:25:03.951Z"
+  },
+  {
+    "_id": "s_mq87zq0gw6ytg",
+    "userId": "u_mq87xgx71hfx9",
+    "platform": "LeetCode",
+    "currentRating": 3686,
+    "maxRating": 3686,
+    "contestsCount": 51,
+    "solvedCount": 253,
+    "solvedByTopic": {
+      "Arrays": 89,
+      "Graphs": 20,
+      "DP": 30,
+      "Trees": 25,
+      "Greedy": 25,
+      "Binary Search": 38,
+      "Math": 13,
+      "Strings": 13
+    },
+    "difficultyDistribution": {
+      "Easy": 60,
+      "Medium": 141,
+      "Hard": 52
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Weekly Contest 111",
+        "rating": 1880,
+        "rank": 11,
+        "date": "2018-11-18T02:30:00.000Z",
+        "ratingChange": 380
+      },
+      {
+        "contestName": "Weekly Contest 112",
+        "rating": 2163,
+        "rank": 1,
+        "date": "2018-11-25T02:30:00.000Z",
+        "ratingChange": 283
+      },
+      {
+        "contestName": "Weekly Contest 113",
+        "rating": 2369,
+        "rank": 1,
+        "date": "2018-12-02T02:30:00.000Z",
+        "ratingChange": 206
+      },
+      {
+        "contestName": "Weekly Contest 115",
+        "rating": 2526,
+        "rank": 1,
+        "date": "2018-12-16T02:30:00.000Z",
+        "ratingChange": 157
+      },
+      {
+        "contestName": "Weekly Contest 116",
+        "rating": 2626,
+        "rank": 2,
+        "date": "2018-12-23T02:30:00.000Z",
+        "ratingChange": 100
+      },
+      {
+        "contestName": "Weekly Contest 117",
+        "rating": 2638,
+        "rank": 18,
+        "date": "2018-12-30T02:30:00.000Z",
+        "ratingChange": 12
+      },
+      {
+        "contestName": "Weekly Contest 118",
+        "rating": 2738,
+        "rank": 1,
+        "date": "2019-01-06T02:30:00.000Z",
+        "ratingChange": 100
+      },
+      {
+        "contestName": "Weekly Contest 119",
+        "rating": 2796,
+        "rank": 3,
+        "date": "2019-01-13T02:30:00.000Z",
+        "ratingChange": 58
+      },
+      {
+        "contestName": "Weekly Contest 120",
+        "rating": 2759,
+        "rank": 65,
+        "date": "2019-01-20T02:30:00.000Z",
+        "ratingChange": -37
+      },
+      {
+        "contestName": "Weekly Contest 124",
+        "rating": 2843,
+        "rank": 1,
+        "date": "2019-02-17T02:30:00.000Z",
+        "ratingChange": 84
+      },
+      {
+        "contestName": "Weekly Contest 125",
+        "rating": 2904,
+        "rank": 2,
+        "date": "2019-02-24T02:30:00.000Z",
+        "ratingChange": 61
+      },
+      {
+        "contestName": "Weekly Contest 127",
+        "rating": 2979,
+        "rank": 1,
+        "date": "2019-03-10T02:30:00.000Z",
+        "ratingChange": 75
+      },
+      {
+        "contestName": "Weekly Contest 128",
+        "rating": 3013,
+        "rank": 3,
+        "date": "2019-03-17T02:30:00.000Z",
+        "ratingChange": 34
+      },
+      {
+        "contestName": "Weekly Contest 129",
+        "rating": 3077,
+        "rank": 1,
+        "date": "2019-03-24T01:30:00.000Z",
+        "ratingChange": 64
+      },
+      {
+        "contestName": "Weekly Contest 130",
+        "rating": 3084,
+        "rank": 5,
+        "date": "2019-03-31T02:30:00.000Z",
+        "ratingChange": 7
+      },
+      {
+        "contestName": "Weekly Contest 131",
+        "rating": 3017,
+        "rank": 69,
+        "date": "2019-04-07T02:30:00.000Z",
+        "ratingChange": -67
+      },
+      {
+        "contestName": "Weekly Contest 132",
+        "rating": 2997,
+        "rank": 17,
+        "date": "2019-04-14T02:30:00.000Z",
+        "ratingChange": -20
+      },
+      {
+        "contestName": "Weekly Contest 133",
+        "rating": 2922,
+        "rank": 146,
+        "date": "2019-04-21T02:30:00.000Z",
+        "ratingChange": -75
+      },
+      {
+        "contestName": "Weekly Contest 134",
+        "rating": 2933,
+        "rank": 7,
+        "date": "2019-04-28T02:30:00.000Z",
+        "ratingChange": 11
+      },
+      {
+        "contestName": "Weekly Contest 135",
+        "rating": 3002,
+        "rank": 1,
+        "date": "2019-05-05T02:30:00.000Z",
+        "ratingChange": 69
+      },
+      {
+        "contestName": "Weekly Contest 136",
+        "rating": 2978,
+        "rank": 21,
+        "date": "2019-05-12T02:30:00.000Z",
+        "ratingChange": -24
+      },
+      {
+        "contestName": "Weekly Contest 137",
+        "rating": 2996,
+        "rank": 5,
+        "date": "2019-05-19T02:30:00.000Z",
+        "ratingChange": 18
+      },
+      {
+        "contestName": "Weekly Contest 138",
+        "rating": 2972,
+        "rank": 21,
+        "date": "2019-05-26T02:30:00.000Z",
+        "ratingChange": -24
+      },
+      {
+        "contestName": "Biweekly Contest 2",
+        "rating": 2881,
+        "rank": 76,
+        "date": "2019-06-15T14:30:00.000Z",
+        "ratingChange": -91
+      },
+      {
+        "contestName": "Weekly Contest 141",
+        "rating": 2890,
+        "rank": 9,
+        "date": "2019-06-16T02:30:00.000Z",
+        "ratingChange": 9
+      },
+      {
+        "contestName": "Weekly Contest 142",
+        "rating": 2963,
+        "rank": 1,
+        "date": "2019-06-23T02:30:00.000Z",
+        "ratingChange": 73
+      },
+      {
+        "contestName": "Weekly Contest 143",
+        "rating": 3032,
+        "rank": 1,
+        "date": "2019-06-30T02:30:00.000Z",
+        "ratingChange": 69
+      },
+      {
+        "contestName": "Weekly Contest 144",
+        "rating": 3097,
+        "rank": 1,
+        "date": "2019-07-07T02:30:00.000Z",
+        "ratingChange": 65
+      },
+      {
+        "contestName": "Weekly Contest 145",
+        "rating": 3152,
+        "rank": 1,
+        "date": "2019-07-14T02:30:00.000Z",
+        "ratingChange": 55
+      },
+      {
+        "contestName": "Weekly Contest 146",
+        "rating": 3208,
+        "rank": 1,
+        "date": "2019-07-21T02:30:00.000Z",
+        "ratingChange": 56
+      },
+      {
+        "contestName": "Weekly Contest 147",
+        "rating": 3235,
+        "rank": 2,
+        "date": "2019-07-28T02:30:00.000Z",
+        "ratingChange": 27
+      },
+      {
+        "contestName": "Weekly Contest 148",
+        "rating": 3249,
+        "rank": 3,
+        "date": "2019-08-04T02:30:00.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Weekly Contest 149",
+        "rating": 3252,
+        "rank": 4,
+        "date": "2019-08-11T02:30:00.000Z",
+        "ratingChange": 3
+      },
+      {
+        "contestName": "Weekly Contest 150",
+        "rating": 3179,
+        "rank": 57,
+        "date": "2019-08-18T02:30:00.000Z",
+        "ratingChange": -73
+      },
+      {
+        "contestName": "Biweekly Contest 7",
+        "rating": 3164,
+        "rank": 7,
+        "date": "2019-08-24T14:30:00.000Z",
+        "ratingChange": -15
+      },
+      {
+        "contestName": "Weekly Contest 151",
+        "rating": 3222,
+        "rank": 1,
+        "date": "2019-08-25T02:30:00.000Z",
+        "ratingChange": 58
+      },
+      {
+        "contestName": "Weekly Contest 152",
+        "rating": 3276,
+        "rank": 1,
+        "date": "2019-09-01T02:30:00.000Z",
+        "ratingChange": 54
+      },
+      {
+        "contestName": "Weekly Contest 153",
+        "rating": 3301,
+        "rank": 2,
+        "date": "2019-09-08T02:30:00.000Z",
+        "ratingChange": 25
+      },
+      {
+        "contestName": "Weekly Contest 154",
+        "rating": 3324,
+        "rank": 2,
+        "date": "2019-09-15T02:30:00.000Z",
+        "ratingChange": 23
+      },
+      {
+        "contestName": "Weekly Contest 155",
+        "rating": 3379,
+        "rank": 1,
+        "date": "2019-09-22T02:30:00.000Z",
+        "ratingChange": 55
+      },
+      {
+        "contestName": "Weekly Contest 156",
+        "rating": 3386,
+        "rank": 3,
+        "date": "2019-09-29T02:30:00.000Z",
+        "ratingChange": 7
+      },
+      {
+        "contestName": "Weekly Contest 157",
+        "rating": 3393,
+        "rank": 3,
+        "date": "2019-10-06T02:30:00.000Z",
+        "ratingChange": 7
+      },
+      {
+        "contestName": "Weekly Contest 158",
+        "rating": 3417,
+        "rank": 2,
+        "date": "2019-10-13T02:30:00.000Z",
+        "ratingChange": 24
+      },
+      {
+        "contestName": "Weekly Contest 159",
+        "rating": 3471,
+        "rank": 1,
+        "date": "2019-10-20T02:30:00.000Z",
+        "ratingChange": 54
+      },
+      {
+        "contestName": "Weekly Contest 162",
+        "rating": 3490,
+        "rank": 2,
+        "date": "2019-11-10T02:30:00.000Z",
+        "ratingChange": 19
+      },
+      {
+        "contestName": "Weekly Contest 163",
+        "rating": 3490,
+        "rank": 3,
+        "date": "2019-11-17T02:30:00.000Z",
+        "ratingChange": 0
+      },
+      {
+        "contestName": "Weekly Contest 164",
+        "rating": 3510,
+        "rank": 2,
+        "date": "2019-11-24T02:30:00.000Z",
+        "ratingChange": 20
+      },
+      {
+        "contestName": "Weekly Contest 165",
+        "rating": 3567,
+        "rank": 1,
+        "date": "2019-12-01T02:30:00.000Z",
+        "ratingChange": 57
+      },
+      {
+        "contestName": "Weekly Contest 172",
+        "rating": 3628,
+        "rank": 1,
+        "date": "2020-01-19T02:30:00.000Z",
+        "ratingChange": 61
+      },
+      {
+        "contestName": "Weekly Contest 177",
+        "rating": 3625,
+        "rank": 3,
+        "date": "2020-02-23T02:30:00.000Z",
+        "ratingChange": -3
+      },
+      {
+        "contestName": "Weekly Contest 180",
+        "rating": 3686,
+        "rank": 1,
+        "date": "2020-03-15T02:30:00.000Z",
+        "ratingChange": 61
+      }
+    ],
+    "recentSubmissions": [],
+    "lastUpdated": "2026-06-10T15:25:04.240Z",
+    "createdAt": "2026-06-10T15:25:04.240Z",
+    "updatedAt": "2026-06-10T15:25:04.240Z"
+  },
+  {
+    "_id": "s_mq87zqmhbpmx3",
+    "userId": "u_mq87xgx71hfx9",
+    "platform": "Codeforces",
+    "currentRating": 3428,
+    "maxRating": 4009,
+    "contestsCount": 303,
+    "solvedCount": 349,
+    "solvedByTopic": {
+      "DP": 112,
+      "Strings": 23,
+      "Binary Search": 39,
+      "Greedy": 154,
+      "Arrays": 90,
+      "Graphs": 91,
+      "Trees": 39,
+      "Math": 174
+    },
+    "difficultyDistribution": {
+      "Easy": 78,
+      "Medium": 53,
+      "Hard": 218
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Codeforces Beta Round 2",
+        "rating": 1602,
+        "rank": 14,
+        "date": "2010-02-25T19:00:00.000Z",
+        "ratingChange": 1602
+      },
+      {
+        "contestName": "Codeforces Beta Round 8",
+        "rating": 1764,
+        "rank": 5,
+        "date": "2010-04-08T17:45:00.000Z",
+        "ratingChange": 162
+      },
+      {
+        "contestName": "Codeforces Beta Round 10",
+        "rating": 1878,
+        "rank": 18,
+        "date": "2010-04-15T17:45:00.000Z",
+        "ratingChange": 114
+      },
+      {
+        "contestName": "Codeforces Beta Round 13",
+        "rating": 1967,
+        "rank": 11,
+        "date": "2010-05-06T16:00:00.000Z",
+        "ratingChange": 89
+      },
+      {
+        "contestName": "Codeforces Beta Round 19",
+        "rating": 2063,
+        "rank": 2,
+        "date": "2010-06-24T17:00:00.000Z",
+        "ratingChange": 96
+      },
+      {
+        "contestName": "Codeforces Beta Round 23",
+        "rating": 2081,
+        "rank": 15,
+        "date": "2010-07-09T17:00:00.000Z",
+        "ratingChange": 18
+      },
+      {
+        "contestName": "Codeforces Beta Round 24",
+        "rating": 2098,
+        "rank": 20,
+        "date": "2010-07-26T15:00:00.000Z",
+        "ratingChange": 17
+      },
+      {
+        "contestName": "Codeforces Beta Round 28 (Codeforces format)",
+        "rating": 2128,
+        "rank": 11,
+        "date": "2010-09-17T17:00:00.000Z",
+        "ratingChange": 30
+      },
+      {
+        "contestName": "Codeforces Beta Round 33 (Codeforces format)",
+        "rating": 2203,
+        "rank": 1,
+        "date": "2010-10-07T17:00:00.000Z",
+        "ratingChange": 75
+      },
+      {
+        "contestName": "Codeforces Beta Round 37",
+        "rating": 2256,
+        "rank": 3,
+        "date": "2010-10-25T17:00:00.000Z",
+        "ratingChange": 53
+      },
+      {
+        "contestName": "School Personal Contest #1 (Winter Computer School 2010/11) - Codeforces Beta Round 38 (ACM-ICPC Rules)",
+        "rating": 2270,
+        "rank": 1,
+        "date": "2010-10-30T16:00:00.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Codeforces Beta Round 39",
+        "rating": 2311,
+        "rank": 1,
+        "date": "2010-11-05T18:00:00.000Z",
+        "ratingChange": 41
+      },
+      {
+        "contestName": "Codeforces Beta Round 41",
+        "rating": 2341,
+        "rank": 1,
+        "date": "2010-11-18T18:00:00.000Z",
+        "ratingChange": 30
+      },
+      {
+        "contestName": "School Personal Contest #2 (Winter Computer School 2010/11) - Codeforces Beta Round 43 (ACM-ICPC Rules)",
+        "rating": 2351,
+        "rank": 2,
+        "date": "2010-12-05T11:00:00.000Z",
+        "ratingChange": 10
+      },
+      {
+        "contestName": "Codeforces Beta Round 48",
+        "rating": 2388,
+        "rank": 1,
+        "date": "2010-12-28T18:30:00.000Z",
+        "ratingChange": 37
+      },
+      {
+        "contestName": "Codeforces Beta Round 53",
+        "rating": 2419,
+        "rank": 1,
+        "date": "2011-01-25T18:00:00.000Z",
+        "ratingChange": 31
+      },
+      {
+        "contestName": "Codeforces Beta Round 56",
+        "rating": 2438,
+        "rank": 1,
+        "date": "2011-02-19T18:00:00.000Z",
+        "ratingChange": 19
+      },
+      {
+        "contestName": "Codeforces Beta Round 58",
+        "rating": 2455,
+        "rank": 1,
+        "date": "2011-02-25T18:00:00.000Z",
+        "ratingChange": 17
+      },
+      {
+        "contestName": "Manthan 2011",
+        "rating": 2491,
+        "rank": 1,
+        "date": "2011-03-13T19:30:00.000Z",
+        "ratingChange": 36
+      },
+      {
+        "contestName": "Codeforces Beta Round 66",
+        "rating": 2494,
+        "rank": 3,
+        "date": "2011-04-10T10:30:00.000Z",
+        "ratingChange": 3
+      },
+      {
+        "contestName": "Codeforces Beta Round 68",
+        "rating": 2517,
+        "rank": 1,
+        "date": "2011-04-15T17:00:00.000Z",
+        "ratingChange": 23
+      },
+      {
+        "contestName": "Codeforces Beta Round 69 (Div. 1 Only)",
+        "rating": 2501,
+        "rank": 11,
+        "date": "2011-04-19T17:15:00.000Z",
+        "ratingChange": -16
+      },
+      {
+        "contestName": "Yandex.Algorithm 2011: Qualification 2",
+        "rating": 2514,
+        "rank": 1,
+        "date": "2011-05-06T17:00:00.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Codeforces Beta Round 72 (Div. 1 Only)",
+        "rating": 2547,
+        "rank": 1,
+        "date": "2011-05-13T17:10:00.000Z",
+        "ratingChange": 33
+      },
+      {
+        "contestName": "Yandex.Algorithm 2011: Round 1",
+        "rating": 2586,
+        "rank": 1,
+        "date": "2011-05-20T17:00:00.000Z",
+        "ratingChange": 39
+      },
+      {
+        "contestName": "Yandex.Algorithm 2011: Round 2",
+        "rating": 2624,
+        "rank": 2,
+        "date": "2011-05-22T17:10:00.000Z",
+        "ratingChange": 38
+      },
+      {
+        "contestName": "Codeforces Beta Round 73 (Div. 1 Only)",
+        "rating": 2632,
+        "rank": 4,
+        "date": "2011-06-07T17:00:00.000Z",
+        "ratingChange": 8
+      },
+      {
+        "contestName": "Codeforces Beta Round 74 (Div. 1 Only)",
+        "rating": 2646,
+        "rank": 2,
+        "date": "2011-06-16T17:00:00.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Yandex.Algorithm 2011: Finals",
+        "rating": 2610,
+        "rank": 7,
+        "date": "2011-07-15T14:00:00.000Z",
+        "ratingChange": -36
+      },
+      {
+        "contestName": "Codeforces Beta Round 79 (Div. 1 Only)",
+        "rating": 2609,
+        "rank": 4,
+        "date": "2011-08-03T19:00:00.000Z",
+        "ratingChange": -1
+      },
+      {
+        "contestName": "Codeforces Beta Round 81",
+        "rating": 2604,
+        "rank": 5,
+        "date": "2011-08-13T17:00:00.000Z",
+        "ratingChange": -5
+      },
+      {
+        "contestName": "Codeforces Beta Round 83 (Div. 1 Only)",
+        "rating": 2613,
+        "rank": 2,
+        "date": "2011-08-23T17:00:00.000Z",
+        "ratingChange": 9
+      },
+      {
+        "contestName": "Codeforces Beta Round 84 (Div. 1 Only)",
+        "rating": 2601,
+        "rank": 7,
+        "date": "2011-08-29T18:00:00.000Z",
+        "ratingChange": -12
+      },
+      {
+        "contestName": "Codeforces Beta Round 85 (Div. 1 Only)",
+        "rating": 2549,
+        "rank": 22,
+        "date": "2011-09-03T14:00:00.000Z",
+        "ratingChange": -52
+      },
+      {
+        "contestName": "Codeforces Beta Round 86 (Div. 1 Only)",
+        "rating": 2560,
+        "rank": 4,
+        "date": "2011-09-08T17:00:00.000Z",
+        "ratingChange": 11
+      },
+      {
+        "contestName": "Codeforces Beta Round 87 (Div. 1 Only)",
+        "rating": 2595,
+        "rank": 1,
+        "date": "2011-09-15T17:00:00.000Z",
+        "ratingChange": 35
+      },
+      {
+        "contestName": "Codeforces Beta Round 88",
+        "rating": 2612,
+        "rank": 3,
+        "date": "2011-09-23T17:00:00.000Z",
+        "ratingChange": 17
+      },
+      {
+        "contestName": "School Regional Team Contest, Saratov, 2011",
+        "rating": 2635,
+        "rank": 1,
+        "date": "2011-10-18T11:30:00.000Z",
+        "ratingChange": 23
+      },
+      {
+        "contestName": "Codeforces Beta Round 91 (Div. 1 Only)",
+        "rating": 2661,
+        "rank": 1,
+        "date": "2011-10-27T17:00:00.000Z",
+        "ratingChange": 26
+      },
+      {
+        "contestName": "Codeforces Beta Round 92 (Div. 1 Only)",
+        "rating": 2683,
+        "rank": 1,
+        "date": "2011-11-03T17:10:00.000Z",
+        "ratingChange": 22
+      },
+      {
+        "contestName": "Codeforces Beta Round 93 (Div. 1 Only)",
+        "rating": 2693,
+        "rank": 2,
+        "date": "2011-11-09T19:00:00.000Z",
+        "ratingChange": 10
+      },
+      {
+        "contestName": "Codeforces Beta Round 94 (Div. 1 Only)",
+        "rating": 2670,
+        "rank": 5,
+        "date": "2011-11-15T08:10:00.000Z",
+        "ratingChange": -23
+      },
+      {
+        "contestName": "Codeforces Round 100",
+        "rating": 2704,
+        "rank": 3,
+        "date": "2012-01-04T17:00:00.000Z",
+        "ratingChange": 34
+      },
+      {
+        "contestName": "Codeforces Round 102 (Div. 1)",
+        "rating": 2762,
+        "rank": 1,
+        "date": "2012-01-12T17:05:00.000Z",
+        "ratingChange": 58
+      },
+      {
+        "contestName": "Codeforces Round 104 (Div. 1)",
+        "rating": 2809,
+        "rank": 1,
+        "date": "2012-01-22T09:00:00.000Z",
+        "ratingChange": 47
+      },
+      {
+        "contestName": "Codeforces Round 107 (Div. 1)",
+        "rating": 2783,
+        "rank": 10,
+        "date": "2012-02-17T17:00:00.000Z",
+        "ratingChange": -26
+      },
+      {
+        "contestName": "Codeforces Round 109 (Div. 1)",
+        "rating": 2831,
+        "rank": 1,
+        "date": "2012-02-24T17:00:00.000Z",
+        "ratingChange": 48
+      },
+      {
+        "contestName": "Codeforces Round 110 (Div. 1)",
+        "rating": 2877,
+        "rank": 1,
+        "date": "2012-02-29T19:30:00.000Z",
+        "ratingChange": 46
+      },
+      {
+        "contestName": "VK Cup 2012 Round 1",
+        "rating": 2883,
+        "rank": 3,
+        "date": "2012-03-11T17:05:00.000Z",
+        "ratingChange": 6
+      },
+      {
+        "contestName": "VK Cup 2012 Round 2",
+        "rating": 2907,
+        "rank": 1,
+        "date": "2012-03-25T17:05:00.000Z",
+        "ratingChange": 24
+      },
+      {
+        "contestName": "Codeforces Round 114 (Div. 1)",
+        "rating": 2906,
+        "rank": 2,
+        "date": "2012-03-27T17:00:00.000Z",
+        "ratingChange": -1
+      },
+      {
+        "contestName": "Croc Champ 2012 - Round 1",
+        "rating": 2919,
+        "rank": 1,
+        "date": "2012-04-06T17:00:00.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "VK Cup 2012 Round 3",
+        "rating": 2877,
+        "rank": 8,
+        "date": "2012-04-08T17:05:00.000Z",
+        "ratingChange": -42
+      },
+      {
+        "contestName": "Codeforces Round 115",
+        "rating": 2887,
+        "rank": 1,
+        "date": "2012-04-14T11:00:00.000Z",
+        "ratingChange": 10
+      },
+      {
+        "contestName": "Codeforces Round 122 (Div. 1)",
+        "rating": 2902,
+        "rank": 2,
+        "date": "2012-06-03T17:30:00.000Z",
+        "ratingChange": 15
+      },
+      {
+        "contestName": "Codeforces Round 124 (Div. 1)",
+        "rating": 2938,
+        "rank": 1,
+        "date": "2012-06-12T15:00:00.000Z",
+        "ratingChange": 36
+      },
+      {
+        "contestName": "Codeforces Round 125 (Div. 1)",
+        "rating": 2964,
+        "rank": 2,
+        "date": "2012-06-22T17:30:00.000Z",
+        "ratingChange": 26
+      },
+      {
+        "contestName": "Codeforces Round 129 (Div. 1)",
+        "rating": 3022,
+        "rank": 1,
+        "date": "2012-07-11T17:30:00.000Z",
+        "ratingChange": 58
+      },
+      {
+        "contestName": "VK Cup 2012 Finals",
+        "rating": 3010,
+        "rank": 3,
+        "date": "2012-07-15T09:30:00.000Z",
+        "ratingChange": -12
+      },
+      {
+        "contestName": "Codeforces Round 131 (Div. 1)",
+        "rating": 2998,
+        "rank": 3,
+        "date": "2012-07-30T17:30:00.000Z",
+        "ratingChange": -12
+      },
+      {
+        "contestName": "Codeforces Round 134 (Div. 1)",
+        "rating": 2973,
+        "rank": 4,
+        "date": "2012-08-18T09:05:00.000Z",
+        "ratingChange": -25
+      },
+      {
+        "contestName": "Codeforces Round 138 (Div. 1)",
+        "rating": 2991,
+        "rank": 2,
+        "date": "2012-09-16T17:30:00.000Z",
+        "ratingChange": 18
+      },
+      {
+        "contestName": "Codeforces Round 144 (Div. 1)",
+        "rating": 3042,
+        "rank": 1,
+        "date": "2012-10-11T17:30:00.000Z",
+        "ratingChange": 51
+      },
+      {
+        "contestName": "Codeforces Round 145 (Div. 1, ACM-ICPC Rules)",
+        "rating": 3022,
+        "rank": 3,
+        "date": "2012-10-16T09:00:00.000Z",
+        "ratingChange": -20
+      },
+      {
+        "contestName": "Codeforces Round 146 (Div. 1)",
+        "rating": 2977,
+        "rank": 6,
+        "date": "2012-10-21T09:10:00.000Z",
+        "ratingChange": -45
+      },
+      {
+        "contestName": "Bayan 2012-2013 Elimination Round (ACM ICPC Rules, English statements)",
+        "rating": 3034,
+        "rank": 1,
+        "date": "2012-11-01T18:30:00.000Z",
+        "ratingChange": 57
+      },
+      {
+        "contestName": "Codeforces Round 148 (Div. 1)",
+        "rating": 3082,
+        "rank": 1,
+        "date": "2012-11-04T18:00:00.000Z",
+        "ratingChange": 48
+      },
+      {
+        "contestName": "Codeforces Round 150 (Div. 1)",
+        "rating": 3016,
+        "rank": 11,
+        "date": "2012-11-16T17:40:00.000Z",
+        "ratingChange": -66
+      },
+      {
+        "contestName": "Codeforces Round 153 (Div. 1)",
+        "rating": 3030,
+        "rank": 2,
+        "date": "2012-12-06T17:30:00.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Codeforces Round 165 (Div. 1)",
+        "rating": 3026,
+        "rank": 3,
+        "date": "2013-02-01T17:30:00.000Z",
+        "ratingChange": -4
+      },
+      {
+        "contestName": "Codeforces Round 167 (Div. 1)",
+        "rating": 3039,
+        "rank": 2,
+        "date": "2013-02-13T17:30:00.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Codeforces Round 172 (Div. 1)",
+        "rating": 2990,
+        "rank": 7,
+        "date": "2013-03-10T17:30:00.000Z",
+        "ratingChange": -49
+      },
+      {
+        "contestName": "Croc Champ 2013 - Round 1",
+        "rating": 3051,
+        "rank": 1,
+        "date": "2013-04-15T17:35:00.000Z",
+        "ratingChange": 61
+      },
+      {
+        "contestName": "Codeforces Round 180 (Div. 1)",
+        "rating": 3103,
+        "rank": 1,
+        "date": "2013-04-19T17:30:00.000Z",
+        "ratingChange": 52
+      },
+      {
+        "contestName": "Croc Champ 2013 - Round 2",
+        "rating": 3157,
+        "rank": 1,
+        "date": "2013-04-22T17:45:00.000Z",
+        "ratingChange": 54
+      },
+      {
+        "contestName": "Croc Champ 2013 - Finals",
+        "rating": 3188,
+        "rank": 1,
+        "date": "2013-05-17T12:30:00.000Z",
+        "ratingChange": 31
+      },
+      {
+        "contestName": "ABBYY Cup 3.0",
+        "rating": 3195,
+        "rank": 2,
+        "date": "2013-06-12T17:00:00.000Z",
+        "ratingChange": 7
+      },
+      {
+        "contestName": "Codeforces Round 188 (Div. 1)",
+        "rating": 3088,
+        "rank": 24,
+        "date": "2013-06-14T17:30:00.000Z",
+        "ratingChange": -107
+      },
+      {
+        "contestName": "ABBYY Cup 3.0 - Finals (online version)",
+        "rating": 3136,
+        "rank": 1,
+        "date": "2013-07-17T17:45:00.000Z",
+        "ratingChange": 48
+      },
+      {
+        "contestName": "Codeforces Round 192 (Div. 1)",
+        "rating": 3072,
+        "rank": 9,
+        "date": "2013-07-20T15:30:00.000Z",
+        "ratingChange": -64
+      },
+      {
+        "contestName": "MemSQL start[c]up Round 2 - online version",
+        "rating": 3121,
+        "rank": 1,
+        "date": "2013-08-03T20:00:00.000Z",
+        "ratingChange": 49
+      },
+      {
+        "contestName": "Codeforces Round 196 (Div. 1)",
+        "rating": 3165,
+        "rank": 1,
+        "date": "2013-08-16T18:00:00.000Z",
+        "ratingChange": 44
+      },
+      {
+        "contestName": "Codeforces Round 200 (Div. 1)",
+        "rating": 3210,
+        "rank": 1,
+        "date": "2013-09-14T17:40:00.000Z",
+        "ratingChange": 45
+      },
+      {
+        "contestName": "Codeforces Round 207 (Div. 1)",
+        "rating": 3250,
+        "rank": 1,
+        "date": "2013-10-15T14:00:00.000Z",
+        "ratingChange": 40
+      },
+      {
+        "contestName": "Codeforces Round 215 (Div. 1)",
+        "rating": 3205,
+        "rank": 4,
+        "date": "2013-11-26T17:30:00.000Z",
+        "ratingChange": -45
+      },
+      {
+        "contestName": "Codeforces Round 219 (Div. 1)",
+        "rating": 3209,
+        "rank": 2,
+        "date": "2013-12-13T16:00:00.000Z",
+        "ratingChange": 4
+      },
+      {
+        "contestName": "Codeforces Round 222 (Div. 1)",
+        "rating": 3209,
+        "rank": 2,
+        "date": "2013-12-29T17:30:00.000Z",
+        "ratingChange": 0
+      },
+      {
+        "contestName": "Good Bye 2013",
+        "rating": 3093,
+        "rank": 19,
+        "date": "2013-12-30T17:30:00.000Z",
+        "ratingChange": -116
+      },
+      {
+        "contestName": "Codeforces Round 228 (Div. 1)",
+        "rating": 3141,
+        "rank": 1,
+        "date": "2014-02-03T17:45:00.000Z",
+        "ratingChange": 48
+      },
+      {
+        "contestName": "Codeforces Round 239 (Div. 1)",
+        "rating": 3186,
+        "rank": 1,
+        "date": "2014-03-30T09:00:00.000Z",
+        "ratingChange": 45
+      },
+      {
+        "contestName": "RCC 2014 Warmup (Div. 1)",
+        "rating": 3228,
+        "rank": 1,
+        "date": "2014-04-17T17:40:00.000Z",
+        "ratingChange": 42
+      },
+      {
+        "contestName": "Zepto Code Rush 2014",
+        "rating": 3206,
+        "rank": 3,
+        "date": "2014-06-13T18:00:00.000Z",
+        "ratingChange": -22
+      },
+      {
+        "contestName": "Codeforces Round 253 (Div. 1)",
+        "rating": 3245,
+        "rank": 1,
+        "date": "2014-06-19T17:30:00.000Z",
+        "ratingChange": 39
+      },
+      {
+        "contestName": "MemSQL Start[c]UP 2.0 - Round 1",
+        "rating": 3173,
+        "rank": 8,
+        "date": "2014-07-27T19:30:00.000Z",
+        "ratingChange": -72
+      },
+      {
+        "contestName": "Codeforces Round 260 (Div. 1)",
+        "rating": 3213,
+        "rank": 1,
+        "date": "2014-08-08T17:30:00.000Z",
+        "ratingChange": 40
+      },
+      {
+        "contestName": "MemSQL Start[c]UP 2.0 - Round 2 - Online Round",
+        "rating": 3260,
+        "rank": 1,
+        "date": "2014-08-10T20:00:00.000Z",
+        "ratingChange": 47
+      },
+      {
+        "contestName": "Codeforces Round 265 (Div. 1)",
+        "rating": 3299,
+        "rank": 1,
+        "date": "2014-09-07T17:30:00.000Z",
+        "ratingChange": 39
+      },
+      {
+        "contestName": "Codeforces Round 270",
+        "rating": 3164,
+        "rank": 21,
+        "date": "2014-09-28T18:05:00.000Z",
+        "ratingChange": -135
+      },
+      {
+        "contestName": "Codeforces Round 275 (Div. 1)",
+        "rating": 3203,
+        "rank": 1,
+        "date": "2014-10-24T19:10:00.000Z",
+        "ratingChange": 39
+      },
+      {
+        "contestName": "Codeforces Round 282 (Div. 1)",
+        "rating": 3240,
+        "rank": 1,
+        "date": "2014-12-13T18:30:00.000Z",
+        "ratingChange": 37
+      },
+      {
+        "contestName": "Good Bye 2014",
+        "rating": 3254,
+        "rank": 1,
+        "date": "2014-12-30T17:30:00.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Codeforces Round 290 (Div. 1)",
+        "rating": 3201,
+        "rank": 5,
+        "date": "2015-02-02T18:35:00.000Z",
+        "ratingChange": -53
+      },
+      {
+        "contestName": "Rockethon 2015",
+        "rating": 3239,
+        "rank": 1,
+        "date": "2015-02-07T20:15:00.000Z",
+        "ratingChange": 38
+      },
+      {
+        "contestName": "VK Cup 2015 - Round 1",
+        "rating": 3223,
+        "rank": 4,
+        "date": "2015-03-21T16:00:00.000Z",
+        "ratingChange": -16
+      },
+      {
+        "contestName": "ZeptoLab Code Rush 2015",
+        "rating": 3274,
+        "rank": 1,
+        "date": "2015-04-04T19:05:00.000Z",
+        "ratingChange": 51
+      },
+      {
+        "contestName": "VK Cup 2015 - Round 2",
+        "rating": 3341,
+        "rank": 1,
+        "date": "2015-04-17T18:30:00.000Z",
+        "ratingChange": 67
+      },
+      {
+        "contestName": "VK Cup 2015 - Раунд 3",
+        "rating": 3407,
+        "rank": 1,
+        "date": "2015-05-03T18:30:00.000Z",
+        "ratingChange": 66
+      },
+      {
+        "contestName": "Looksery Cup 2015",
+        "rating": 3445,
+        "rank": 1,
+        "date": "2015-06-06T15:30:00.000Z",
+        "ratingChange": 38
+      },
+      {
+        "contestName": "VK Cup 2015 - Finals",
+        "rating": 3503,
+        "rank": 1,
+        "date": "2015-07-26T11:15:00.000Z",
+        "ratingChange": 58
+      },
+      {
+        "contestName": "Codeforces Round 318 [RussianCodeCup Thanks-Round] (Div. 1)",
+        "rating": 3374,
+        "rank": 166,
+        "date": "2015-08-29T18:40:00.000Z",
+        "ratingChange": -129
+      },
+      {
+        "contestName": "Codeforces Round 336 (Div. 1)",
+        "rating": 3374,
+        "rank": 2,
+        "date": "2015-12-23T18:35:00.000Z",
+        "ratingChange": 0
+      },
+      {
+        "contestName": "Good Bye 2015",
+        "rating": 3444,
+        "rank": 1,
+        "date": "2015-12-30T18:05:00.000Z",
+        "ratingChange": 70
+      },
+      {
+        "contestName": "8VC Venture Cup 2016 - Elimination Round",
+        "rating": 3373,
+        "rank": 6,
+        "date": "2016-02-13T20:05:00.000Z",
+        "ratingChange": -71
+      },
+      {
+        "contestName": "Manthan, Codefest 16",
+        "rating": 3444,
+        "rank": 1,
+        "date": "2016-02-26T19:45:00.000Z",
+        "ratingChange": 71
+      },
+      {
+        "contestName": "8VC Venture Cup 2016 - Final Round",
+        "rating": 3518,
+        "rank": 1,
+        "date": "2016-02-28T20:10:00.000Z",
+        "ratingChange": 74
+      },
+      {
+        "contestName": "Codeforces Round 345 (Div. 1)",
+        "rating": 3582,
+        "rank": 1,
+        "date": "2016-03-07T11:25:00.000Z",
+        "ratingChange": 64
+      },
+      {
+        "contestName": "CROC 2016 - Elimination Round",
+        "rating": 3534,
+        "rank": 2,
+        "date": "2016-03-18T18:35:00.000Z",
+        "ratingChange": -48
+      },
+      {
+        "contestName": "VK Cup 2016 - Round 1",
+        "rating": 3588,
+        "rank": 1,
+        "date": "2016-03-28T18:35:00.000Z",
+        "ratingChange": 54
+      },
+      {
+        "contestName": "CROC 2016 - Final Round [Private, For Onsite Finalists Only]",
+        "rating": 3640,
+        "rank": 1,
+        "date": "2016-04-15T16:15:00.000Z",
+        "ratingChange": 52
+      },
+      {
+        "contestName": "VK Cup 2016 - Round 2",
+        "rating": 3501,
+        "rank": 4,
+        "date": "2016-04-24T18:35:00.000Z",
+        "ratingChange": -139
+      },
+      {
+        "contestName": "VK Cup 2016 - Round 3",
+        "rating": 3554,
+        "rank": 1,
+        "date": "2016-05-07T18:05:00.000Z",
+        "ratingChange": 53
+      },
+      {
+        "contestName": "Codeforces Round 360 (Div. 1)",
+        "rating": 3525,
+        "rank": 2,
+        "date": "2016-06-29T19:05:00.000Z",
+        "ratingChange": -29
+      },
+      {
+        "contestName": "VK Cup 2016 - Finals",
+        "rating": 3580,
+        "rank": 1,
+        "date": "2016-07-03T11:50:00.000Z",
+        "ratingChange": 55
+      },
+      {
+        "contestName": "Codeforces Round 385 (Div. 1)",
+        "rating": 3638,
+        "rank": 1,
+        "date": "2016-12-17T18:35:00.000Z",
+        "ratingChange": 58
+      },
+      {
+        "contestName": "Good Bye 2016",
+        "rating": 3615,
+        "rank": 2,
+        "date": "2016-12-30T16:45:00.000Z",
+        "ratingChange": -23
+      },
+      {
+        "contestName": "Codecraft-17 and Codeforces Round 391 (Div. 1 + Div. 2, combined)",
+        "rating": 3670,
+        "rank": 1,
+        "date": "2017-01-12T18:35:00.000Z",
+        "ratingChange": 55
+      },
+      {
+        "contestName": "8VC Venture Cup 2017 - Elimination Round",
+        "rating": 3739,
+        "rank": 1,
+        "date": "2017-01-15T19:05:00.000Z",
+        "ratingChange": 69
+      },
+      {
+        "contestName": "8VC Venture Cup 2017 - Final Round",
+        "rating": 3544,
+        "rank": 7,
+        "date": "2017-01-22T20:15:00.000Z",
+        "ratingChange": -195
+      },
+      {
+        "contestName": "ICM Technex 2017 and Codeforces Round 400 (Div. 1 + Div. 2, combined)",
+        "rating": 3534,
+        "rank": 2,
+        "date": "2017-02-23T16:55:00.000Z",
+        "ratingChange": -10
+      },
+      {
+        "contestName": "Playrix Codescapes Cup (Codeforces Round 413, rated, Div. 1 + Div. 2)",
+        "rating": 3602,
+        "rank": 1,
+        "date": "2017-05-11T17:35:00.000Z",
+        "ratingChange": 68
+      },
+      {
+        "contestName": "AIM Tech Round 4 (Div. 1)",
+        "rating": 3488,
+        "rank": 7,
+        "date": "2017-08-24T19:05:00.000Z",
+        "ratingChange": -114
+      },
+      {
+        "contestName": "MemSQL Start[c]UP 3.0 - Round 1",
+        "rating": 3438,
+        "rank": 4,
+        "date": "2017-09-16T20:05:00.000Z",
+        "ratingChange": -50
+      },
+      {
+        "contestName": "Manthan, Codefest 17",
+        "rating": 3411,
+        "rank": 3,
+        "date": "2017-09-24T17:05:00.000Z",
+        "ratingChange": -27
+      },
+      {
+        "contestName": "MemSQL Start[c]UP 3.0 - Round 2 and Codeforces Round 437 (Div. 1)",
+        "rating": 3496,
+        "rank": 1,
+        "date": "2017-09-30T20:05:00.000Z",
+        "ratingChange": 85
+      },
+      {
+        "contestName": "Codeforces Round 470 (rated, Div. 1, based on VK Cup 2018 Round 1)",
+        "rating": 3206,
+        "rank": 140,
+        "date": "2018-03-10T17:35:00.000Z",
+        "ratingChange": -290
+      },
+      {
+        "contestName": "Codeforces Round 477 (rated, Div. 1, based on VK Cup 2018 Round 3)",
+        "rating": 3235,
+        "rank": 3,
+        "date": "2018-04-29T15:45:00.000Z",
+        "ratingChange": 29
+      },
+      {
+        "contestName": "Avito Code Challenge 2018",
+        "rating": 3341,
+        "rank": 1,
+        "date": "2018-05-27T17:50:00.000Z",
+        "ratingChange": 106
+      },
+      {
+        "contestName": "Codeforces Round 485 (Div. 1)",
+        "rating": 3434,
+        "rank": 1,
+        "date": "2018-05-29T17:45:00.000Z",
+        "ratingChange": 93
+      },
+      {
+        "contestName": "Manthan, Codefest 18 (rated, Div. 1 + Div. 2)",
+        "rating": 3509,
+        "rank": 1,
+        "date": "2018-09-02T16:35:00.000Z",
+        "ratingChange": 75
+      },
+      {
+        "contestName": "Lyft Level 5 Challenge 2018 - Elimination Round",
+        "rating": 3581,
+        "rank": 1,
+        "date": "2018-10-07T19:05:00.000Z",
+        "ratingChange": 72
+      },
+      {
+        "contestName": "Codeforces Round 519 by Botan Investments",
+        "rating": 3312,
+        "rank": 126,
+        "date": "2018-10-28T17:35:00.000Z",
+        "ratingChange": -269
+      },
+      {
+        "contestName": "Lyft Level 5 Challenge 2018 - Final Round",
+        "rating": 3401,
+        "rank": 1,
+        "date": "2018-11-04T20:10:00.000Z",
+        "ratingChange": 89
+      },
+      {
+        "contestName": "Mail.Ru Cup 2018 Round 2",
+        "rating": 3372,
+        "rank": 5,
+        "date": "2018-11-10T17:05:00.000Z",
+        "ratingChange": -29
+      },
+      {
+        "contestName": "Avito Cool Challenge 2018",
+        "rating": 3469,
+        "rank": 1,
+        "date": "2018-12-16T17:05:00.000Z",
+        "ratingChange": 97
+      },
+      {
+        "contestName": "Good Bye 2018",
+        "rating": 3559,
+        "rank": 1,
+        "date": "2018-12-30T17:15:00.000Z",
+        "ratingChange": 90
+      },
+      {
+        "contestName": "Hello 2019",
+        "rating": 3539,
+        "rank": 3,
+        "date": "2019-01-04T17:45:00.000Z",
+        "ratingChange": -20
+      },
+      {
+        "contestName": "Codeforces Global Round 1",
+        "rating": 3624,
+        "rank": 1,
+        "date": "2019-02-07T15:35:00.000Z",
+        "ratingChange": 85
+      },
+      {
+        "contestName": "Codeforces Global Round 2",
+        "rating": 3628,
+        "rank": 2,
+        "date": "2019-04-06T13:35:00.000Z",
+        "ratingChange": 4
+      },
+      {
+        "contestName": "Forethought Future Cup - Elimination Round",
+        "rating": 3698,
+        "rank": 1,
+        "date": "2019-04-20T20:35:00.000Z",
+        "ratingChange": 70
+      },
+      {
+        "contestName": "Codeforces Global Round 3",
+        "rating": 3686,
+        "rank": 2,
+        "date": "2019-06-01T16:50:00.000Z",
+        "ratingChange": -12
+      },
+      {
+        "contestName": "Codeforces Round 576 (Div. 1)",
+        "rating": 3645,
+        "rank": 2,
+        "date": "2019-07-30T16:35:00.000Z",
+        "ratingChange": -41
+      },
+      {
+        "contestName": "Manthan, Codefest 19 (open for everyone, rated, Div. 1 + Div. 2)",
+        "rating": 3711,
+        "rank": 1,
+        "date": "2019-08-25T16:40:00.000Z",
+        "ratingChange": 66
+      },
+      {
+        "contestName": "Codeforces Round 584 - Dasha Code Championship - Elimination Round (rated, open for everyone, Div. 1 + Div. 2)",
+        "rating": 3557,
+        "rank": 11,
+        "date": "2019-09-14T15:35:00.000Z",
+        "ratingChange": -154
+      },
+      {
+        "contestName": "Codeforces Round 596 (Div. 1, based on Technocup 2020 Elimination Round 2)",
+        "rating": 3532,
+        "rank": 3,
+        "date": "2019-10-26T13:05:00.000Z",
+        "ratingChange": -25
+      },
+      {
+        "contestName": "Codeforces Round 602 (Div. 1, based on Technocup 2020 Elimination Round 3)",
+        "rating": 3544,
+        "rank": 2,
+        "date": "2019-11-24T10:05:00.000Z",
+        "ratingChange": 12
+      },
+      {
+        "contestName": "Codeforces Round 604 (Div. 1)",
+        "rating": 3556,
+        "rank": 2,
+        "date": "2019-12-05T16:35:00.000Z",
+        "ratingChange": 12
+      },
+      {
+        "contestName": "Codeforces Global Round 6",
+        "rating": 3539,
+        "rank": 3,
+        "date": "2019-12-17T17:35:00.000Z",
+        "ratingChange": -17
+      },
+      {
+        "contestName": "Codeforces Round 609 (Div. 1)",
+        "rating": 3615,
+        "rank": 1,
+        "date": "2019-12-21T13:05:00.000Z",
+        "ratingChange": 76
+      },
+      {
+        "contestName": "Good Bye 2019",
+        "rating": 3418,
+        "rank": 50,
+        "date": "2019-12-29T17:05:00.000Z",
+        "ratingChange": -197
+      },
+      {
+        "contestName": "Hello 2020",
+        "rating": 3430,
+        "rank": 4,
+        "date": "2020-01-04T14:35:00.000Z",
+        "ratingChange": 12
+      },
+      {
+        "contestName": "Codeforces Round 614 (Div. 1)",
+        "rating": 3461,
+        "rank": 2,
+        "date": "2020-01-19T15:35:00.000Z",
+        "ratingChange": 31
+      },
+      {
+        "contestName": "Codeforces Round 616 (Div. 1)",
+        "rating": 3549,
+        "rank": 1,
+        "date": "2020-02-02T16:35:00.000Z",
+        "ratingChange": 88
+      },
+      {
+        "contestName": "Codeforces Round 621 (Div. 1 + Div. 2)",
+        "rating": 3404,
+        "rank": 26,
+        "date": "2020-02-17T17:50:00.000Z",
+        "ratingChange": -145
+      },
+      {
+        "contestName": "VK Cup 2019-2020 - Elimination Round (Engine)",
+        "rating": 3496,
+        "rank": 1,
+        "date": "2020-02-23T18:35:00.000Z",
+        "ratingChange": 92
+      },
+      {
+        "contestName": "Ozon Tech Challenge 2020 (Div.1 + Div.2, Rated, T-shirts + prizes!)",
+        "rating": 3585,
+        "rank": 1,
+        "date": "2020-03-03T16:50:00.000Z",
+        "ratingChange": 89
+      },
+      {
+        "contestName": "Codeforces Global Round 7",
+        "rating": 3669,
+        "rank": 1,
+        "date": "2020-03-19T17:05:00.000Z",
+        "ratingChange": 84
+      },
+      {
+        "contestName": "Codeforces Round 631 (Div. 1) - Thanks, Denis aramis Shitov!",
+        "rating": 3673,
+        "rank": 2,
+        "date": "2020-04-03T16:35:00.000Z",
+        "ratingChange": 4
+      },
+      {
+        "contestName": "Codeforces Round 633 (Div. 1)",
+        "rating": 3733,
+        "rank": 1,
+        "date": "2020-04-12T16:05:00.000Z",
+        "ratingChange": 60
+      },
+      {
+        "contestName": "Codeforces Round 635 (Div. 1)",
+        "rating": 3541,
+        "rank": 29,
+        "date": "2020-04-15T17:05:00.000Z",
+        "ratingChange": -192
+      },
+      {
+        "contestName": "Codeforces Round 641 (Div. 1)",
+        "rating": 3409,
+        "rank": 26,
+        "date": "2020-05-12T15:05:00.000Z",
+        "ratingChange": -132
+      },
+      {
+        "contestName": "Codeforces Round 647 (Div. 1) - Thanks, Algo Muse!",
+        "rating": 3520,
+        "rank": 1,
+        "date": "2020-06-04T17:05:00.000Z",
+        "ratingChange": 111
+      },
+      {
+        "contestName": "Codeforces Global Round 8",
+        "rating": 3567,
+        "rank": 2,
+        "date": "2020-06-18T17:15:00.000Z",
+        "ratingChange": 47
+      },
+      {
+        "contestName": "Codeforces Global Round 9",
+        "rating": 3669,
+        "rank": 1,
+        "date": "2020-07-04T17:15:00.000Z",
+        "ratingChange": 102
+      },
+      {
+        "contestName": "Codeforces Round 659 (Div. 1)",
+        "rating": 3735,
+        "rank": 1,
+        "date": "2020-07-24T16:35:00.000Z",
+        "ratingChange": 66
+      },
+      {
+        "contestName": "Codeforces Round 664 (Div. 1)",
+        "rating": 3515,
+        "rank": 41,
+        "date": "2020-08-12T16:35:00.000Z",
+        "ratingChange": -220
+      },
+      {
+        "contestName": "Codeforces Global Round 10",
+        "rating": 3506,
+        "rank": 4,
+        "date": "2020-08-16T17:35:00.000Z",
+        "ratingChange": -9
+      },
+      {
+        "contestName": "Codeforces Round 666 (Div. 1)",
+        "rating": 3613,
+        "rank": 1,
+        "date": "2020-08-30T16:35:00.000Z",
+        "ratingChange": 107
+      },
+      {
+        "contestName": "Codeforces Round 668 (Div. 1)",
+        "rating": 3438,
+        "rank": 36,
+        "date": "2020-09-06T16:35:00.000Z",
+        "ratingChange": -175
+      },
+      {
+        "contestName": "Codeforces Round 673 (Div. 1)",
+        "rating": 3533,
+        "rank": 1,
+        "date": "2020-09-27T17:05:00.000Z",
+        "ratingChange": 95
+      },
+      {
+        "contestName": "Grakn Forces 2020",
+        "rating": 3629,
+        "rank": 1,
+        "date": "2020-09-30T17:20:00.000Z",
+        "ratingChange": 96
+      },
+      {
+        "contestName": "Codeforces Global Round 11",
+        "rating": 3509,
+        "rank": 22,
+        "date": "2020-10-10T17:50:00.000Z",
+        "ratingChange": -120
+      },
+      {
+        "contestName": "Codeforces Round 679 (Div. 1, based on Technocup 2021 Elimination Round 1)",
+        "rating": 3619,
+        "rank": 1,
+        "date": "2020-10-25T13:05:00.000Z",
+        "ratingChange": 110
+      },
+      {
+        "contestName": "VK Cup 2019-2020 - Final Round (Engine)",
+        "rating": 3687,
+        "rank": 1,
+        "date": "2020-11-01T16:05:00.000Z",
+        "ratingChange": 68
+      },
+      {
+        "contestName": "Codeforces Global Round 12",
+        "rating": 3712,
+        "rank": 2,
+        "date": "2020-12-06T17:35:00.000Z",
+        "ratingChange": 25
+      },
+      {
+        "contestName": "Codeforces Round 691 (Div. 1)",
+        "rating": 3783,
+        "rank": 1,
+        "date": "2020-12-19T11:35:00.000Z",
+        "ratingChange": 71
+      },
+      {
+        "contestName": "Codeforces Round 692 (Div. 1, based on Technocup 2021 Elimination Round 3)",
+        "rating": 3601,
+        "rank": 20,
+        "date": "2020-12-20T17:05:00.000Z",
+        "ratingChange": -182
+      },
+      {
+        "contestName": "Good Bye 2020",
+        "rating": 3702,
+        "rank": 1,
+        "date": "2020-12-30T17:35:00.000Z",
+        "ratingChange": 101
+      },
+      {
+        "contestName": "Codeforces Round 694 (Div. 1)",
+        "rating": 3778,
+        "rank": 1,
+        "date": "2021-01-05T16:35:00.000Z",
+        "ratingChange": 76
+      },
+      {
+        "contestName": "Codeforces Round 698 (Div. 1)",
+        "rating": 3748,
+        "rank": 3,
+        "date": "2021-01-28T16:50:00.000Z",
+        "ratingChange": -30
+      },
+      {
+        "contestName": "Codeforces Global Round 13",
+        "rating": 3565,
+        "rank": 35,
+        "date": "2021-02-28T16:35:00.000Z",
+        "ratingChange": -183
+      },
+      {
+        "contestName": "Codeforces Round 706 (Div. 1)",
+        "rating": 3572,
+        "rank": 3,
+        "date": "2021-03-10T14:05:00.000Z",
+        "ratingChange": 7
+      },
+      {
+        "contestName": "Codeforces Round 707 (Div. 1, based on Moscow Open Olympiad in Informatics)",
+        "rating": 3668,
+        "rank": 1,
+        "date": "2021-03-13T11:35:00.000Z",
+        "ratingChange": 96
+      },
+      {
+        "contestName": "Codeforces Round 712 (Div. 1)",
+        "rating": 3697,
+        "rank": 2,
+        "date": "2021-04-03T16:50:00.000Z",
+        "ratingChange": 29
+      },
+      {
+        "contestName": "Codeforces Round 715 (Div. 1)",
+        "rating": 3682,
+        "rank": 3,
+        "date": "2021-04-16T16:50:00.000Z",
+        "ratingChange": -15
+      },
+      {
+        "contestName": "Contest 2050 and Codeforces Round 718 (Div. 1 + Div. 2)",
+        "rating": 3617,
+        "rank": 8,
+        "date": "2021-04-23T17:20:00.000Z",
+        "ratingChange": -65
+      },
+      {
+        "contestName": "Codeforces Global Round 14",
+        "rating": 3579,
+        "rank": 6,
+        "date": "2021-05-02T17:35:00.000Z",
+        "ratingChange": -38
+      },
+      {
+        "contestName": "Codeforces Round 722 (Div. 1)",
+        "rating": 3538,
+        "rank": 8,
+        "date": "2021-05-24T16:50:00.000Z",
+        "ratingChange": -41
+      },
+      {
+        "contestName": "Deltix Round, Spring 2021 (open for everyone, rated, Div. 1 + Div. 2)",
+        "rating": 3669,
+        "rank": 1,
+        "date": "2021-05-30T16:50:00.000Z",
+        "ratingChange": 131
+      },
+      {
+        "contestName": "Codeforces LATOKEN Round 1 (Div. 1 + Div. 2)",
+        "rating": 3723,
+        "rank": 2,
+        "date": "2021-06-13T18:35:00.000Z",
+        "ratingChange": 54
+      },
+      {
+        "contestName": "Codeforces Round 728 (Div. 1)",
+        "rating": 3748,
+        "rank": 2,
+        "date": "2021-06-25T17:50:00.000Z",
+        "ratingChange": 25
+      },
+      {
+        "contestName": "Harbour.Space Scholarship Contest 2021-2022 (open for everyone, rated, Div. 1 + Div. 2)",
+        "rating": 3729,
+        "rank": 3,
+        "date": "2021-07-22T17:05:00.000Z",
+        "ratingChange": -19
+      },
+      {
+        "contestName": "Codeforces Global Round 15",
+        "rating": 3822,
+        "rank": 1,
+        "date": "2021-07-25T17:20:00.000Z",
+        "ratingChange": 93
+      },
+      {
+        "contestName": "Codeforces Round 736 (Div. 1)",
+        "rating": 3819,
+        "rank": 2,
+        "date": "2021-08-01T17:00:00.000Z",
+        "ratingChange": -3
+      },
+      {
+        "contestName": "Deltix Round, Summer 2021 (open for everyone, rated, Div. 1 + Div. 2)",
+        "rating": 3656,
+        "rank": 22,
+        "date": "2021-08-29T17:05:00.000Z",
+        "ratingChange": -163
+      },
+      {
+        "contestName": "Codeforces Global Round 16",
+        "rating": 3707,
+        "rank": 2,
+        "date": "2021-09-12T17:05:00.000Z",
+        "ratingChange": 51
+      },
+      {
+        "contestName": "Codeforces Round 752 (Div. 1)",
+        "rating": 3804,
+        "rank": 1,
+        "date": "2021-10-30T16:35:00.000Z",
+        "ratingChange": 97
+      },
+      {
+        "contestName": "Codeforces Global Round 17",
+        "rating": 3797,
+        "rank": 2,
+        "date": "2021-11-23T17:35:00.000Z",
+        "ratingChange": -7
+      },
+      {
+        "contestName": "Deltix Round, Autumn 2021 (open for everyone, rated, Div. 1 + Div. 2)",
+        "rating": 3870,
+        "rank": 1,
+        "date": "2021-11-28T17:05:00.000Z",
+        "ratingChange": 73
+      },
+      {
+        "contestName": "Codeforces Global Round 18",
+        "rating": 3756,
+        "rank": 8,
+        "date": "2021-12-24T17:05:00.000Z",
+        "ratingChange": -114
+      },
+      {
+        "contestName": "Good Bye 2021: 2022 is NEAR",
+        "rating": 3836,
+        "rank": 1,
+        "date": "2021-12-29T17:35:00.000Z",
+        "ratingChange": 80
+      },
+      {
+        "contestName": "Hello 2022",
+        "rating": 3911,
+        "rank": 1,
+        "date": "2022-01-03T16:50:00.000Z",
+        "ratingChange": 75
+      },
+      {
+        "contestName": "Codeforces Round 767 (Div. 1)",
+        "rating": 3979,
+        "rank": 1,
+        "date": "2022-01-22T16:35:00.000Z",
+        "ratingChange": 68
+      },
+      {
+        "contestName": "Codeforces Round 768 (Div. 1)",
+        "rating": 3809,
+        "rank": 9,
+        "date": "2022-01-27T16:35:00.000Z",
+        "ratingChange": -170
+      },
+      {
+        "contestName": "Codeforces Global Round 19",
+        "rating": 3879,
+        "rank": 1,
+        "date": "2022-02-12T17:05:00.000Z",
+        "ratingChange": 70
+      },
+      {
+        "contestName": "Codeforces Round 773 (Div. 1)",
+        "rating": 3946,
+        "rank": 1,
+        "date": "2022-02-23T12:10:00.000Z",
+        "ratingChange": 67
+      },
+      {
+        "contestName": "CodeTON Round 1 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3796,
+        "rank": 8,
+        "date": "2022-03-24T16:35:00.000Z",
+        "ratingChange": -150
+      },
+      {
+        "contestName": "Codeforces Round 783 (Div. 1)",
+        "rating": 3801,
+        "rank": 2,
+        "date": "2022-04-19T16:35:00.000Z",
+        "ratingChange": 5
+      },
+      {
+        "contestName": "Codeforces Global Round 20",
+        "rating": 3814,
+        "rank": 2,
+        "date": "2022-04-23T17:05:00.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Codeforces Round 789 (Div. 1)",
+        "rating": 3805,
+        "rank": 2,
+        "date": "2022-05-08T16:35:00.000Z",
+        "ratingChange": -9
+      },
+      {
+        "contestName": "Codeforces Round 792 (Div. 1 + Div. 2)",
+        "rating": 3882,
+        "rank": 1,
+        "date": "2022-05-19T16:35:00.000Z",
+        "ratingChange": 77
+      },
+      {
+        "contestName": "Codeforces Round 794 (Div. 1)",
+        "rating": 3764,
+        "rank": 6,
+        "date": "2022-05-25T19:50:00.000Z",
+        "ratingChange": -118
+      },
+      {
+        "contestName": "Codeforces Round 796 (Div. 1)",
+        "rating": 3732,
+        "rank": 4,
+        "date": "2022-06-03T16:35:00.000Z",
+        "ratingChange": -32
+      },
+      {
+        "contestName": "Codeforces Round 800 (Div. 1)",
+        "rating": 3727,
+        "rank": 3,
+        "date": "2022-06-16T16:35:00.000Z",
+        "ratingChange": -5
+      },
+      {
+        "contestName": "Codeforces Global Round 21",
+        "rating": 3671,
+        "rank": 7,
+        "date": "2022-06-25T16:50:00.000Z",
+        "ratingChange": -56
+      },
+      {
+        "contestName": "Codeforces Round 808 (Div. 1)",
+        "rating": 3678,
+        "rank": 3,
+        "date": "2022-07-16T16:35:00.000Z",
+        "ratingChange": 7
+      },
+      {
+        "contestName": "CodeTON Round 2 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3771,
+        "rank": 1,
+        "date": "2022-07-31T16:35:00.000Z",
+        "ratingChange": 93
+      },
+      {
+        "contestName": "Codeforces Round 814 (Div. 1)",
+        "rating": 3851,
+        "rank": 1,
+        "date": "2022-08-16T16:35:00.000Z",
+        "ratingChange": 80
+      },
+      {
+        "contestName": "Codeforces Global Round 22",
+        "rating": 3757,
+        "rank": 6,
+        "date": "2022-09-30T17:05:00.000Z",
+        "ratingChange": -94
+      },
+      {
+        "contestName": "Dytechlab Cup 2022",
+        "rating": 3834,
+        "rank": 1,
+        "date": "2022-10-07T17:05:00.000Z",
+        "ratingChange": 77
+      },
+      {
+        "contestName": "Codeforces Global Round 23",
+        "rating": 3912,
+        "rank": 1,
+        "date": "2022-10-15T16:50:00.000Z",
+        "ratingChange": 78
+      },
+      {
+        "contestName": "CodeTON Round 3 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3735,
+        "rank": 10,
+        "date": "2022-11-06T17:05:00.000Z",
+        "ratingChange": -177
+      },
+      {
+        "contestName": "Pinely Round 1 (Div. 1 + Div. 2)",
+        "rating": 3817,
+        "rank": 1,
+        "date": "2022-11-20T17:05:00.000Z",
+        "ratingChange": 82
+      },
+      {
+        "contestName": "Polynomial Round 2022 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3764,
+        "rank": 3,
+        "date": "2022-12-17T17:05:00.000Z",
+        "ratingChange": -53
+      },
+      {
+        "contestName": "Good Bye 2022: 2023 is NEAR",
+        "rating": 3731,
+        "rank": 5,
+        "date": "2022-12-30T17:05:00.000Z",
+        "ratingChange": -33
+      },
+      {
+        "contestName": "Hello 2023",
+        "rating": 3768,
+        "rank": 2,
+        "date": "2023-01-03T17:05:00.000Z",
+        "ratingChange": 37
+      },
+      {
+        "contestName": "TypeDB Forces 2023 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3803,
+        "rank": 2,
+        "date": "2023-01-29T17:35:00.000Z",
+        "ratingChange": 35
+      },
+      {
+        "contestName": "Codeforces Round 857 (Div. 1)",
+        "rating": 3658,
+        "rank": 17,
+        "date": "2023-03-09T12:35:00.000Z",
+        "ratingChange": -145
+      },
+      {
+        "contestName": "Nebius Welcome Round (Div. 1 + Div. 2)",
+        "rating": 3706,
+        "rank": 2,
+        "date": "2023-03-12T16:35:00.000Z",
+        "ratingChange": 48
+      },
+      {
+        "contestName": "CodeTON Round 4 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3486,
+        "rank": 73,
+        "date": "2023-03-31T16:35:00.000Z",
+        "ratingChange": -220
+      },
+      {
+        "contestName": "Codeforces Round 865 (Div. 1)",
+        "rating": 3635,
+        "rank": 1,
+        "date": "2023-04-09T17:00:00.000Z",
+        "ratingChange": 149
+      },
+      {
+        "contestName": "Codeforces Round 866 (Div. 1)",
+        "rating": 3588,
+        "rank": 5,
+        "date": "2023-04-15T11:05:00.000Z",
+        "ratingChange": -47
+      },
+      {
+        "contestName": "Codeforces Round 869 (Div. 1)",
+        "rating": 3662,
+        "rank": 2,
+        "date": "2023-04-29T16:50:00.000Z",
+        "ratingChange": 74
+      },
+      {
+        "contestName": "Codeforces Round 873 (Div. 1)",
+        "rating": 3622,
+        "rank": 6,
+        "date": "2023-05-14T16:35:00.000Z",
+        "ratingChange": -40
+      },
+      {
+        "contestName": "Codeforces Round 875 (Div. 1)",
+        "rating": 3611,
+        "rank": 4,
+        "date": "2023-05-28T17:05:00.000Z",
+        "ratingChange": -11
+      },
+      {
+        "contestName": "Codeforces Round 880 (Div. 1)",
+        "rating": 3664,
+        "rank": 2,
+        "date": "2023-06-18T16:35:00.000Z",
+        "ratingChange": 53
+      },
+      {
+        "contestName": "CodeTON Round 5 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3755,
+        "rank": 1,
+        "date": "2023-06-24T17:05:00.000Z",
+        "ratingChange": 91
+      },
+      {
+        "contestName": "Codeforces Round 884 (Div. 1 + Div. 2)",
+        "rating": 3767,
+        "rank": 2,
+        "date": "2023-07-11T17:35:00.000Z",
+        "ratingChange": 12
+      },
+      {
+        "contestName": "Codeforces Round 887 (Div. 1)",
+        "rating": 3726,
+        "rank": 4,
+        "date": "2023-07-23T17:05:00.000Z",
+        "ratingChange": -41
+      },
+      {
+        "contestName": "Codeforces Round 889 (Div. 1)",
+        "rating": 3727,
+        "rank": 3,
+        "date": "2023-07-29T17:05:00.000Z",
+        "ratingChange": 1
+      },
+      {
+        "contestName": "Pinely Round 2 (Div. 1 + Div. 2)",
+        "rating": 3817,
+        "rank": 1,
+        "date": "2023-08-30T17:35:00.000Z",
+        "ratingChange": 90
+      },
+      {
+        "contestName": "CodeTON Round 6 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3751,
+        "rank": 6,
+        "date": "2023-09-18T16:50:00.000Z",
+        "ratingChange": -66
+      },
+      {
+        "contestName": "Codeforces Round 901 (Div. 1)",
+        "rating": 3775,
+        "rank": 2,
+        "date": "2023-09-30T17:35:00.000Z",
+        "ratingChange": 24
+      },
+      {
+        "contestName": "Codeforces Round 906 (Div. 1)",
+        "rating": 3557,
+        "rank": 46,
+        "date": "2023-10-28T17:05:00.000Z",
+        "ratingChange": -218
+      },
+      {
+        "contestName": "Codeforces Round 908 (Div. 1)",
+        "rating": 3584,
+        "rank": 4,
+        "date": "2023-11-07T16:35:00.000Z",
+        "ratingChange": 27
+      },
+      {
+        "contestName": "CodeTON Round 7 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3485,
+        "rank": 18,
+        "date": "2023-11-25T17:20:00.000Z",
+        "ratingChange": -99
+      },
+      {
+        "contestName": "Pinely Round 3 (Div. 1 + Div. 2)",
+        "rating": 3375,
+        "rank": 33,
+        "date": "2023-12-23T17:35:00.000Z",
+        "ratingChange": -110
+      },
+      {
+        "contestName": "Good Bye 2023",
+        "rating": 3330,
+        "rank": 22,
+        "date": "2023-12-30T16:50:00.000Z",
+        "ratingChange": -45
+      },
+      {
+        "contestName": "Hello 2024",
+        "rating": 3375,
+        "rank": 7,
+        "date": "2024-01-06T17:05:00.000Z",
+        "ratingChange": 45
+      },
+      {
+        "contestName": "think-cell Round 1",
+        "rating": 3395,
+        "rank": 7,
+        "date": "2024-02-17T17:35:00.000Z",
+        "ratingChange": 20
+      },
+      {
+        "contestName": "Codeforces Round 930 (Div. 1)",
+        "rating": 3434,
+        "rank": 4,
+        "date": "2024-02-29T16:35:00.000Z",
+        "ratingChange": 39
+      },
+      {
+        "contestName": "Codeforces Round 934 (Div. 1)",
+        "rating": 3572,
+        "rank": 1,
+        "date": "2024-03-16T17:00:00.000Z",
+        "ratingChange": 138
+      },
+      {
+        "contestName": "CodeTON Round 8 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3565,
+        "rank": 6,
+        "date": "2024-03-30T17:35:00.000Z",
+        "ratingChange": -7
+      },
+      {
+        "contestName": "Codeforces Round 942 (Div. 1)",
+        "rating": 3690,
+        "rank": 1,
+        "date": "2024-04-30T17:05:00.000Z",
+        "ratingChange": 125
+      },
+      {
+        "contestName": "Codeforces Round 947 (Div. 1 + Div. 2)",
+        "rating": 3757,
+        "rank": 1,
+        "date": "2024-05-25T17:35:00.000Z",
+        "ratingChange": 67
+      },
+      {
+        "contestName": "Codeforces Global Round 26",
+        "rating": 3845,
+        "rank": 1,
+        "date": "2024-06-09T17:35:00.000Z",
+        "ratingChange": 88
+      },
+      {
+        "contestName": "EPIC Institute of Technology Round Summer 2024 (Div. 1 + Div. 2)",
+        "rating": 3803,
+        "rank": 3,
+        "date": "2024-06-30T17:35:00.000Z",
+        "ratingChange": -42
+      },
+      {
+        "contestName": "Codeforces Round 959 sponsored by NEAR (Div. 1 + Div. 2)",
+        "rating": 3880,
+        "rank": 1,
+        "date": "2024-07-18T16:35:00.000Z",
+        "ratingChange": 77
+      },
+      {
+        "contestName": "Pinely Round 4 (Div. 1 + Div. 2)",
+        "rating": 3947,
+        "rank": 1,
+        "date": "2024-07-28T17:35:00.000Z",
+        "ratingChange": 67
+      },
+      {
+        "contestName": "Codeforces Round 969 (Div. 1)",
+        "rating": 4009,
+        "rank": 1,
+        "date": "2024-08-30T17:05:00.000Z",
+        "ratingChange": 62
+      },
+      {
+        "contestName": "CodeTON Round 9 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 3993,
+        "rank": 2,
+        "date": "2024-11-23T17:35:00.000Z",
+        "ratingChange": -16
+      },
+      {
+        "contestName": "Rayan Programming Contest 2024 - Selection (Codeforces Round 989, Div. 1 + Div. 2)",
+        "rating": 3985,
+        "rank": 2,
+        "date": "2024-11-30T17:35:00.000Z",
+        "ratingChange": -8
+      },
+      {
+        "contestName": "Hello 2025",
+        "rating": 3815,
+        "rank": 13,
+        "date": "2025-01-04T17:05:00.000Z",
+        "ratingChange": -170
+      },
+      {
+        "contestName": "IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 + Div. 2)",
+        "rating": 3841,
+        "rank": 2,
+        "date": "2025-01-20T17:35:00.000Z",
+        "ratingChange": 26
+      },
+      {
+        "contestName": "Ethflow Round 1 (Codeforces Round 1001, Div. 1 + Div. 2)",
+        "rating": 3840,
+        "rank": 3,
+        "date": "2025-01-26T17:05:00.000Z",
+        "ratingChange": -1
+      },
+      {
+        "contestName": "Codeforces Round 1004 (Div. 1)",
+        "rating": 3857,
+        "rank": 2,
+        "date": "2025-02-11T16:35:00.000Z",
+        "ratingChange": 17
+      },
+      {
+        "contestName": "Codeforces Round 1008 (Div. 1)",
+        "rating": 3798,
+        "rank": 4,
+        "date": "2025-03-10T17:15:00.000Z",
+        "ratingChange": -59
+      },
+      {
+        "contestName": "Codeforces Round 1012 (Div. 1)",
+        "rating": 3892,
+        "rank": 1,
+        "date": "2025-03-23T08:05:00.000Z",
+        "ratingChange": 94
+      },
+      {
+        "contestName": "Teza Round 1 (Codeforces Round 1015, Div. 1 + Div. 2)",
+        "rating": 3796,
+        "rank": 8,
+        "date": "2025-04-05T17:35:00.000Z",
+        "ratingChange": -96
+      },
+      {
+        "contestName": "Neowise Labs Contest 1 (Codeforces Round 1018, Div. 1 + Div. 2)",
+        "rating": 3761,
+        "rank": 5,
+        "date": "2025-04-19T16:35:00.000Z",
+        "ratingChange": -35
+      },
+      {
+        "contestName": "Codeforces Round 1021 (Div. 1)",
+        "rating": 3850,
+        "rank": 1,
+        "date": "2025-04-26T11:35:00.000Z",
+        "ratingChange": 89
+      },
+      {
+        "contestName": "Codeforces Round 1024 (Div. 1)",
+        "rating": 3843,
+        "rank": 2,
+        "date": "2025-05-11T17:05:00.000Z",
+        "ratingChange": -7
+      },
+      {
+        "contestName": "Codeforces Round 1028 (Div. 1)",
+        "rating": 3777,
+        "rank": 6,
+        "date": "2025-05-31T16:35:00.000Z",
+        "ratingChange": -66
+      },
+      {
+        "contestName": "EPIC Institute of Technology Round Summer 2025 (Codeforces Round 1036, Div. 1 + Div. 2)",
+        "rating": 3723,
+        "rank": 4,
+        "date": "2025-07-06T17:35:00.000Z",
+        "ratingChange": -54
+      },
+      {
+        "contestName": "Order Capital Round 1 (Codeforces Round 1038, Div. 1 + Div. 2)",
+        "rating": 3820,
+        "rank": 1,
+        "date": "2025-07-19T16:50:00.000Z",
+        "ratingChange": 97
+      },
+      {
+        "contestName": "Atto Round 1 (Codeforces Round 1041, Div. 1 + Div. 2)",
+        "rating": 3791,
+        "rank": 4,
+        "date": "2025-08-07T17:35:00.000Z",
+        "ratingChange": -29
+      },
+      {
+        "contestName": "Codeforces Round 1046 (Div. 1)",
+        "rating": 3619,
+        "rank": 20,
+        "date": "2025-08-28T17:35:00.000Z",
+        "ratingChange": -172
+      },
+      {
+        "contestName": "Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2)",
+        "rating": 3616,
+        "rank": 6,
+        "date": "2025-10-03T17:35:00.000Z",
+        "ratingChange": -3
+      },
+      {
+        "contestName": "Codeforces Round 1058 (Div. 1)",
+        "rating": 3629,
+        "rank": 4,
+        "date": "2025-10-12T17:05:00.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Pinely Round 5 (Div. 1 + Div. 2)",
+        "rating": 3747,
+        "rank": 1,
+        "date": "2025-10-30T19:35:00.000Z",
+        "ratingChange": 118
+      },
+      {
+        "contestName": "Codeforces Global Round 30 (Div. 1 + Div. 2)",
+        "rating": 3652,
+        "rank": 11,
+        "date": "2025-11-06T17:35:00.000Z",
+        "ratingChange": -95
+      },
+      {
+        "contestName": "Codeforces Round 1066 (Div. 1 + Div. 2)",
+        "rating": 3757,
+        "rank": 1,
+        "date": "2025-11-23T12:35:00.000Z",
+        "ratingChange": 105
+      },
+      {
+        "contestName": "Codeforces Global Round 31 (Div. 1 + Div. 2)",
+        "rating": 3718,
+        "rank": 6,
+        "date": "2025-12-19T17:05:00.000Z",
+        "ratingChange": -39
+      },
+      {
+        "contestName": "Good Bye 2025",
+        "rating": 3583,
+        "rank": 28,
+        "date": "2025-12-27T17:35:00.000Z",
+        "ratingChange": -135
+      },
+      {
+        "contestName": "Hello 2026",
+        "rating": 3478,
+        "rank": 25,
+        "date": "2026-01-07T17:35:00.000Z",
+        "ratingChange": -105
+      },
+      {
+        "contestName": "Codeforces Round 1073 (Div. 1)",
+        "rating": 3513,
+        "rank": 4,
+        "date": "2026-01-17T17:35:00.000Z",
+        "ratingChange": 35
+      },
+      {
+        "contestName": "Codeforces Round 1077 (Div. 1)",
+        "rating": 3533,
+        "rank": 5,
+        "date": "2026-01-29T17:35:00.000Z",
+        "ratingChange": 20
+      },
+      {
+        "contestName": "Codeforces Round 1079 (Div. 1)",
+        "rating": 3593,
+        "rank": 2,
+        "date": "2026-02-11T17:35:00.000Z",
+        "ratingChange": 60
+      },
+      {
+        "contestName": "Codeforces Round 1082 (Div. 1)",
+        "rating": 3718,
+        "rank": 1,
+        "date": "2026-02-23T17:05:00.000Z",
+        "ratingChange": 125
+      },
+      {
+        "contestName": "Codeforces Round 1085 (Div. 1 + Div. 2)",
+        "rating": 3719,
+        "rank": 3,
+        "date": "2026-03-08T17:35:00.000Z",
+        "ratingChange": 1
+      },
+      {
+        "contestName": "Nebius Round 2 (Codeforces Round 1088, Div. 1 + Div. 2)",
+        "rating": 3755,
+        "rank": 2,
+        "date": "2026-03-28T17:15:00.000Z",
+        "ratingChange": 36
+      },
+      {
+        "contestName": "Codeforces Round 1093 (Div. 1)",
+        "rating": 3544,
+        "rank": 42,
+        "date": "2026-04-13T16:35:00.000Z",
+        "ratingChange": -211
+      },
+      {
+        "contestName": "Spectral::Cup 2026 Round 1 (Codeforces Round 1094, Div. 1 + Div. 2)",
+        "rating": 3473,
+        "rank": 13,
+        "date": "2026-04-25T17:05:00.000Z",
+        "ratingChange": -71
+      },
+      {
+        "contestName": "Spectral::Cup 2026 Round 2 (Codeforces Round 1100, Div. 1 + Div. 2)",
+        "rating": 3428,
+        "rank": 11,
+        "date": "2026-05-23T17:35:00.000Z",
+        "ratingChange": -45
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Wowee Binary String",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/H",
+        "verdict": "OK",
+        "submittedAt": "2026-05-23T17:04:27.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "combinatorics",
+          "dp",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Wowee Binary String",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/H",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-05-23T17:00:24.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "combinatorics",
+          "dp",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Wowee Binary String",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/H",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-05-23T16:53:24.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "combinatorics",
+          "dp",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Load Unbalancing",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/F",
+        "verdict": "OK",
+        "submittedAt": "2026-05-23T15:30:11.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "binary search",
+          "bitmasks",
+          "dp",
+          "greedy"
+        ]
+      },
+      {
+        "problemName": "Deconstruction Tree",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/E",
+        "verdict": "OK",
+        "submittedAt": "2026-05-23T15:05:16.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "combinatorics",
+          "data structures",
+          "dp",
+          "graphs",
+          "trees"
+        ]
+      },
+      {
+        "problemName": "Deconstruction Tree",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/E",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-05-23T15:04:18.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "combinatorics",
+          "data structures",
+          "dp",
+          "graphs",
+          "trees"
+        ]
+      },
+      {
+        "problemName": "Me When Median Problem",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/D",
+        "verdict": "OK",
+        "submittedAt": "2026-05-23T14:54:55.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "binary search",
+          "greedy"
+        ]
+      },
+      {
+        "problemName": "We Be Flipping (Hard Version)",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/C2",
+        "verdict": "OK",
+        "submittedAt": "2026-05-23T14:40:53.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "constructive algorithms",
+          "dp",
+          "greedy"
+        ]
+      },
+      {
+        "problemName": "We Be Flipping (Easy Version)",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/C1",
+        "verdict": "OK",
+        "submittedAt": "2026-05-23T14:37:57.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "constructive algorithms",
+          "greedy"
+        ]
+      },
+      {
+        "problemName": "Absolute Cinema",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-05-23T14:36:37.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Slimes on a Line",
+        "problemUrl": "https://codeforces.com/contest/2229/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-05-23T14:35:38.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Morning",
+        "problemUrl": "https://codeforces.com/contest/1883/problem/A",
+        "verdict": "COMPILATION_ERROR",
+        "submittedAt": "2026-05-03T03:54:58.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Counting Sort?",
+        "problemUrl": "https://codeforces.com/contest/2222/problem/H",
+        "verdict": "OK",
+        "submittedAt": "2026-04-25T17:02:45.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "brute force",
+          "combinatorics",
+          "dp"
+        ]
+      },
+      {
+        "problemName": "Counting Sort?",
+        "problemUrl": "https://codeforces.com/contest/2222/problem/H",
+        "verdict": "TIME_LIMIT_EXCEEDED",
+        "submittedAt": "2026-04-25T16:56:31.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "brute force",
+          "combinatorics",
+          "dp"
+        ]
+      },
+      {
+        "problemName": "Counting Sort?",
+        "problemUrl": "https://codeforces.com/contest/2222/problem/H",
+        "verdict": "TIME_LIMIT_EXCEEDED",
+        "submittedAt": "2026-04-25T16:30:58.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "brute force",
+          "combinatorics",
+          "dp"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:25:05.033Z",
+    "createdAt": "2026-06-10T15:25:05.033Z",
+    "updatedAt": "2026-06-10T15:25:05.033Z"
+  },
+  {
+    "_id": "s_mq884kkdwxvbb",
+    "userId": "u_mq884b5h5viwe",
+    "platform": "LeetCode",
+    "currentRating": 1500,
+    "maxRating": 1500,
+    "contestsCount": 0,
+    "solvedCount": 52,
+    "solvedByTopic": {
+      "Arrays": 18,
+      "Graphs": 4,
+      "DP": 6,
+      "Trees": 5,
+      "Greedy": 5,
+      "Binary Search": 8,
+      "Math": 3,
+      "Strings": 3
+    },
+    "difficultyDistribution": {
+      "Easy": 27,
+      "Medium": 25,
+      "Hard": 0
+    },
+    "ratingHistory": [],
+    "recentSubmissions": [
+      {
+        "problemName": "LeetCode Problem #678",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-09T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #679",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-08T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #680",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-05T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #681",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-04T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #682",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-03T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Trees"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #683",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-02T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #684",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-23T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #685",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-22T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #686",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-19T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #687",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-08T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Trees"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #688",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-05T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #689",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-04T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #690",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-03-26T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #691",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #692",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-03-06T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Trees"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:44:06.625Z",
+    "createdAt": "2026-06-10T15:28:50.461Z",
+    "updatedAt": "2026-06-10T15:44:06.625Z"
+  },
+  {
+    "_id": "s_mq884l27m2n28",
+    "userId": "u_mq884b5h5viwe",
+    "platform": "CodeChef",
+    "currentRating": 1398,
+    "maxRating": 1433,
+    "contestsCount": 4,
+    "solvedCount": 54,
+    "solvedByTopic": {
+      "Arrays": 22,
+      "Graphs": 3,
+      "DP": 5,
+      "Trees": 3,
+      "Greedy": 8,
+      "Binary Search": 5,
+      "Math": 5,
+      "Strings": 3
+    },
+    "difficultyDistribution": {
+      "Easy": 32,
+      "Medium": 16,
+      "Hard": 5
+    },
+    "ratingHistory": [
+      {
+        "contestName": "CodeChef Starters 60",
+        "rating": 1254,
+        "rank": 2056,
+        "date": "2026-04-15T15:44:07.691Z",
+        "ratingChange": 6
+      },
+      {
+        "contestName": "CodeChef Starters 61",
+        "rating": 1276,
+        "rank": 1856,
+        "date": "2026-04-29T15:44:07.691Z",
+        "ratingChange": 22
+      },
+      {
+        "contestName": "CodeChef Starters 62",
+        "rating": 1314,
+        "rank": 1656,
+        "date": "2026-05-13T15:44:07.691Z",
+        "ratingChange": 38
+      },
+      {
+        "contestName": "CodeChef Starters 63",
+        "rating": 1368,
+        "rank": 1456,
+        "date": "2026-05-27T15:44:07.691Z",
+        "ratingChange": 54
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Chef and Dynamic Programming",
+        "problemUrl": "https://www.codechef.com/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-08T15:44:07.691Z",
+        "difficulty": "Medium",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "Array Queries",
+        "problemUrl": "https://www.codechef.com/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-06T15:44:07.691Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Arrays"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:44:07.694Z",
+    "createdAt": "2026-06-10T15:28:51.103Z",
+    "updatedAt": "2026-06-10T15:44:07.694Z"
+  },
+  {
+    "_id": "s_mq884l3ypnn82",
+    "userId": "u_mq884b5h5viwe",
+    "platform": "Codeforces",
+    "currentRating": 1053,
+    "maxRating": 1059,
+    "contestsCount": 7,
+    "solvedCount": 104,
+    "solvedByTopic": {
+      "DP": 3,
+      "Math": 62,
+      "Strings": 11,
+      "Greedy": 40,
+      "Graphs": 1,
+      "Arrays": 3
+    },
+    "difficultyDistribution": {
+      "Easy": 104,
+      "Medium": 0,
+      "Hard": 0
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Codeforces Round 1062 (Div. 4)",
+        "rating": 455,
+        "rank": 8160,
+        "date": "2025-10-28T16:50:00.000Z",
+        "ratingChange": 455
+      },
+      {
+        "contestName": "Codeforces Round 1065 (Div. 3)",
+        "rating": 724,
+        "rank": 9559,
+        "date": "2025-11-20T17:05:00.000Z",
+        "ratingChange": 269
+      },
+      {
+        "contestName": "Hello 2026",
+        "rating": 945,
+        "rank": 9933,
+        "date": "2026-01-07T17:35:00.000Z",
+        "ratingChange": 221
+      },
+      {
+        "contestName": "Codeforces Round 1072 (Div. 3)",
+        "rating": 1014,
+        "rank": 18019,
+        "date": "2026-01-12T16:50:00.000Z",
+        "ratingChange": 69
+      },
+      {
+        "contestName": "Codeforces Round 1074 (Div. 4)",
+        "rating": 1052,
+        "rank": 14398,
+        "date": "2026-01-18T16:50:00.000Z",
+        "ratingChange": 38
+      },
+      {
+        "contestName": "Codeforces Round 1075 (Div. 2)",
+        "rating": 1059,
+        "rank": 12489,
+        "date": "2026-01-23T16:35:00.000Z",
+        "ratingChange": 7
+      },
+      {
+        "contestName": "Codeforces Round 1076 (Div. 3)",
+        "rating": 1053,
+        "rank": 13133,
+        "date": "2026-01-25T16:50:00.000Z",
+        "ratingChange": -6
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Raspberries",
+        "problemUrl": "https://codeforces.com/contest/1883/problem/C",
+        "verdict": "OK",
+        "submittedAt": "2026-04-08T13:09:35.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "dp",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Swap and Delete",
+        "problemUrl": "https://codeforces.com/contest/1913/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-04-08T09:40:31.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Dragons",
+        "problemUrl": "https://codeforces.com/contest/230/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T09:42:42.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "sortings"
+        ]
+      },
+      {
+        "problemName": "cAPS lOCK",
+        "problemUrl": "https://codeforces.com/contest/131/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T08:24:08.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "cAPS lOCK",
+        "problemUrl": "https://codeforces.com/contest/131/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-03-07T08:11:18.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Expression",
+        "problemUrl": "https://codeforces.com/contest/479/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:52:02.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Lucky Division",
+        "problemUrl": "https://codeforces.com/contest/122/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:36:39.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "number theory"
+        ]
+      },
+      {
+        "problemName": "Chat room",
+        "problemUrl": "https://codeforces.com/contest/58/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:16:28.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "String Task",
+        "problemUrl": "https://codeforces.com/contest/118/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-06T09:57:05.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Young Physicist",
+        "problemUrl": "https://codeforces.com/contest/69/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-06T09:08:20.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-02-06T18:55:34.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-02-06T18:54:01.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Deletive Editing",
+        "problemUrl": "https://codeforces.com/contest/1666/problem/D",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T20:08:15.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy"
+        ]
+      },
+      {
+        "problemName": "Strange Partition",
+        "problemUrl": "https://codeforces.com/contest/1471/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T18:51:29.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math",
+          "number theory"
+        ]
+      },
+      {
+        "problemName": "Strange Partition",
+        "problemUrl": "https://codeforces.com/contest/1471/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-02-05T18:50:01.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math",
+          "number theory"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:44:07.480Z",
+    "createdAt": "2026-06-10T15:28:51.166Z",
+    "updatedAt": "2026-06-10T15:44:07.480Z"
+  },
+  {
+    "_id": "s_mq88vgd1695uk",
+    "userId": "u_mq88sjrrcilas",
+    "platform": "LeetCode",
+    "currentRating": 1540,
+    "maxRating": 1540,
+    "contestsCount": 2,
+    "solvedCount": 261,
+    "solvedByTopic": {
+      "Arrays": 91,
+      "Graphs": 21,
+      "DP": 31,
+      "Trees": 26,
+      "Greedy": 26,
+      "Binary Search": 39,
+      "Math": 13,
+      "Strings": 13
+    },
+    "difficultyDistribution": {
+      "Easy": 179,
+      "Medium": 78,
+      "Hard": 4
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Biweekly Contest 149",
+        "rating": 1495,
+        "rank": 14259,
+        "date": "2025-02-01T14:30:00.000Z",
+        "ratingChange": -5
+      },
+      {
+        "contestName": "Biweekly Contest 169",
+        "rating": 1540,
+        "rank": 6553,
+        "date": "2025-11-08T14:30:00.000Z",
+        "ratingChange": 45
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "LeetCode Problem #245",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-09T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #246",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-06T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #247",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-05T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #248",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-04T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #249",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-03T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Trees"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #250",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-02T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #251",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-26T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #252",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-25T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #253",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-12T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #254",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-10T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Trees"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #255",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-09T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Arrays"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #256",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-05T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #257",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-05-03T00:00:00.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Graphs"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #258",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-28T00:00:00.000Z",
+        "difficulty": "Medium",
+        "tags": [
+          "Greedy"
+        ]
+      },
+      {
+        "problemName": "LeetCode Problem #259",
+        "problemUrl": "https://leetcode.com/problemset/all/",
+        "verdict": "OK",
+        "submittedAt": "2026-04-27T00:00:00.000Z",
+        "difficulty": "Hard",
+        "tags": [
+          "Trees"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:49:44.725Z",
+    "createdAt": "2026-06-10T15:49:44.725Z",
+    "updatedAt": "2026-06-10T15:49:44.725Z"
+  },
+  {
+    "_id": "s_mq88vhbhyh2yt",
+    "userId": "u_mq88sjrrcilas",
+    "platform": "Codeforces",
+    "currentRating": 1122,
+    "maxRating": 1207,
+    "contestsCount": 28,
+    "solvedCount": 140,
+    "solvedByTopic": {
+      "Strings": 17,
+      "Math": 99,
+      "Greedy": 56,
+      "Arrays": 4,
+      "DP": 5,
+      "Binary Search": 6,
+      "Graphs": 4,
+      "Trees": 1
+    },
+    "difficultyDistribution": {
+      "Easy": 132,
+      "Medium": 8,
+      "Hard": 0
+    },
+    "ratingHistory": [
+      {
+        "contestName": "Educational Codeforces Round 170 (Rated for Div. 2)",
+        "rating": 382,
+        "rank": 14553,
+        "date": "2024-10-14T16:35:00.000Z",
+        "ratingChange": 382
+      },
+      {
+        "contestName": "Codeforces Round 979 (Div. 2)",
+        "rating": 645,
+        "rank": 12218,
+        "date": "2024-10-19T16:20:00.000Z",
+        "ratingChange": 263
+      },
+      {
+        "contestName": "Codeforces Round 980 (Div. 2)",
+        "rating": 827,
+        "rank": 9109,
+        "date": "2024-10-20T11:05:00.000Z",
+        "ratingChange": 182
+      },
+      {
+        "contestName": "Codeforces Round 981 (Div. 3)",
+        "rating": 935,
+        "rank": 12604,
+        "date": "2024-10-24T16:50:00.000Z",
+        "ratingChange": 108
+      },
+      {
+        "contestName": "Codeforces Round 982 (Div. 2)",
+        "rating": 961,
+        "rank": 11275,
+        "date": "2024-10-26T16:35:00.000Z",
+        "ratingChange": 26
+      },
+      {
+        "contestName": "Educational Codeforces Round 171 (Rated for Div. 2)",
+        "rating": 1019,
+        "rank": 8788,
+        "date": "2024-10-28T16:35:00.000Z",
+        "ratingChange": 58
+      },
+      {
+        "contestName": "Refact.ai Match 1 (Codeforces Round 985)",
+        "rating": 1051,
+        "rank": 4792,
+        "date": "2024-11-09T17:35:00.000Z",
+        "ratingChange": 32
+      },
+      {
+        "contestName": "Codeforces Round 986 (Div. 2)",
+        "rating": 1048,
+        "rank": 5940,
+        "date": "2024-11-10T17:35:00.000Z",
+        "ratingChange": -3
+      },
+      {
+        "contestName": "Codeforces Round 987 (Div. 2)",
+        "rating": 991,
+        "rank": 9626,
+        "date": "2024-11-15T14:35:00.000Z",
+        "ratingChange": -57
+      },
+      {
+        "contestName": "CodeTON Round 9 (Div. 1 + Div. 2, Rated, Prizes!)",
+        "rating": 925,
+        "rank": 8515,
+        "date": "2024-11-23T17:35:00.000Z",
+        "ratingChange": -66
+      },
+      {
+        "contestName": "Codeforces Round 993 (Div. 4)",
+        "rating": 980,
+        "rank": 7817,
+        "date": "2024-12-15T16:50:00.000Z",
+        "ratingChange": 55
+      },
+      {
+        "contestName": "Codeforces Round 994 (Div. 2)",
+        "rating": 981,
+        "rank": 10314,
+        "date": "2024-12-20T16:35:00.000Z",
+        "ratingChange": 1
+      },
+      {
+        "contestName": "Codeforces Round 996 (Div. 2)",
+        "rating": 957,
+        "rank": 15008,
+        "date": "2025-01-12T16:35:00.000Z",
+        "ratingChange": -24
+      },
+      {
+        "contestName": "Codeforces Round 998 (Div. 3)",
+        "rating": 1136,
+        "rank": 2501,
+        "date": "2025-01-19T17:05:00.000Z",
+        "ratingChange": 179
+      },
+      {
+        "contestName": "Codeforces Round 1000 (Div. 2)",
+        "rating": 1019,
+        "rank": 16002,
+        "date": "2025-01-22T14:05:00.000Z",
+        "ratingChange": -117
+      },
+      {
+        "contestName": "Codeforces Round 1005 (Div. 2)",
+        "rating": 1193,
+        "rank": 2614,
+        "date": "2025-02-16T16:35:00.000Z",
+        "ratingChange": 174
+      },
+      {
+        "contestName": "Educational Codeforces Round 174 (Rated for Div. 2)",
+        "rating": 1070,
+        "rank": 14761,
+        "date": "2025-02-18T16:35:00.000Z",
+        "ratingChange": -123
+      },
+      {
+        "contestName": "Codeforces Round 1006 (Div. 3)",
+        "rating": 1083,
+        "rank": 9778,
+        "date": "2025-02-25T16:50:00.000Z",
+        "ratingChange": 13
+      },
+      {
+        "contestName": "Educational Codeforces Round 175 (Rated for Div. 2)",
+        "rating": 1103,
+        "rank": 7903,
+        "date": "2025-02-27T16:35:00.000Z",
+        "ratingChange": 20
+      },
+      {
+        "contestName": "Codeforces Round 1007 (Div. 2)",
+        "rating": 1068,
+        "rank": 10976,
+        "date": "2025-02-28T16:50:00.000Z",
+        "ratingChange": -35
+      },
+      {
+        "contestName": "Codeforces Round 1009 (Div. 3)",
+        "rating": 1132,
+        "rank": 5566,
+        "date": "2025-03-11T17:05:00.000Z",
+        "ratingChange": 64
+      },
+      {
+        "contestName": "Codeforces Round 1013 (Div. 3)",
+        "rating": 1109,
+        "rank": 11178,
+        "date": "2025-03-25T16:50:00.000Z",
+        "ratingChange": -23
+      },
+      {
+        "contestName": "Educational Codeforces Round 177 (Rated for Div. 2)",
+        "rating": 1103,
+        "rank": 9266,
+        "date": "2025-04-03T16:35:00.000Z",
+        "ratingChange": -6
+      },
+      {
+        "contestName": "Codeforces Round 1016 (Div. 3)",
+        "rating": 1138,
+        "rank": 6664,
+        "date": "2025-04-08T16:50:00.000Z",
+        "ratingChange": 35
+      },
+      {
+        "contestName": "Codeforces Round 1017 (Div. 4)",
+        "rating": 1152,
+        "rank": 6272,
+        "date": "2025-04-13T17:50:00.000Z",
+        "ratingChange": 14
+      },
+      {
+        "contestName": "Codeforces Round 1023 (Div. 2)",
+        "rating": 1207,
+        "rank": 3894,
+        "date": "2025-05-05T16:50:00.000Z",
+        "ratingChange": 55
+      },
+      {
+        "contestName": "Codeforces Round 1037 (Div. 3)",
+        "rating": 1141,
+        "rank": 14459,
+        "date": "2025-07-17T16:50:00.000Z",
+        "ratingChange": -66
+      },
+      {
+        "contestName": "Codeforces Round 1074 (Div. 4)",
+        "rating": 1122,
+        "rank": 9863,
+        "date": "2026-01-18T16:50:00.000Z",
+        "ratingChange": -19
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Swap and Delete",
+        "problemUrl": "https://codeforces.com/contest/1913/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-04-08T10:00:58.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T17:39:55.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-03-07T17:36:05.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "Theatre Square",
+        "problemUrl": "https://codeforces.com/contest/1/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-03-07T17:34:49.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "math"
+        ]
+      },
+      {
+        "problemName": "cAPS lOCK",
+        "problemUrl": "https://codeforces.com/contest/131/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T08:06:38.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "strings"
+        ]
+      },
+      {
+        "problemName": "Expression",
+        "problemUrl": "https://codeforces.com/contest/479/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:54:32.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Lucky Division",
+        "problemUrl": "https://codeforces.com/contest/122/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-03-07T07:43:57.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "number theory"
+        ]
+      },
+      {
+        "problemName": "Bad Boy",
+        "problemUrl": "https://codeforces.com/contest/1537/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T18:58:36.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "constructive algorithms",
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Three Indices",
+        "problemUrl": "https://codeforces.com/contest/1380/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T18:45:50.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "data structures"
+        ]
+      },
+      {
+        "problemName": "Three Indices",
+        "problemUrl": "https://codeforces.com/contest/1380/problem/A",
+        "verdict": "TIME_LIMIT_EXCEEDED",
+        "submittedAt": "2026-02-05T18:42:24.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "brute force",
+          "data structures"
+        ]
+      },
+      {
+        "problemName": "Sum of Medians",
+        "problemUrl": "https://codeforces.com/contest/1440/problem/B",
+        "verdict": "OK",
+        "submittedAt": "2026-02-05T18:24:58.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Sum of Medians",
+        "problemUrl": "https://codeforces.com/contest/1440/problem/B",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-02-05T18:24:02.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Mainak and Array",
+        "problemUrl": "https://codeforces.com/contest/1726/problem/A",
+        "verdict": "WRONG_ANSWER",
+        "submittedAt": "2026-02-05T17:45:18.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "greedy",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Mocha and Math",
+        "problemUrl": "https://codeforces.com/contest/1559/problem/A",
+        "verdict": "OK",
+        "submittedAt": "2026-01-19T16:55:54.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "bitmasks",
+          "constructive algorithms",
+          "math"
+        ]
+      },
+      {
+        "problemName": "Shifted MEX",
+        "problemUrl": "https://codeforces.com/contest/2185/problem/C",
+        "verdict": "OK",
+        "submittedAt": "2026-01-18T14:53:57.000Z",
+        "difficulty": "Easy",
+        "tags": [
+          "implementation",
+          "sortings"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:49:45.965Z",
+    "createdAt": "2026-06-10T15:49:45.965Z",
+    "updatedAt": "2026-06-10T15:49:45.965Z"
+  },
+  {
+    "_id": "s_mq88vhojjtyav",
+    "userId": "u_mq88sjrrcilas",
+    "platform": "CodeChef",
+    "currentRating": 1539,
+    "maxRating": 1565,
+    "contestsCount": 4,
+    "solvedCount": 112,
+    "solvedByTopic": {
+      "Arrays": 45,
+      "Graphs": 6,
+      "DP": 11,
+      "Trees": 6,
+      "Greedy": 17,
+      "Binary Search": 11,
+      "Math": 11,
+      "Strings": 6
+    },
+    "difficultyDistribution": {
+      "Easy": 67,
+      "Medium": 34,
+      "Hard": 11
+    },
+    "ratingHistory": [
+      {
+        "contestName": "CodeChef Starters 60",
+        "rating": 1384,
+        "rank": 2045,
+        "date": "2026-04-15T15:49:46.433Z",
+        "ratingChange": -5
+      },
+      {
+        "contestName": "CodeChef Starters 61",
+        "rating": 1384,
+        "rank": 1845,
+        "date": "2026-04-29T15:49:46.433Z",
+        "ratingChange": 0
+      },
+      {
+        "contestName": "CodeChef Starters 62",
+        "rating": 1389,
+        "rank": 1645,
+        "date": "2026-05-13T15:49:46.433Z",
+        "ratingChange": 5
+      },
+      {
+        "contestName": "CodeChef Starters 63",
+        "rating": 1399,
+        "rank": 1445,
+        "date": "2026-05-27T15:49:46.433Z",
+        "ratingChange": 10
+      }
+    ],
+    "recentSubmissions": [
+      {
+        "problemName": "Chef and Dynamic Programming",
+        "problemUrl": "https://www.codechef.com/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-08T15:49:46.433Z",
+        "difficulty": "Medium",
+        "tags": [
+          "DP"
+        ]
+      },
+      {
+        "problemName": "Array Queries",
+        "problemUrl": "https://www.codechef.com/",
+        "verdict": "OK",
+        "submittedAt": "2026-06-06T15:49:46.433Z",
+        "difficulty": "Easy",
+        "tags": [
+          "Arrays"
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-10T15:49:46.435Z",
+    "createdAt": "2026-06-10T15:49:46.435Z",
+    "updatedAt": "2026-06-10T15:49:46.435Z"
+  }
+]

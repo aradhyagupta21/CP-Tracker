@@ -1,0 +1,270 @@
+import React, { useState } from 'react';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar } from 'recharts';
+import { Award, Compass, PieChart as PieIcon, HelpCircle } from 'lucide-react';
+
+export default function Analytics({ stats }) {
+  const [selectedPlatform, setSelectedPlatform] = useState('All');
+
+  // Filter platforms options
+  const availablePlatforms = ['All', ...stats.map(s => s.platform)];
+
+  // Get aggregated stats
+  const getAggregatedData = () => {
+    const topicMap = {
+      'Arrays': 0, 'Graphs': 0, 'DP': 0, 'Trees': 0, 'Greedy': 0, 'Binary Search': 0, 'Math': 0, 'Strings': 0
+    };
+    const difficultyMap = { Easy: 0, Medium: 0, Hard: 0 };
+    let ratingHistoryCombined = [];
+
+    stats.forEach(s => {
+      if (selectedPlatform !== 'All' && s.platform !== selectedPlatform) return;
+
+      // Aggregate topics
+      if (s.solvedByTopic) {
+        const topics = s.solvedByTopic instanceof Map ? Object.fromEntries(s.solvedByTopic) : s.solvedByTopic;
+        Object.keys(topics).forEach(t => {
+          if (topicMap[t] !== undefined) {
+            topicMap[t] += topics[t] || 0;
+          }
+        });
+      }
+
+      // Aggregate difficulties
+      if (s.difficultyDistribution) {
+        const diffs = s.difficultyDistribution instanceof Map ? Object.fromEntries(s.difficultyDistribution) : s.difficultyDistribution;
+        Object.keys(diffs).forEach(d => {
+          if (difficultyMap[d] !== undefined) {
+            difficultyMap[d] += diffs[d] || 0;
+          }
+        });
+      }
+
+      // Aggregate history
+      if (s.ratingHistory) {
+        const history = s.ratingHistory.map(h => ({
+          ...h,
+          platform: s.platform,
+          displayDate: new Date(h.date).toLocaleDateString(undefined, { month: 'short', year: '2-digit' })
+        }));
+        ratingHistoryCombined = [...ratingHistoryCombined, ...history];
+      }
+    });
+
+    // Format topics for Radar chart
+    const radarData = Object.keys(topicMap).map(topic => ({
+      subject: topic,
+      count: topicMap[topic],
+      fullMark: 100
+    }));
+
+    // Format difficulties for Pie chart
+    const pieData = Object.keys(difficultyMap).map(diff => ({
+      name: diff,
+      value: difficultyMap[diff]
+    })).filter(d => d.value > 0);
+
+    // Format rating history (sorted by date)
+    ratingHistoryCombined.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    return { radarData, pieData, ratingHistory: ratingHistoryCombined };
+  };
+
+  const { radarData, pieData, ratingHistory } = getAggregatedData();
+
+  // Color constants for Pie cells
+  const COLORS = {
+    'Easy': '#00f2fe',
+    'Medium': '#4facfe',
+    'Hard': '#8a2be2'
+  };
+
+  return (
+    <div className="space-y-8 animate-fadeIn">
+      {/* Header and Filter */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-purple bg-clip-text text-transparent">
+            Rating & DSA Analytics
+          </h1>
+          <p className="text-slate-400 mt-1">Visualize rating history, difficulty splits, and topic distributions.</p>
+        </div>
+
+        {/* Filter Tab */}
+        <div className="flex items-center gap-2 bg-dark-900 border border-slate-700 px-3 py-1.5 rounded-xl self-start">
+          <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider mr-2">Filter Platform:</span>
+          {availablePlatforms.map(plat => (
+            <button
+              key={plat}
+              onClick={() => setSelectedPlatform(plat)}
+              className={`px-3 py-1 rounded-lg text-xs font-bold transition ${selectedPlatform === plat ? 'bg-gradient-to-r from-brand-indigo to-brand-purple text-slate-100' : 'text-slate-400 hover:text-slate-200'}`}
+            >
+              {plat}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {stats.length === 0 ? (
+        <div className="glass-panel p-12 rounded-2xl border border-slate-700 text-center text-slate-400">
+          Sync your account profiles on the dashboard to populate interactive graphs!
+        </div>
+      ) : (
+        <>
+          {/* Rating progression line chart */}
+          <div className="glass-panel p-6 rounded-2xl border border-slate-700 glow-indigo">
+            <div className="flex items-center gap-2 mb-6">
+              <Award className="w-5 h-5 text-brand-indigo" />
+              <h2 className="text-xl font-bold text-slate-100">Rating Progression Timeline</h2>
+            </div>
+            
+            {ratingHistory.length === 0 ? (
+              <div className="h-64 flex items-center justify-center text-slate-400 text-sm">
+                No contest rating history available for this selection. Participate in contests to see rating curves!
+              </div>
+            ) : (
+              <div className="h-80 w-full">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={ratingHistory} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
+                    <XAxis 
+                      dataKey="displayDate" 
+                      stroke="#64748b" 
+                      fontSize={11}
+                      tickLine={false}
+                    />
+                    <YAxis 
+                      stroke="#64748b" 
+                      fontSize={11} 
+                      domain={['auto', 'auto']}
+                      tickLine={false}
+                    />
+                    <Tooltip 
+                      content={({ active, payload }) => {
+                        if (active && payload && payload.length) {
+                          const data = payload[0].payload;
+                          return (
+                            <div className="glass-panel p-4 rounded-xl border border-brand-indigo/30 shadow-lg text-xs space-y-1">
+                              <p className="font-bold text-slate-100">{data.contestName}</p>
+                              <p className="text-slate-400">Platform: <span className="font-semibold text-slate-200">{data.platform}</span></p>
+                              <p className="text-slate-400">Rating: <span className="text-brand-cyan font-bold text-sm">{data.rating}</span> ({data.ratingChange >= 0 ? `+${data.ratingChange}` : data.ratingChange})</p>
+                              <p className="text-slate-400">Rank: <span className="font-semibold text-slate-200">#{data.rank}</span></p>
+                              <p className="text-[10px] text-slate-500">{new Date(data.date).toLocaleDateString()}</p>
+                            </div>
+                          );
+                        }
+                        return null;
+                      }}
+                    />
+                    <Line 
+                      type="monotone" 
+                      dataKey="rating" 
+                      stroke="url(#colorRating)" 
+                      strokeWidth={3}
+                      activeDot={{ r: 8, stroke: '#00f2fe', strokeWidth: 2 }}
+                    />
+                    <defs>
+                      <linearGradient id="colorRating" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#00f2fe" />
+                        <stop offset="50%" stopColor="#4facfe" />
+                        <stop offset="100%" stopColor="#8a2be2" />
+                      </linearGradient>
+                    </defs>
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            )}
+          </div>
+
+          {/* Radar and Pie Split Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Topic Radar Breakdown */}
+            <div className="glass-panel p-6 rounded-2xl border border-slate-700">
+              <div className="flex items-center gap-2 mb-6">
+                <Compass className="w-5 h-5 text-brand-cyan" />
+                <h2 className="text-xl font-bold text-slate-100">Topic-wise Solved Distribution</h2>
+              </div>
+              
+              <div className="h-72 w-full flex justify-center">
+                <ResponsiveContainer width="100%" height="100%">
+                  <RadarChart cx="50%" cy="50%" outerRadius="75%" data={radarData}>
+                    <PolarGrid stroke="rgba(255, 255, 255, 0.08)" />
+                    <PolarAngleAxis dataKey="subject" stroke="#94a3b8" fontSize={11} />
+                    <PolarRadiusAxis angle={30} domain={[0, 'auto']} stroke="rgba(255, 255, 255, 0.2)" fontSize={9} />
+                    <Radar 
+                      name="Solved" 
+                      dataKey="count" 
+                      stroke="#00f2fe" 
+                      fill="#4facfe" 
+                      fillOpacity={0.15} 
+                    />
+                    <Tooltip />
+                  </RadarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
+            {/* Difficulty Pie split */}
+            <div className="glass-panel p-6 rounded-2xl border border-slate-700">
+              <div className="flex items-center gap-2 mb-6">
+                <PieIcon className="w-5 h-5 text-brand-purple" />
+                <h2 className="text-xl font-bold text-slate-100">Difficulty Distribution</h2>
+              </div>
+
+              {pieData.length === 0 ? (
+                <div className="h-72 flex items-center justify-center text-slate-400 text-sm">
+                  No difficulty data solved on this platform.
+                </div>
+              ) : (
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 h-72">
+                  <div className="h-56 w-56">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <PieChart>
+                        <Pie
+                          data={pieData}
+                          cx="50%"
+                          cy="50%"
+                          innerRadius={65}
+                          outerRadius={80}
+                          paddingAngle={3}
+                          dataKey="value"
+                        >
+                          {pieData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={COLORS[entry.name] || '#8884d8'} />
+                          ))}
+                        </Pie>
+                        <Tooltip 
+                          formatter={(value) => [`${value} Problems`, 'Solved']}
+                          contentStyle={{ backgroundColor: 'rgba(11, 17, 32, 0.9)', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.1)' }}
+                        />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  </div>
+
+                  <div className="space-y-4">
+                    {pieData.map((d, i) => {
+                      const total = pieData.reduce((sum, item) => sum + item.value, 0);
+                      const percent = ((d.value / total) * 100).toFixed(1);
+                      return (
+                        <div key={d.name} className="flex items-center gap-3">
+                          <div 
+                            className="w-3 h-3 rounded-full" 
+                            style={{ backgroundColor: COLORS[d.name] }}
+                          />
+                          <div>
+                            <p className="text-sm font-semibold text-slate-200">{d.name}</p>
+                            <p className="text-xs text-slate-400">{d.value} Solved ({percent}%)</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}

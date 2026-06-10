@@ -1,0 +1,345 @@
+import React, { useEffect, useState } from 'react';
+import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight } from 'lucide-react';
+import axios from 'axios';
+import Dashboard from './components/Dashboard';
+import AuthPage from './components/AuthPage';
+import Analytics from './components/Analytics';
+import StreakHeatmap from './components/StreakHeatmap';
+import Goals from './components/Goals';
+import ContestTracker from './components/ContestTracker';
+import Leaderboard from './components/Leaderboard';
+import AiAnalyzer from './components/AiAnalyzer';
+
+const BACKEND_URL = 'http://localhost:5000/api';
+
+export default function App() {
+  const [allUsers, setAllUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [stats, setStats] = useState([]);
+  const [goals, setGoals] = useState([]);
+  const [leaderboard, setLeaderboard] = useState([]);
+  const [activeTab, setActiveTab] = useState('dashboard');
+  const [isLoading, setIsLoading] = useState(false);
+  const [connError, setConnError] = useState(false);
+
+  // Fetch initial users list for leaderboard stand
+  const fetchUsers = async () => {
+    try {
+      setConnError(false);
+      const res = await axios.get(`${BACKEND_URL}/users`);
+      setAllUsers(res.data);
+    } catch (err) {
+      console.error('Backend connection failed:', err.message);
+      setConnError(true);
+    }
+  };
+
+  useEffect(() => {
+    const cachedUser = localStorage.getItem('cp_tracker_user');
+    if (cachedUser) {
+      try {
+        const parsed = JSON.parse(cachedUser);
+        setCurrentUser(parsed);
+        // Verify user account sync directly
+        axios.get(`${BACKEND_URL}/users/${parsed.username}`).then(res => {
+          setCurrentUser(res.data);
+          localStorage.setItem('cp_tracker_user', JSON.stringify(res.data));
+        }).catch((err) => {
+          if (err.response && err.response.status === 404) {
+            console.warn('User not found on backend. Clearing stale local cache.');
+            localStorage.removeItem('cp_tracker_user');
+            setCurrentUser(null);
+          }
+        });
+      } catch (e) {
+        console.warn('Failed to parse cached user credentials.');
+      }
+    }
+    fetchUsers();
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('cp_tracker_user');
+    setCurrentUser(null);
+    setStats([]);
+    setGoals([]);
+    setLeaderboard([]);
+  };
+
+  // Fetch data whenever user selection updates
+  useEffect(() => {
+    if (!currentUser) return;
+    const fetchUserData = async () => {
+      setIsLoading(true);
+      try {
+        const [statsRes, goalsRes, leadRes] = await Promise.all([
+          axios.get(`${BACKEND_URL}/stats/${currentUser._id}`),
+          axios.get(`${BACKEND_URL}/goals/${currentUser._id}`),
+          axios.get(`${BACKEND_URL}/stats/leaderboard/${currentUser._id}`)
+        ]);
+        setStats(statsRes.data);
+        setGoals(goalsRes.data);
+        setLeaderboard(leadRes.data);
+      } catch (err) {
+        console.error('Failed to load user statistics:', err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchUserData();
+  }, [currentUser]);
+
+  // Sync user profiles
+  const handleSync = async () => {
+    if (!currentUser) return;
+    setIsLoading(true);
+    try {
+      const res = await axios.post(`${BACKEND_URL}/stats/${currentUser._id}/sync`);
+      setStats(res.data);
+      // Re-fetch goals and leaderboard since sync can complete milestones or rating entries
+      const [goalsRes, leadRes] = await Promise.all([
+        axios.get(`${BACKEND_URL}/goals/${currentUser._id}`),
+        axios.get(`${BACKEND_URL}/stats/leaderboard/${currentUser._id}`)
+      ]);
+      setGoals(goalsRes.data);
+      setLeaderboard(leadRes.data);
+    } catch (err) {
+      alert(err.response?.data?.error || 'Profile synchronization failed.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleUserSelect = (userId) => {
+    const selected = allUsers.find(u => u._id === userId);
+    if (selected) {
+      setCurrentUser(selected);
+    }
+  };
+
+  const handleUserRegister = (newUser) => {
+    setAllUsers([...allUsers, newUser]);
+    setCurrentUser(newUser);
+  };
+
+  const handleUserUpdate = (updatedUser) => {
+    setCurrentUser(updatedUser);
+    setAllUsers(allUsers.map(u => u._id === updatedUser._id ? updatedUser : u));
+  };
+
+
+  const handleGoalAdd = (newGoal) => {
+    setGoals([...goals, newGoal]);
+    // Refresh leaderboard since goal addition can trigger updates
+    axios.get(`${BACKEND_URL}/stats/leaderboard/${currentUser._id}`).then(res => setLeaderboard(res.data));
+  };
+
+  const handleGoalDelete = async (goalId) => {
+    try {
+      await axios.delete(`${BACKEND_URL}/goals/${goalId}`);
+      setGoals(goals.filter(g => g._id !== goalId));
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleFriendAdd = (updatedUserObj) => {
+    // Update local currentUser to show added friends list
+    setCurrentUser(updatedUserObj);
+    // Update it in allUsers list too
+    setAllUsers(allUsers.map(u => u._id === updatedUserObj._id ? updatedUserObj : u));
+    // Re-fetch leaderboard stand
+    axios.get(`${BACKEND_URL}/stats/leaderboard/${currentUser._id}`).then(res => setLeaderboard(res.data));
+  };
+
+  const handleFriendRemove = async (friendUsername) => {
+    try {
+      const res = await axios.delete(`${BACKEND_URL}/users/${currentUser._id}/friends/${friendUsername}`);
+      setCurrentUser(res.data);
+      setAllUsers(allUsers.map(u => u._id === res.data._id ? res.data : u));
+      axios.get(`${BACKEND_URL}/stats/leaderboard/${currentUser._id}`).then(lRes => setLeaderboard(lRes.data));
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // Render sub panels
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'dashboard':
+        return (
+          <Dashboard 
+            currentUser={currentUser} 
+            stats={stats} 
+            goals={goals} 
+            onSync={handleSync} 
+            isLoading={isLoading} 
+            allUsers={allUsers}
+            onUserSelect={handleUserSelect}
+            onUserRegister={handleUserRegister}
+            onUserUpdate={handleUserUpdate}
+          />
+        );
+      case 'analytics':
+        return <Analytics stats={stats} />;
+      case 'heatmap':
+        return <StreakHeatmap stats={stats} />;
+      case 'goals':
+        return (
+          <Goals 
+            currentUser={currentUser} 
+            goals={goals} 
+            onGoalAdd={handleGoalAdd} 
+            onGoalDelete={handleGoalDelete} 
+          />
+        );
+      case 'contests':
+        return <ContestTracker stats={stats} />;
+      case 'leaderboard':
+        return (
+          <Leaderboard 
+            currentUser={currentUser} 
+            leaderboard={leaderboard} 
+            onFriendAdd={handleFriendAdd} 
+            onFriendRemove={handleFriendRemove} 
+          />
+        );
+      case 'coach':
+        return <AiAnalyzer currentUser={currentUser} stats={stats} />;
+      default:
+        return <div className="text-slate-400">Section not found.</div>;
+    }
+  };
+
+  if (!currentUser) {
+    return (
+      <AuthPage 
+        onAuthSuccess={(user) => {
+          setCurrentUser(user);
+          localStorage.setItem('cp_tracker_user', JSON.stringify(user));
+          fetchUsers();
+        }}
+        connError={connError}
+        onRetryConnection={fetchUsers}
+      />
+    );
+  }
+
+  return (
+    <div className="flex min-h-screen relative overflow-hidden bg-dark-950 font-sans">
+      {/* Sidebar Navigation */}
+      <aside className="w-64 border-r border-slate-800/80 bg-dark-900/40 backdrop-blur-xl shrink-0 hidden md:flex flex-col justify-between p-6">
+        <div className="space-y-8">
+          {/* Logo Brand Header */}
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-gradient-to-tr from-brand-cyan to-brand-purple rounded-xl text-dark-950 glow-indigo">
+              <Terminal className="w-6 h-6" />
+            </div>
+            <div>
+              <h2 className="font-extrabold text-slate-100 text-lg leading-tight tracking-wide">CP Tracker</h2>
+              <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-widest bg-dark-800 border border-slate-700/60 px-1.5 py-0.5 rounded-md">V1.0.0</span>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="space-y-1">
+            {[
+              { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+              { id: 'analytics', label: 'Analytics', icon: BarChart3 },
+              { id: 'heatmap', label: 'Streak Heatmap', icon: CalendarRange },
+              { id: 'goals', label: 'Target Goals', icon: Target },
+              { id: 'contests', label: 'Contest Tracker', icon: Flame },
+              { id: 'leaderboard', label: 'Leaderboard', icon: Users },
+              { id: 'coach', label: 'AI Coach', icon: Sparkles },
+            ].map(tab => {
+              const Icon = tab.icon;
+              const isActive = activeTab === tab.id;
+              
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 group ${isActive ? 'bg-gradient-to-r from-brand-indigo to-brand-purple text-slate-100 shadow-md shadow-brand-indigo/10' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/20'}`}
+                >
+                  <div className="flex items-center gap-3">
+                    <Icon className={`w-4 h-4 ${isActive ? 'text-slate-100' : 'text-slate-400 group-hover:text-slate-200'}`} />
+                    <span>{tab.label}</span>
+                  </div>
+                  {isActive && <ChevronRight className="w-3.5 h-3.5 text-slate-100" />}
+                </button>
+              );
+            })}
+          </nav>
+        </div>
+
+        {/* Footer info showing connection health and logout option */}
+        <div className="pt-4 border-t border-slate-800/50 space-y-4">
+          <button
+            onClick={handleLogout}
+            className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-bold text-red-400 hover:text-red-350 bg-red-950/10 hover:bg-red-950/20 border border-red-900/10 transition"
+          >
+            <LogOut className="w-4 h-4" />
+            <span>Log Out</span>
+          </button>
+
+          <div className="text-xs text-slate-500 space-y-1">
+            <p className="flex items-center gap-2 font-medium">
+              <span className={`w-2 h-2 rounded-full inline-block ${connError ? 'bg-red-500 animate-pulse' : 'bg-emerald-500 animate-ping'}`} />
+              {connError ? 'Offline Mode' : 'Server Online'}
+            </p>
+            <p className="text-[10px] text-slate-600 font-semibold uppercase tracking-wider">User: {currentUser.username}</p>
+          </div>
+        </div>
+      </aside>
+
+      {/* Main Content Area */}
+      <main className="flex-1 p-6 md:p-10 max-w-7xl mx-auto w-full overflow-y-auto h-screen relative">
+        {/* Backend offline warning banner */}
+        {connError && (
+          <div className="mb-6 p-4 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center justify-between text-amber-300 text-xs font-semibold">
+            <span>The local backend Express server seems to be offline. Please run the server in another terminal (`node src/server.js` or `npm run dev` in `/backend`).</span>
+            <button 
+              onClick={fetchUsers}
+              className="px-3 py-1 bg-amber-500 text-dark-950 font-bold rounded-lg hover:opacity-90"
+            >
+              Retry Connection
+            </button>
+          </div>
+        )}
+
+        {/* Loader Overlay */}
+        {isLoading && (
+          <div className="absolute inset-0 bg-dark-950/45 backdrop-blur-sm z-50 flex items-center justify-center">
+            <div className="p-4 bg-dark-900 border border-slate-700/60 rounded-2xl flex items-center gap-3 shadow-2xl animate-pulse">
+              <div className="w-5 h-5 rounded-full border-2 border-brand-cyan border-t-transparent animate-spin"></div>
+              <span className="text-xs text-slate-200 font-semibold">Synchronizing CP profiles...</span>
+            </div>
+          </div>
+        )}
+
+        {/* Mobile Navigation bar */}
+        <div className="md:hidden flex overflow-x-auto gap-2 pb-4 mb-4 border-b border-slate-800/60 select-none">
+          {[
+            { id: 'dashboard', label: 'Dashboard' },
+            { id: 'analytics', label: 'Analytics' },
+            { id: 'heatmap', label: 'Streak' },
+            { id: 'goals', label: 'Goals' },
+            { id: 'contests', label: 'Contests' },
+            { id: 'leaderboard', label: 'Social' },
+            { id: 'coach', label: 'AI Coach' },
+          ].map(tab => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition ${activeTab === tab.id ? 'bg-gradient-to-r from-brand-indigo to-brand-purple text-slate-100' : 'bg-slate-800/30 text-slate-400 hover:text-slate-200'}`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {renderContent()}
+      </main>
+    </div>
+  );
+}
