@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "_id": "g_mq8i2pbpgfyu1",
+    "userId": "u_mq884b5h5viwe",
+    "title": "Become Pupil on codeforces by August'26",
+    "platform": "Codeforces",
+    "targetType": "rating",
+    "targetValue": 1200,
+    "currentValue": 1053,
+    "isCompleted": false,
+    "createdAt": "2026-06-10T20:07:19.477Z",
+    "updatedAt": "2026-06-12T18:12:02.450Z"
+  },
+  {
+    "_id": "g_mq8i3msatlugz",
+    "userId": "u_mq884b5h5viwe",
+    "title": "To become 2-star coder again in June",
+    "platform": "CodeChef",
+    "targetType": "rating",
+    "targetValue": 1400,
+    "currentValue": 1398,
+    "isCompleted": false,
+    "createdAt": "2026-06-10T20:08:02.842Z",
+    "updatedAt": "2026-06-12T18:12:02.452Z"
+  }
+]

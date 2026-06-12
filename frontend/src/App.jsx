@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight, Sun, Moon, ChevronDown, Check } from 'lucide-react';
+import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight, Sun, Moon } from 'lucide-react';
 import axios from 'axios';
 import Dashboard from './components/Dashboard';
 import AuthPage from './components/AuthPage';
@@ -23,25 +23,16 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [connError, setConnError] = useState(false);
 
-  // Mode & Theme state — persisted across sessions matching To-Doo-Doo-Doo Dashboard
+  // Mode state — persisted across sessions
   const [mode, setMode] = useState(() => {
     const saved = localStorage.getItem('cp_tracker_mode');
     return saved ? saved : 'dark'; // default: dark
   });
 
-  const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('cp_tracker_theme');
-    return saved ? saved : 'violet'; // default: violet
-  });
-
-  const [showThemeDropdown, setShowThemeDropdown] = useState(false);
-
   useEffect(() => {
     const root = document.documentElement;
     root.setAttribute('data-mode', mode);
-    root.setAttribute('data-theme', theme);
     localStorage.setItem('cp_tracker_mode', mode);
-    localStorage.setItem('cp_tracker_theme', theme);
 
     // Keep class compatibility for tailwind utility extensions
     if (mode === 'dark') {
@@ -49,7 +40,7 @@ export default function App() {
     } else {
       root.classList.add('light');
     }
-  }, [mode, theme]);
+  }, [mode]);
 
   const toggleMode = () => setMode(prev => prev === 'dark' ? 'light' : 'dark');
 
@@ -374,65 +365,19 @@ export default function App() {
 
         {/* Footer info showing connection health and logout option */}
         <div className="pt-4 border-t border-slate-800/50 space-y-3">
-
-          {/* Mode & Theme Controls matching To-Doo-Doo-Doo */}
-          <div className="space-y-2">
-            {/* Mode Switcher Toggle Button */}
-            <button
-              onClick={toggleMode}
-              className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-bold border transition-all duration-300 bg-slate-800/10 hover:bg-slate-800/20 border-slate-700/50 text-slate-300"
-            >
-              <div className="flex items-center gap-2">
-                {mode === 'dark' ? <Moon className="w-4 h-4 text-brand-cyan" /> : <Sun className="w-4 h-4 text-brand-indigo" />}
-                <span>Appearance</span>
-              </div>
-              <span className="uppercase text-[9px] px-1.5 py-0.5 rounded bg-slate-800/40 border border-slate-700/50 font-semibold tracking-wider">
-                {mode}
-              </span>
-            </button>
-
-            {/* Theme Dropdown Switcher */}
-            <div className="relative">
-              <button
-                onClick={() => setShowThemeDropdown(!showThemeDropdown)}
-                className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-bold border transition-all duration-300 bg-slate-800/10 hover:bg-slate-800/20 border-slate-700/50 text-slate-300"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-brand-cyan shadow-[0_0_8px_rgba(var(--brand-cyan),0.6)]" />
-                  <span className="capitalize">Theme: {theme.replace('-', ' ')}</span>
-                </div>
-                <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-300 ${showThemeDropdown ? 'rotate-180' : ''}`} />
-              </button>
-
-              {showThemeDropdown && (
-                <div className="absolute bottom-full left-0 right-0 mb-2 p-1.5 rounded-xl border border-slate-700 bg-dark-900 shadow-xl z-[100] flex flex-col gap-1 max-h-56 overflow-y-auto">
-                  {[
-                    { id: 'violet', label: 'Violet', color: 'hsl(263, 90%, 60%)' },
-                    { id: 'flowery-pink', label: 'Flowery Pink', color: 'hsl(325, 90%, 60%)' },
-                    { id: 'strawberry-red', label: 'Strawberry Red', color: 'hsl(355, 95%, 58%)' },
-                    { id: 'cloudy-blue', label: 'Cloudy Blue', color: 'hsl(205, 90%, 60%)' },
-                    { id: 'apple-green', label: 'Apple Green', color: 'hsl(142, 85%, 52%)' },
-                    { id: 'sunny-yellow', label: 'Sunny Yellow', color: 'hsl(45, 100%, 55%)' },
-                  ].map(t => (
-                    <button
-                      key={t.id}
-                      onClick={() => {
-                        setTheme(t.id);
-                        setShowThemeDropdown(false);
-                      }}
-                      className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-left text-xs font-semibold transition hover:bg-slate-800/40 text-slate-300 ${theme === t.id ? 'bg-slate-800/60' : ''}`}
-                    >
-                      <div className="flex items-center gap-2">
-                        <span className="w-2.5 h-2.5 rounded-full border border-white/20" style={{ backgroundColor: t.color }} />
-                        <span>{t.label}</span>
-                      </div>
-                      {theme === t.id && <Check className="w-3.5 h-3.5 text-brand-cyan" />}
-                    </button>
-                  ))}
-                </div>
-              )}
+          {/* Appearance Mode Control */}
+          <button
+            onClick={toggleMode}
+            className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-bold border transition-all duration-300 bg-slate-800/10 hover:bg-slate-800/20 border-slate-700/50 text-slate-300"
+          >
+            <div className="flex items-center gap-2">
+              {mode === 'dark' ? <Moon className="w-4 h-4 text-brand-cyan" /> : <Sun className="w-4 h-4 text-brand-indigo" />}
+              <span>Appearance</span>
             </div>
-          </div>
+            <span className="uppercase text-[9px] px-1.5 py-0.5 rounded bg-slate-800/40 border border-slate-700/50 font-semibold tracking-wider">
+              {mode}
+            </span>
+          </button>
 
           <button
             onClick={handleLogout}
