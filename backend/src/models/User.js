@@ -11,6 +11,18 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  fullName: {
+    type: String,
+    default: ''
+  },
+  location: {
+    type: String,
+    default: ''
+  },
+  college: {
+    type: String,
+    default: ''
+  },
   codeforcesHandle: {
     type: String,
     default: ''

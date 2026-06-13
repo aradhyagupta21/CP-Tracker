@@ -35,9 +35,9 @@ router.get('/:username', async (req, res) => {
 // Create/Signup user
 router.post('/signup', async (req, res) => {
   try {
-    const { username, password, codeforcesHandle, codechefHandle, leetcodeHandle } = req.body;
-    if (!username || !password) {
-      return res.status(400).json({ error: 'Username and password are required.' });
+    const { username, password, fullName, location, college, codeforcesHandle, codechefHandle, leetcodeHandle } = req.body;
+    if (!username || !password || !fullName || !location || !college) {
+      return res.status(400).json({ error: 'Username, password, full name, location, and college are required.' });
     }
 
     const existing = await dbHelper.getUserByUsername(username);
@@ -48,6 +48,9 @@ router.post('/signup', async (req, res) => {
     const newUser = await dbHelper.createUser({
       username,
       password: hashPassword(password),
+      fullName,
+      location,
+      college,
       codeforcesHandle: codeforcesHandle || '',
       codechefHandle: codechefHandle || '',
       leetcodeHandle: leetcodeHandle || '',

@@ -54,10 +54,10 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
 
   const getPlatformBadge = (plat) => {
     const classes = {
-      'Codeforces': 'bg-brand-indigo/10 border-brand-indigo/20 text-brand-indigo',
-      'CodeChef': 'bg-brand-purple/10 border-brand-purple/20 text-brand-purple',
-      'LeetCode': 'bg-brand-cyan/10 border-brand-cyan/20 text-brand-cyan',
-      'All': 'bg-slate-800 border-slate-700 text-slate-300'
+      'Codeforces': 'bg-brand-indigo/10 border-royal/20 text-brand-indigo',
+      'CodeChef': 'bg-brand-indigo/10 border-brand-indigo/20 text-slate-100',
+      'LeetCode': 'bg-brand-indigo/10 border-royal/20 text-brand-indigo',
+      'All': 'bg-slate-50 border-slate-800/80 text-slate-400'
     };
     return classes[plat] || classes.All;
   };
@@ -66,17 +66,17 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
     <div className="space-y-8 animate-fadeIn">
       {/* Header */}
       <div>
-        <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-purple bg-clip-text text-transparent">
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-100 ">
           Target Goal Setting
         </h1>
-        <p className="text-slate-400 mt-1">Configure and monitor your milestones for ratings and total solved counts.</p>
+        <p className="text-slate-500 mt-1">Configure and monitor your milestones for ratings and total solved counts.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Create Goal Form */}
-        <div className="glass-panel p-6 rounded-2xl border border-slate-700 h-fit glow-indigo">
+        <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 h-fit shadow-sm">
           <h2 className="text-xl font-bold text-slate-100 mb-4 flex items-center gap-2">
-            <Plus className="w-5 h-5 text-brand-cyan" /> New Coding Goal
+            <Plus className="w-5 h-5 text-brand-indigo" /> New Coding Goal
           </h2>
 
           {error && (
@@ -87,26 +87,26 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">Goal Title *</label>
+              <label className="text-xs font-semibold text-slate-500">Goal Title *</label>
               <input
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="e.g. Reach Specialist on CF"
-                className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-xl text-slate-100 outline-none focus:border-brand-cyan"
+                className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-xl text-slate-100 outline-none focus:border-royal/20"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-400">Platform</label>
+                <label className="text-xs font-semibold text-slate-500">Platform</label>
                 <select
                   value={platform}
                   onChange={(e) => {
                     setPlatform(e.target.value);
                     if (e.target.value === 'All') setTargetType('solved_count');
                   }}
-                  className="w-full bg-dark-900 border border-slate-700 px-3 py-2 rounded-xl text-slate-100 outline-none focus:border-brand-cyan"
+                  className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-xl text-slate-100 outline-none focus:border-royal/20"
                 >
                   <option value="All">All Platforms</option>
                   <option value="Codeforces">Codeforces</option>
@@ -116,12 +116,12 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-400">Target Type</label>
+                <label className="text-xs font-semibold text-slate-500">Target Type</label>
                 <select
                   value={targetType}
                   onChange={(e) => setTargetType(e.target.value)}
                   disabled={platform === 'All'}
-                  className="w-full bg-dark-900 border border-slate-700 px-3 py-2 rounded-xl text-slate-100 outline-none focus:border-brand-cyan disabled:opacity-40"
+                  className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-xl text-slate-100 outline-none focus:border-royal/20 disabled:opacity-40"
                 >
                   <option value="solved_count">Solved Count</option>
                   <option value="rating">Rating Target</option>
@@ -130,20 +130,20 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
             </div>
 
             <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">Target Value *</label>
+              <label className="text-xs font-semibold text-slate-500">Target Value *</label>
               <input
                 type="text"
                 value={targetValue}
                 onChange={(e) => setTargetValue(e.target.value)}
                 placeholder="e.g. 500 or 1400"
-                className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-xl text-slate-100 outline-none focus:border-brand-cyan"
+                className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-xl text-slate-100 outline-none focus:border-royal/20"
               />
             </div>
 
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-brand-indigo to-brand-purple text-slate-100 py-2.5 rounded-xl font-bold transition hover:opacity-95 disabled:opacity-50 mt-2"
+              className="w-full bg-brand-indigo text-white text-slate-100 py-2.5 rounded-xl font-bold transition hover:opacity-95 disabled:opacity-50 mt-2"
             >
               {isLoading ? 'Creating...' : 'Create Goal'}
             </button>
@@ -155,8 +155,8 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
           <h2 className="text-2xl font-bold text-slate-100">Milestone Progress</h2>
 
           {goals.length === 0 ? (
-            <div className="glass-panel p-12 rounded-2xl border border-slate-700 text-center text-slate-400 flex flex-col items-center gap-3">
-              <Flag className="w-12 h-12 text-slate-600 animate-pulse-slow" />
+            <div className="bg-[#110e1b] border border-slate-800/80 p-12 rounded-2xl border border-slate-800/80 text-center text-slate-500 flex flex-col items-center gap-3">
+              <Flag className="w-12 h-12 text-slate-400 animate-pulse-slow" />
               <p>No active coding milestones set. Define one in the creation panel!</p>
             </div>
           ) : (
@@ -167,7 +167,7 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
                 return (
                   <div 
                     key={goal._id} 
-                    className={`glass-panel p-5 rounded-2xl border border-slate-700 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 relative overflow-hidden ${goal.isCompleted ? 'border-emerald-500/20' : ''}`}
+                    className={`bg-[#110e1b] border border-slate-800/80 p-5 rounded-2xl border border-slate-800/80 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 relative overflow-hidden ${goal.isCompleted ? 'border-emerald-500/20' : ''}`}
                   >
                     {/* Highlight complete */}
                     {goal.isCompleted && (
@@ -179,7 +179,7 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
                         <span className={`px-2 py-0.5 text-[10px] font-bold border rounded-full ${getPlatformBadge(goal.platform)}`}>
                           {goal.platform}
                         </span>
-                        <span className="text-slate-400 text-xs font-medium">
+                        <span className="text-slate-500 text-xs font-medium">
                           {goal.targetType === 'rating' ? 'Rating Target' : 'Problems Count'}
                         </span>
                         {goal.isCompleted && (
@@ -193,13 +193,13 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
 
                       {/* Progress bar */}
                       <div className="space-y-1">
-                        <div className="w-full bg-slate-900 rounded-full h-2">
+                        <div className="w-full bg-slate-100 rounded-full h-2">
                           <div 
                             className={`h-full rounded-full transition-all duration-500 ${goal.isCompleted ? 'bg-gradient-to-r from-emerald-500 to-teal-400' : 'bg-gradient-to-r from-brand-indigo to-brand-cyan'}`}
                             style={{ width: `${percent}%` }}
                           />
                         </div>
-                        <div className="flex justify-between text-xs font-semibold text-slate-400">
+                        <div className="flex justify-between text-xs font-semibold text-slate-500">
                           <span>Progress: {goal.currentValue} / {goal.targetValue}</span>
                           <span>{percent}%</span>
                         </div>
@@ -208,7 +208,7 @@ export default function Goals({ currentUser, goals, onGoalAdd, onGoalDelete }) {
 
                     <button
                       onClick={() => onGoalDelete(goal._id)}
-                      className="p-2 border border-slate-800 hover:border-red-500/40 text-slate-500 hover:text-red-400 rounded-xl transition self-end sm:self-center"
+                      className="p-2 border border-slate-800/80 hover:border-red-500/40 text-slate-500 hover:text-red-400 rounded-xl transition self-end sm:self-center"
                       title="Delete Goal"
                     >
                       <Trash2 className="w-5 h-5" />

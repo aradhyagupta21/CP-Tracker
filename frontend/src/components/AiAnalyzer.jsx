@@ -24,11 +24,11 @@ export default function AiAnalyzer({ currentUser, stats }) {
 
   const getPlatformClass = (plat) => {
     const classes = {
-      'Codeforces': 'bg-brand-indigo/10 border border-brand-indigo/20 text-brand-indigo',
-      'CodeChef': 'bg-brand-purple/10 border border-brand-purple/20 text-brand-purple',
-      'LeetCode': 'bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan'
+      'Codeforces': 'bg-brand-indigo/10 border border-royal/20 text-brand-indigo',
+      'CodeChef': 'bg-brand-indigo/10 border border-brand-indigo/20 text-slate-100',
+      'LeetCode': 'bg-brand-indigo/10 border border-royal/20 text-brand-indigo'
     };
-    return classes[plat] || 'bg-slate-800 border border-slate-700 text-slate-300';
+    return classes[plat] || 'bg-slate-50 border border-slate-800/80 text-slate-400';
   };
 
   return (
@@ -36,17 +36,17 @@ export default function AiAnalyzer({ currentUser, stats }) {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-purple bg-clip-text text-transparent">
+          <h1 className="text-4xl font-extrabold tracking-tight text-slate-100 ">
             AI Performance Coach
           </h1>
-          <p className="text-slate-400 mt-1">Leverage Gemini to audit weak spots and discover targeted problems.</p>
+          <p className="text-slate-500 mt-1">Leverage Gemini to audit weak spots and discover targeted problems.</p>
         </div>
 
         {currentUser && (
           <button
             onClick={handleAnalyze}
             disabled={loading || stats.length === 0}
-            className={`flex items-center gap-2 bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-purple hover:opacity-95 text-slate-100 px-6 py-2.5 rounded-xl font-bold transition shadow-lg disabled:opacity-50 disabled:cursor-not-allowed`}
+            className={`flex items-center gap-2 text-slate-100 hover:opacity-95 text-slate-100 px-6 py-2.5 rounded-xl font-bold transition shadow-lg disabled:opacity-50 disabled:cursor-not-allowed`}
           >
             <Sparkles className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
             {loading ? 'Analyzing Profile...' : 'Analyze My Performance'}
@@ -55,15 +55,15 @@ export default function AiAnalyzer({ currentUser, stats }) {
       </div>
 
       {stats.length === 0 ? (
-        <div className="glass-panel p-12 rounded-2xl border border-slate-700 text-center text-slate-400">
+        <div className="bg-[#110e1b] border border-slate-800/80 p-12 rounded-2xl border border-slate-800/80 text-center text-slate-500">
           Sync your account profiles on the dashboard to trigger AI coaching audits.
         </div>
       ) : !analysis ? (
-        <div className="glass-panel p-12 rounded-2xl border border-slate-700 text-center space-y-6 glow-indigo">
-          <Brain className="w-16 h-16 text-brand-cyan mx-auto animate-bounce" />
+        <div className="bg-[#110e1b] border border-slate-800/80 p-12 rounded-2xl border border-slate-800/80 text-center space-y-6 shadow-sm">
+          <Brain className="w-16 h-16 text-brand-indigo mx-auto animate-bounce" />
           <div className="max-w-md mx-auto space-y-2">
             <h3 className="text-xl font-bold text-slate-100">Ready to audit your DSA progress?</h3>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-500 text-sm">
               Our analyzer combines solved tags across Codeforces, LeetCode, and CodeChef and queries Gemini to isolate accuracy limits, predict rating gains, and assign practice tasks.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function AiAnalyzer({ currentUser, stats }) {
           <button
             onClick={handleAnalyze}
             disabled={loading}
-            className="bg-gradient-to-r from-brand-indigo to-brand-purple hover:opacity-95 text-slate-100 px-6 py-2.5 rounded-xl font-bold transition"
+            className="bg-brand-indigo text-white hover:opacity-95 text-slate-100 px-6 py-2.5 rounded-xl font-bold transition"
           >
             Run AI Coaching Audit
           </button>
@@ -79,52 +79,52 @@ export default function AiAnalyzer({ currentUser, stats }) {
       ) : (
         <div className="space-y-8 animate-fadeIn">
           {/* Insights Overview Paragraph */}
-          <div className="glass-panel p-6 rounded-2xl border border-slate-700 glow-indigo space-y-3 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-indigo/5 rounded-full blur-3xl"></div>
+          <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm space-y-3 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-indigo/10 rounded-full blur-3xl"></div>
             <h3 className="font-extrabold text-slate-100 text-xl flex items-center gap-2">
-              <MessageSquareCode className="w-6 h-6 text-brand-cyan" /> Coach Insights Overview
+              <MessageSquareCode className="w-6 h-6 text-brand-indigo" /> Coach Insights Overview
             </h3>
-            <p className="text-sm text-slate-300 leading-relaxed font-medium">
+            <p className="text-sm text-slate-400 leading-relaxed font-medium">
               {analysis.insights}
             </p>
           </div>
 
           {/* Rating forecasts and tactics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass-panel p-6 rounded-2xl border border-slate-700 flex items-center gap-5">
-              <div className="p-3 bg-brand-cyan/10 rounded-xl text-brand-cyan">
+            <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 flex items-center gap-5">
+              <div className="p-3 bg-brand-indigo/10 rounded-xl text-brand-indigo">
                 <Flame className="w-8 h-8" />
               </div>
               <div>
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Predicted Rating Shift</p>
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Predicted Rating Shift</p>
                 <h3 className="text-3xl font-extrabold text-emerald-400 mt-1">
                   +{analysis.predictedRatingGain}
                 </h3>
-                <p className="text-[10px] text-slate-400 mt-0.5">Estimated performance trend</p>
+                <p className="text-[10px] text-slate-500 mt-0.5">Estimated performance trend</p>
               </div>
             </div>
 
-            <div className="glass-panel p-6 rounded-2xl border border-slate-700 flex items-center gap-5">
-              <div className="p-3 bg-brand-purple/10 rounded-xl text-brand-purple">
+            <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 flex items-center gap-5">
+              <div className="p-3 bg-brand-indigo/10 rounded-xl text-slate-100">
                 <Award className="w-8 h-8" />
               </div>
               <div>
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Contest Rank Range</p>
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Contest Rank Range</p>
                 <h3 className="text-xl font-bold text-slate-100 mt-1">#{analysis.predictedRankRange}</h3>
-                <p className="text-[10px] text-slate-400 mt-0.5">Forecasted standings rank</p>
+                <p className="text-[10px] text-slate-500 mt-0.5">Forecasted standings rank</p>
               </div>
             </div>
 
-            <div className="glass-panel p-6 rounded-2xl border border-slate-700 flex items-center gap-5">
+            <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 flex items-center gap-5">
               <div className="p-3 bg-brand-indigo/10 rounded-xl text-brand-indigo">
                 <Target className="w-8 h-8" />
               </div>
               <div>
-                <p className="text-xs font-semibold text-slate-400 tracking-wider uppercase">Focus Category</p>
-                <h3 className="text-lg font-bold text-slate-200 mt-1">
+                <p className="text-xs font-semibold text-slate-500 tracking-wider uppercase">Focus Category</p>
+                <h3 className="text-lg font-bold text-slate-100 mt-1">
                   {analysis.weakTopics[0]?.topic || 'DP / Graphs'}
                 </h3>
-                <p className="text-[10px] text-slate-400 mt-0.5">Top prioritized growth topic</p>
+                <p className="text-[10px] text-slate-500 mt-0.5">Top prioritized growth topic</p>
               </div>
             </div>
           </div>
@@ -132,20 +132,20 @@ export default function AiAnalyzer({ currentUser, stats }) {
           {/* Weak Topics warnings */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-              <ShieldAlert className="w-6 h-6 text-brand-pink" /> Identified Weak Areas
+              <ShieldAlert className="w-6 h-6 text-brand-indigo" /> Identified Weak Areas
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {analysis.weakTopics.map((item, idx) => (
-                <div key={idx} className="glass-panel p-5 rounded-2xl border border-slate-700 flex flex-col justify-between gap-3 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-brand-pink/5 rounded-full blur-2xl"></div>
+                <div key={idx} className="bg-[#110e1b] border border-slate-800/80 p-5 rounded-2xl border border-slate-800/80 flex flex-col justify-between gap-3 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-brand-indigo/10 rounded-full blur-2xl"></div>
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="px-3 py-1 bg-brand-pink/15 border border-brand-pink/30 text-brand-pink rounded-full font-bold text-xs">
+                      <span className="px-3 py-1 bg-brand-indigo/10 border border-royal/20 text-brand-indigo rounded-full font-bold text-xs">
                         {item.topic}
                       </span>
-                      <span className="text-slate-400 font-semibold text-xs">Accuracy rate: <span className="text-brand-pink font-bold">{item.accuracy}</span></span>
+                      <span className="text-slate-500 font-semibold text-xs">Accuracy rate: <span className="text-brand-indigo font-bold">{item.accuracy}</span></span>
                     </div>
-                    <p className="text-slate-300 text-sm leading-relaxed">
+                    <p className="text-slate-400 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -158,31 +158,31 @@ export default function AiAnalyzer({ currentUser, stats }) {
           {/* Problem Recommendations */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-brand-cyan" /> Smart Problem Recommendations
+              <Sparkles className="w-6 h-6 text-brand-indigo" /> Smart Problem Recommendations
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {analysis.recommendations.map((item, idx) => (
-                <div key={idx} className="glass-panel p-5 rounded-2xl border border-slate-700 flex flex-col justify-between gap-4 hover:border-brand-cyan/20 transition-all duration-300">
+                <div key={idx} className="bg-[#110e1b] border border-slate-800/80 p-5 rounded-2xl border border-slate-800/80 flex flex-col justify-between gap-4 hover:border-royal/20 transition-all duration-300">
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
                       <span className={`px-2 py-0.5 text-[10px] font-bold border rounded-full ${getPlatformClass(item.platform)}`}>
                         {item.platform}
                       </span>
-                      <span className="text-[10px] text-slate-400 font-semibold">{item.difficulty}</span>
+                      <span className="text-[10px] text-slate-500 font-semibold">{item.difficulty}</span>
                     </div>
-                    <h4 className="font-bold text-slate-200 line-clamp-1">{item.name}</h4>
-                    <p className="text-xs text-slate-400 leading-relaxed line-clamp-3">
+                    <h4 className="font-bold text-slate-100 line-clamp-1">{item.name}</h4>
+                    <p className="text-xs text-slate-500 leading-relaxed line-clamp-3">
                       {item.reason}
                     </p>
                   </div>
 
                   <div className="flex justify-between items-center pt-2 border-t border-slate-800/80">
-                    <span className="text-[10px] font-bold text-brand-cyan uppercase tracking-wide">{item.topic}</span>
+                    <span className="text-[10px] font-bold text-brand-indigo uppercase tracking-wide">{item.topic}</span>
                     <a
                       href={item.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-xs font-semibold text-brand-indigo hover:text-brand-cyan transition flex items-center gap-0.5"
+                      className="text-xs font-semibold text-brand-indigo hover:text-brand-indigo transition flex items-center gap-0.5"
                     >
                       Attempt <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
@@ -193,11 +193,11 @@ export default function AiAnalyzer({ currentUser, stats }) {
           </div>
 
           {/* Contest Strategy Recommendations */}
-          <div className="glass-panel p-6 rounded-2xl border border-slate-700 space-y-4">
+          <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 space-y-4">
             <h3 className="font-extrabold text-slate-100 text-lg flex items-center gap-2">
-              <Brain className="w-5 h-5 text-brand-purple" /> Dynamic Contest Pacing Tactics
+              <Brain className="w-5 h-5 text-slate-100" /> Dynamic Contest Pacing Tactics
             </h3>
-            <div className="text-sm text-slate-300 whitespace-pre-line leading-relaxed font-medium">
+            <div className="text-sm text-slate-400 whitespace-pre-line leading-relaxed font-medium">
               {analysis.contestStrategy}
             </div>
           </div>

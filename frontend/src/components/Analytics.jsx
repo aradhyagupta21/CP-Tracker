@@ -114,20 +114,20 @@ export default function Analytics({ stats }) {
       {/* Header and Filter */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-purple bg-clip-text text-transparent">
+          <h1 className="text-4xl font-extrabold tracking-tight text-slate-100 ">
             Rating & DSA Analytics
           </h1>
-          <p className="text-slate-400 mt-1">Visualize rating history, difficulty splits, and topic distributions.</p>
+          <p className="text-slate-500 mt-1">Visualize rating history, difficulty splits, and topic distributions.</p>
         </div>
 
         {/* Filter Tab */}
-        <div className="flex items-center gap-2 bg-dark-900 border border-slate-700 px-3 py-1.5 rounded-xl self-start">
-          <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider mr-2">Filter Platform:</span>
+        <div className="flex items-center gap-2 bg-[#110e1b] border border-slate-800/80 px-3 py-1.5 rounded-xl self-start">
+          <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider mr-2">Filter Platform:</span>
           {availablePlatforms.map(plat => (
             <button
               key={plat}
               onClick={() => setSelectedPlatform(plat)}
-              className={`px-3 py-1 rounded-lg text-xs font-bold transition ${selectedPlatform === plat ? 'bg-gradient-to-r from-brand-indigo to-brand-purple text-slate-100' : 'text-slate-400 hover:text-slate-200'}`}
+              className={`px-3 py-1 rounded-lg text-xs font-bold transition ${selectedPlatform === plat ? 'bg-brand-indigo text-white text-slate-100' : 'text-slate-500 hover:text-brand-indigo'}`}
             >
               {plat}
             </button>
@@ -136,20 +136,20 @@ export default function Analytics({ stats }) {
       </div>
 
       {stats.length === 0 ? (
-        <div className="glass-panel p-12 rounded-2xl border border-slate-700 text-center text-slate-400">
+        <div className="bg-[#110e1b] border border-slate-800/80 p-12 rounded-2xl border border-slate-800/80 text-center text-slate-500">
           Sync your account profiles on the dashboard to populate interactive graphs!
         </div>
       ) : (
         <>
           {/* Rating progression line chart */}
-          <div className="glass-panel p-6 rounded-2xl border border-slate-700 glow-indigo">
+          <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm">
             <div className="flex items-center gap-2 mb-6">
               <Award className="w-5 h-5 text-brand-indigo" />
               <h2 className="text-xl font-bold text-slate-100">Rating Progression Timeline</h2>
             </div>
             
             {ratingHistory.length === 0 ? (
-              <div className="h-64 flex items-center justify-center text-slate-400 text-sm">
+              <div className="h-64 flex items-center justify-center text-slate-500 text-sm">
                 No contest rating history available for this selection. Participate in contests to see rating curves!
               </div>
             ) : (
@@ -190,11 +190,11 @@ export default function Analytics({ stats }) {
                         if (active && payload && payload.length) {
                           const data = payload[0].payload;
                           return (
-                            <div className="glass-panel p-4 rounded-xl border border-brand-indigo/30 shadow-lg text-xs space-y-1">
+                            <div className="bg-[#110e1b] border border-slate-800/80 p-4 rounded-xl border border-royal/20 shadow-lg text-xs space-y-1">
                               <p className="font-bold text-slate-100">{data.contestName}</p>
-                              <p className="text-slate-400">Platform: <span className="font-semibold text-slate-200">{data.platform}</span></p>
-                              <p className="text-slate-400">Rating: <span className="text-brand-cyan font-bold text-sm">{data.rating}</span> ({data.ratingChange >= 0 ? `+${data.ratingChange}` : data.ratingChange})</p>
-                              <p className="text-slate-400">Rank: <span className="font-semibold text-slate-200">#{data.rank}</span></p>
+                              <p className="text-slate-500">Platform: <span className="font-semibold text-slate-100">{data.platform}</span></p>
+                              <p className="text-slate-500">Rating: <span className="text-brand-indigo font-bold text-sm">{data.rating}</span> ({data.ratingChange >= 0 ? `+${data.ratingChange}` : data.ratingChange})</p>
+                              <p className="text-slate-500">Rank: <span className="font-semibold text-slate-100">#{data.rank}</span></p>
                               <p className="text-[10px] text-slate-500">{new Date(data.date).toLocaleDateString()}</p>
                             </div>
                           );
@@ -218,9 +218,9 @@ export default function Analytics({ stats }) {
           {/* Radar and Pie Split Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Topic Radar Breakdown */}
-            <div className="glass-panel p-6 rounded-2xl border border-slate-700">
+            <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80">
               <div className="flex items-center gap-2 mb-6">
-                <Compass className="w-5 h-5 text-brand-cyan" />
+                <Compass className="w-5 h-5 text-brand-indigo" />
                 <h2 className="text-xl font-bold text-slate-100">Topic-wise Solved Distribution</h2>
               </div>
               
@@ -244,14 +244,14 @@ export default function Analytics({ stats }) {
             </div>
 
             {/* Difficulty Pie split */}
-            <div className="glass-panel p-6 rounded-2xl border border-slate-700">
+            <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80">
               <div className="flex items-center gap-2 mb-6">
-                <PieIcon className="w-5 h-5 text-brand-purple" />
+                <PieIcon className="w-5 h-5 text-slate-100" />
                 <h2 className="text-xl font-bold text-slate-100">Difficulty Distribution</h2>
               </div>
 
               {pieData.length === 0 ? (
-                <div className="h-72 flex items-center justify-center text-slate-400 text-sm">
+                <div className="h-72 flex items-center justify-center text-slate-500 text-sm">
                   No difficulty data solved on this platform.
                 </div>
               ) : (
@@ -291,8 +291,8 @@ export default function Analytics({ stats }) {
                             style={{ backgroundColor: COLORS[d.name] }}
                           />
                           <div>
-                            <p className="text-sm font-semibold text-slate-200">{d.name}</p>
-                            <p className="text-xs text-slate-400">{d.value} Solved ({percent}%)</p>
+                            <p className="text-sm font-semibold text-slate-100">{d.name}</p>
+                            <p className="text-xs text-slate-500">{d.value} Solved ({percent}%)</p>
                           </div>
                         </div>
                       );

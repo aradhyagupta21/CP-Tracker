@@ -212,18 +212,18 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
       {/* Upper Navigation and User selection */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-purple bg-clip-text text-transparent">
+          <h1 className="text-4xl font-extrabold tracking-tight text-slate-100 ">
             Developer Dashboard
           </h1>
-          <p className="text-slate-400 mt-1">
+          <p className="text-slate-500 mt-1">
             Track and optimize your competitive programming handles.
           </p>
         </div>
 
         {/* User Selection Panel */}
         <div className="flex flex-wrap items-center gap-3">
-          <div className="flex items-center gap-2 glass-panel px-4 py-2 rounded-xl border border-slate-700">
-            <UserCheck className="w-5 h-5 text-brand-cyan" />
+          <div className="flex items-center gap-2 bg-[#110e1b] border border-slate-800/80 px-4 py-2 rounded-xl border border-slate-800/80">
+            <UserCheck className="w-5 h-5 text-brand-indigo" />
             <select 
               value={currentUser?._id || ''} 
               onChange={(e) => onUserSelect(e.target.value)}
@@ -233,7 +233,7 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
                 <option value="">No Users Registered</option>
               ) : (
                 allUsers.map(u => (
-                  <option key={u._id} value={u._id} className="bg-dark-900 text-slate-100">
+                  <option key={u._id} value={u._id} className="bg-[#110e1b] text-slate-100">
                     {u.username}
                   </option>
                 ))
@@ -243,7 +243,7 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
 
           <button
             onClick={onAddAccount}
-            className="flex items-center gap-2 bg-gradient-to-r from-brand-indigo to-brand-purple hover:opacity-95 text-slate-100 px-4 py-2 rounded-xl text-sm font-semibold transition"
+            className="flex items-center gap-2 bg-brand-indigo text-white hover:opacity-95 text-slate-100 px-4 py-2 rounded-xl text-sm font-semibold transition"
           >
             <Plus className="w-4 h-4" /> Add Account
           </button>
@@ -251,7 +251,7 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
           {currentUser && (
             <button
               onClick={handleStartEdit}
-              className="flex items-center gap-2 bg-dark-900 border border-slate-700 hover:border-brand-purple hover:bg-brand-purple/10 text-slate-300 hover:text-slate-100 px-4 py-2 rounded-xl text-sm font-semibold transition"
+              className="flex items-center gap-2 bg-[#110e1b] border border-slate-800/80 hover:border-brand-indigo/20 hover:bg-brand-indigo/20 text-slate-400 hover:text-brand-indigo px-4 py-2 rounded-xl text-sm font-semibold transition"
             >
               Configure Handles
             </button>
@@ -261,7 +261,7 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
             <button
               onClick={onSync}
               disabled={isLoading}
-              className={`flex items-center gap-2 glass-panel px-4 py-2 rounded-xl text-sm font-semibold text-brand-cyan border border-brand-cyan/20 transition-all duration-300 hover:bg-brand-cyan/10 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`flex items-center gap-2 bg-[#110e1b] border border-slate-800/80 px-4 py-2 rounded-xl text-sm font-semibold text-brand-indigo border border-royal/20 transition-all duration-300 hover:bg-brand-indigo/10 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
               {isLoading ? 'Syncing...' : 'Sync Profiles'}
@@ -272,21 +272,21 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
 
       {/* Edit handles modal/form */}
       {showEditHandles && (
-        <div className="glass-panel p-6 rounded-2xl border border-slate-700 max-w-xl mx-auto space-y-5 glow-purple">
-          <div className="flex justify-between items-center pb-3 border-b border-slate-800">
+        <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 max-w-xl mx-auto space-y-5 shadow-sm">
+          <div className="flex justify-between items-center pb-3 border-b border-slate-800/80">
             <h2 className="text-xl font-bold text-slate-100">Configure Platform Linking for {currentUser.username}</h2>
             <div className="flex gap-2">
               <button
                 type="button"
                 onClick={() => { setActiveLinkTab('quick'); setError(''); }}
-                className={`px-3 py-1 rounded-lg text-xs font-bold transition ${activeLinkTab === 'quick' ? 'bg-brand-indigo/25 text-brand-indigo border border-brand-indigo/30' : 'text-slate-400 hover:text-slate-200'}`}
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition ${activeLinkTab === 'quick' ? 'bg-brand-indigo/10 text-brand-indigo border border-royal/20' : 'text-slate-500 hover:text-brand-indigo'}`}
               >
                 Quick Handles
               </button>
               <button
                 type="button"
                 onClick={() => { setActiveLinkTab('secure'); setError(''); }}
-                className={`px-3 py-1 rounded-lg text-xs font-bold transition ${activeLinkTab === 'secure' ? 'bg-brand-purple/25 text-brand-purple border border-brand-purple/30' : 'text-slate-400 hover:text-slate-200'}`}
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition ${activeLinkTab === 'secure' ? 'bg-brand-indigo/10 text-slate-100 border border-brand-indigo/20' : 'text-slate-500 hover:text-brand-indigo'}`}
               >
                 Simulated Password Auth
               </button>
@@ -299,48 +299,48 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
             <form onSubmit={handleEditSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">Codeforces Handle</label>
+                  <label className="text-xs font-semibold text-slate-500">Codeforces Handle</label>
                   <input 
                     type="text" 
                     value={editCfHandle} 
                     onChange={(e) => setEditCfHandle(e.target.value)}
                     placeholder="e.g. Tourist"
-                    className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-indigo"
+                    className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-royal/20"
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">CodeChef Handle</label>
+                  <label className="text-xs font-semibold text-slate-500">CodeChef Handle</label>
                   <input 
                     type="text" 
                     value={editCcHandle} 
                     onChange={(e) => setEditCcHandle(e.target.value)}
                     placeholder="e.g. genghis_khan"
-                    className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-purple"
+                    className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-indigo/20"
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">LeetCode Handle</label>
+                  <label className="text-xs font-semibold text-slate-500">LeetCode Handle</label>
                   <input 
                     type="text" 
                     value={editLcHandle} 
                     onChange={(e) => setEditLcHandle(e.target.value)}
                     placeholder="e.g. aradhya_1"
-                    className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-cyan"
+                    className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-royal/20"
                   />
                 </div>
               </div>
-              <div className="flex justify-end gap-3 pt-2 border-t border-slate-800/60">
+              <div className="flex justify-end gap-3 pt-2 border-t border-slate-800/80">
                 <button 
                   type="button" 
                   onClick={() => setShowEditHandles(false)}
-                  className="px-4 py-2 border border-slate-700 rounded-lg text-slate-400 text-sm hover:bg-dark-900 transition"
+                  className="px-4 py-2 border border-slate-800/80 rounded-lg text-slate-500 text-sm hover:bg-[#110e1b] transition"
                 >
                   Cancel
                 </button>
                 <button 
                   type="submit" 
                   disabled={isSavingHandles}
-                  className="px-4 py-2 bg-gradient-to-r from-brand-indigo to-brand-purple rounded-lg text-slate-100 text-sm font-semibold transition hover:opacity-95 disabled:opacity-50"
+                  className="px-4 py-2 bg-brand-indigo text-white rounded-lg text-slate-100 text-sm font-semibold transition hover:opacity-95 disabled:opacity-50"
                 >
                   {isSavingHandles ? 'Saving...' : 'Save Handles'}
                 </button>
@@ -350,18 +350,18 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
             <form onSubmit={handleSecureSubmit} className="space-y-4">
               {isAuthing ? (
                 <div className="py-8 text-center space-y-4">
-                  <div className="w-8 h-8 rounded-full border-4 border-brand-purple border-t-transparent animate-spin mx-auto"></div>
-                  <p className="text-sm text-slate-300 font-semibold animate-pulse">{authStep}</p>
+                  <div className="w-8 h-8 rounded-full border-4 border-brand-indigo/20 border-t-transparent animate-spin mx-auto"></div>
+                  <p className="text-sm text-slate-400 font-semibold animate-pulse">{authStep}</p>
                 </div>
               ) : (
                 <>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-400">Target Platform</label>
+                      <label className="text-xs font-semibold text-slate-500">Target Platform</label>
                       <select
                         value={securePlatform}
                         onChange={(e) => setSecurePlatform(e.target.value)}
-                        className="w-full bg-dark-900 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-purple"
+                        className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-indigo/20"
                       >
                         <option value="Codeforces">Codeforces</option>
                         <option value="CodeChef">CodeChef</option>
@@ -369,37 +369,37 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
                       </select>
                     </div>
                     <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-400">Platform Username/Handle</label>
+                      <label className="text-xs font-semibold text-slate-500">Platform Username/Handle</label>
                       <input 
                         type="text" 
                         value={secureHandle} 
                         onChange={(e) => setSecureHandle(e.target.value)}
                         placeholder="Enter platform handle"
-                        className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-purple"
+                        className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-indigo/20"
                       />
                     </div>
                     <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-400">Platform Password</label>
+                      <label className="text-xs font-semibold text-slate-500">Platform Password</label>
                       <input 
                         type="password" 
                         value={securePassword} 
                         onChange={(e) => setSecurePassword(e.target.value)}
                         placeholder="••••••••"
-                        className="w-full bg-dark-900/80 border border-slate-700 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-purple"
+                        className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-brand-indigo/20"
                       />
                     </div>
                   </div>
-                  <div className="flex justify-end gap-3 pt-2 border-t border-slate-800/60">
+                  <div className="flex justify-end gap-3 pt-2 border-t border-slate-800/80">
                     <button 
                       type="button" 
                       onClick={() => setShowEditHandles(false)}
-                      className="px-4 py-2 border border-slate-700 rounded-lg text-slate-400 text-sm hover:bg-dark-900 transition"
+                      className="px-4 py-2 border border-slate-800/80 rounded-lg text-slate-500 text-sm hover:bg-[#110e1b] transition"
                     >
                       Cancel
                     </button>
                     <button 
                       type="submit" 
-                      className="px-4 py-2 bg-gradient-to-r from-brand-purple to-brand-pink rounded-lg text-slate-100 text-sm font-semibold transition hover:opacity-95"
+                      className="px-4 py-2 bg-brand-indigo text-white rounded-lg text-slate-100 text-sm font-semibold transition hover:opacity-95"
                     >
                       Authenticate & Link
                     </button>
@@ -415,62 +415,62 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
         <>
           {/* Main Key Summary Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="glass-panel glass-panel-hover p-6 rounded-2xl flex items-center gap-5 border border-slate-700 glow-indigo">
-              <div className="p-3 bg-brand-cyan/10 rounded-xl text-brand-cyan">
+            <div className="bg-[#110e1b] border border-slate-800/80 hover:shadow-md transition-shadow p-6 rounded-2xl flex items-center gap-5 border border-slate-800/80 shadow-sm">
+              <div className="p-3 bg-brand-indigo/10 rounded-xl text-brand-indigo">
                 <BookOpen className="w-7 h-7" />
               </div>
               <div>
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Solved</p>
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Solved</p>
                 <h3 className="text-3xl font-extrabold text-slate-100 mt-1">{totalSolved}</h3>
-                <p className="text-xs text-brand-cyan mt-1 font-medium">Across platforms</p>
+                <p className="text-xs text-brand-indigo mt-1 font-medium">Across platforms</p>
               </div>
             </div>
 
-            <div className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-700 glow-indigo flex flex-col justify-between">
+            <div className="bg-[#110e1b] border border-slate-800/80 hover:shadow-md transition-shadow p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col justify-between">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 bg-brand-indigo/10 rounded-xl text-brand-indigo shrink-0">
                   <Award className="w-6 h-6" />
                 </div>
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Platform Ratings</p>
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Platform Ratings</p>
               </div>
               
               <div className="space-y-2 mt-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-xs text-slate-400 font-medium">Codeforces:</span>
+                  <span className="text-xs text-slate-500 font-medium">Codeforces:</span>
                   <span className="text-sm font-extrabold text-brand-indigo">
                     {cfRating > 0 ? cfRating : 'N/A'}
                   </span>
                 </div>
-                <div className="flex justify-between items-center border-t border-slate-800/60 pt-1.5">
-                  <span className="text-xs text-slate-400 font-medium">CodeChef:</span>
-                  <span className="text-sm font-extrabold text-brand-purple">
+                <div className="flex justify-between items-center border-t border-slate-800/80 pt-1.5">
+                  <span className="text-xs text-slate-500 font-medium">CodeChef:</span>
+                  <span className="text-sm font-extrabold text-slate-100">
                     {ccRating > 0 ? `${ccRating} ★` : 'N/A'}
                   </span>
                 </div>
-                <div className="flex justify-between items-center border-t border-slate-800/60 pt-1.5">
-                  <span className="text-xs text-slate-400 font-medium">LeetCode:</span>
-                  <span className="text-sm font-extrabold text-brand-cyan">
+                <div className="flex justify-between items-center border-t border-slate-800/80 pt-1.5">
+                  <span className="text-xs text-slate-500 font-medium">LeetCode:</span>
+                  <span className="text-sm font-extrabold text-brand-indigo">
                     {lcRating > 0 ? lcRating : 'N/A'}
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-700">
+            <div className="bg-[#110e1b] border border-slate-800/80 hover:shadow-md transition-shadow p-6 rounded-2xl border border-slate-800/80">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 bg-brand-purple/10 rounded-xl text-brand-purple shrink-0">
+                <div className="p-2.5 bg-brand-indigo/10 rounded-xl text-slate-100 shrink-0">
                   <Flame className="w-6 h-6 animate-pulse" />
                 </div>
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Coding Streaks</p>
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Coding Streaks</p>
               </div>
-              <div className="grid grid-cols-2 gap-4 pt-3 border-t border-slate-800/60">
+              <div className="grid grid-cols-2 gap-4 pt-3 border-t border-slate-800/80">
                 <div>
                   <p className="text-[10px] text-slate-500 uppercase font-bold tracking-wider mb-1">Active Streak</p>
                   <h3 className="text-2xl font-extrabold text-slate-100">
                     {streakData.bestCurrent.current}
-                    <span className="text-sm font-semibold text-slate-400 ml-1">days</span>
+                    <span className="text-sm font-semibold text-slate-500 ml-1">days</span>
                   </h3>
-                  <p className="text-[10px] font-bold text-brand-purple mt-1">
+                  <p className="text-[10px] font-bold text-slate-100 mt-1">
                     {streakData.bestCurrent.current > 0 ? streakData.bestCurrent.platform : '—'}
                   </p>
                 </div>
@@ -478,25 +478,25 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
                   <p className="text-[10px] text-slate-500 uppercase font-bold tracking-wider mb-1">Max Streak</p>
                   <h3 className="text-2xl font-extrabold text-slate-100">
                     {streakData.bestLongest.longest}
-                    <span className="text-sm font-semibold text-slate-400 ml-1">days</span>
+                    <span className="text-sm font-semibold text-slate-500 ml-1">days</span>
                   </h3>
-                  <p className="text-[10px] font-bold text-brand-cyan mt-1">
+                  <p className="text-[10px] font-bold text-brand-indigo mt-1">
                     {streakData.bestLongest.longest > 0 ? streakData.bestLongest.platform : '—'}
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="glass-panel glass-panel-hover p-6 rounded-2xl flex items-center gap-5 border border-slate-700">
-              <div className="p-3 bg-brand-pink/10 rounded-xl text-brand-pink">
+            <div className="bg-[#110e1b] border border-slate-800/80 hover:shadow-md transition-shadow p-6 rounded-2xl flex items-center gap-5 border border-slate-800/80">
+              <div className="p-3 bg-brand-indigo/10 rounded-xl text-brand-indigo">
                 <Target className="w-7 h-7" />
               </div>
               <div>
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Target Goals</p>
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Target Goals</p>
                 <h3 className="text-3xl font-extrabold text-slate-100 mt-1">
                   {goals.length}
                 </h3>
-                <p className="text-xs text-brand-pink mt-1 font-medium">
+                <p className="text-xs text-brand-indigo mt-1 font-medium">
                   Completed: {goals.filter(g => g.isCompleted).length} / {goals.length}
                 </p>
               </div>
@@ -508,11 +508,11 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
             <h2 className="text-2xl font-bold text-slate-100 mb-6">Linked Handles Breakdown</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Codeforces Panel */}
-              <div className="glass-panel p-6 rounded-2xl border border-slate-700 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-indigo/5 rounded-full blur-2xl"></div>
+              <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-indigo/10 rounded-full blur-2xl"></div>
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="px-2.5 py-1 text-xs font-bold bg-brand-indigo/10 border border-brand-indigo/20 text-brand-indigo rounded-full">
+                    <span className="px-2.5 py-1 text-xs font-bold bg-brand-indigo/10 border border-royal/20 text-brand-indigo rounded-full">
                       Codeforces
                     </span>
                     <h3 className="text-xl font-bold text-slate-100 mt-3">
@@ -521,39 +521,39 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
                   </div>
                 </div>
                 {currentUser.codeforcesHandle ? (
-                  <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-slate-800">
+                  <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-slate-800/80">
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Rating</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Rating</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {stats.find(s => s.platform === 'Codeforces')?.currentRating || 'Unrated'}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Max Rating</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Max Rating</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {stats.find(s => s.platform === 'Codeforces')?.maxRating || 'Unrated'}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Contests</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Contests</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {stats.find(s => s.platform === 'Codeforces')?.contestsCount || 0}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Solved Count</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Solved Count</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {stats.find(s => s.platform === 'Codeforces')?.solvedCount || 0}
                       </p>
                     </div>
                   </div>
                 ) : (
                   <div className="mt-8 space-y-4">
-                    <p className="text-xs text-slate-400">Link your Codeforces handle to synchronize solved counts, rank badges, and rating graphs.</p>
+                    <p className="text-xs text-slate-500">Link your Codeforces handle to synchronize solved counts, rank badges, and rating graphs.</p>
                     <button
                       type="button"
                       onClick={handleStartEdit}
-                      className="w-full text-center py-2 bg-brand-indigo/10 border border-brand-indigo/30 rounded-xl text-brand-indigo font-bold text-xs hover:bg-brand-indigo/20 transition"
+                      className="w-full text-center py-2 bg-brand-indigo/10 border border-royal/20 rounded-xl text-brand-indigo font-bold text-xs hover:bg-brand-indigo/10 transition"
                     >
                       Configure Codeforces Account
                     </button>
@@ -562,11 +562,11 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
               </div>
 
               {/* CodeChef Panel */}
-              <div className="glass-panel p-6 rounded-2xl border border-slate-700 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-purple/5 rounded-full blur-2xl"></div>
+              <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-indigo/10 rounded-full blur-2xl"></div>
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="px-2.5 py-1 text-xs font-bold bg-brand-purple/10 border border-brand-purple/20 text-brand-purple rounded-full">
+                    <span className="px-2.5 py-1 text-xs font-bold bg-brand-indigo/10 border border-brand-indigo/20 text-slate-100 rounded-full">
                       CodeChef
                     </span>
                     <h3 className="text-xl font-bold text-slate-100 mt-3">
@@ -575,39 +575,39 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
                   </div>
                 </div>
                 {currentUser.codechefHandle ? (
-                  <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-slate-800">
+                  <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-slate-800/80">
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Rating</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Rating</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {stats.find(s => s.platform === 'CodeChef')?.currentRating || 'Unrated'}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Max Rating</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Max Rating</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {stats.find(s => s.platform === 'CodeChef')?.maxRating || 'Unrated'}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Contests</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Contests</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {stats.find(s => s.platform === 'CodeChef')?.contestsCount || 0}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Solved Count</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Solved Count</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {stats.find(s => s.platform === 'CodeChef')?.solvedCount || 0}
                       </p>
                     </div>
                   </div>
                 ) : (
                   <div className="mt-8 space-y-4">
-                    <p className="text-xs text-slate-400">Link your CodeChef handle to track star rankings, global ranks, and solve rates.</p>
+                    <p className="text-xs text-slate-500">Link your CodeChef handle to track star rankings, global ranks, and solve rates.</p>
                     <button
                       type="button"
                       onClick={handleStartEdit}
-                      className="w-full text-center py-2 bg-brand-purple/10 border border-brand-purple/30 rounded-xl text-brand-purple font-bold text-xs hover:bg-brand-purple/20 transition"
+                      className="w-full text-center py-2 bg-brand-indigo/10 border border-brand-indigo/20 rounded-xl text-slate-100 font-bold text-xs hover:bg-brand-indigo/20 transition"
                     >
                       Configure CodeChef Account
                     </button>
@@ -616,11 +616,11 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
               </div>
 
               {/* LeetCode Panel */}
-              <div className="glass-panel p-6 rounded-2xl border border-slate-700 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-cyan/5 rounded-full blur-2xl"></div>
+              <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-indigo/10 rounded-full blur-2xl"></div>
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="px-2.5 py-1 text-xs font-bold bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan rounded-full">
+                    <span className="px-2.5 py-1 text-xs font-bold bg-brand-indigo/10 border border-royal/20 text-brand-indigo rounded-full">
                       LeetCode
                     </span>
                     <h3 className="text-xl font-bold text-slate-100 mt-3">
@@ -629,39 +629,39 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
                   </div>
                 </div>
                 {currentUser.leetcodeHandle ? (
-                  <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-slate-800">
+                  <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-slate-800/80">
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Solved Count</p>
-                      <p className="text-lg font-bold text-slate-200 mt-1">
+                      <p className="text-xs text-slate-500 uppercase">Solved Count</p>
+                      <p className="text-lg font-bold text-slate-100 mt-1">
                         {lcSolved}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Easy Solved</p>
-                      <p className="text-sm font-semibold text-slate-200 mt-1 text-emerald-400">
+                      <p className="text-xs text-slate-500 uppercase">Easy Solved</p>
+                      <p className="text-sm font-semibold text-slate-100 mt-1 text-emerald-400">
                         {stats.find(s => s.platform === 'LeetCode')?.difficultyDistribution?.Easy || 0}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Medium Solved</p>
-                      <p className="text-sm font-semibold text-slate-200 mt-1 text-amber-400">
+                      <p className="text-xs text-slate-500 uppercase">Medium Solved</p>
+                      <p className="text-sm font-semibold text-slate-100 mt-1 text-amber-400">
                         {stats.find(s => s.platform === 'LeetCode')?.difficultyDistribution?.Medium || 0}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 uppercase">Hard Solved</p>
-                      <p className="text-sm font-semibold text-slate-200 mt-1 text-rose-500">
+                      <p className="text-xs text-slate-500 uppercase">Hard Solved</p>
+                      <p className="text-sm font-semibold text-slate-100 mt-1 text-rose-500">
                         {stats.find(s => s.platform === 'LeetCode')?.difficultyDistribution?.Hard || 0}
                       </p>
                     </div>
                   </div>
                 ) : (
                   <div className="mt-8 space-y-4">
-                    <p className="text-xs text-slate-400">Link your LeetCode handle to synchronize acceptance distribution (Easy/Medium/Hard).</p>
+                    <p className="text-xs text-slate-500">Link your LeetCode handle to synchronize acceptance distribution (Easy/Medium/Hard).</p>
                     <button
                       type="button"
                       onClick={handleStartEdit}
-                      className="w-full text-center py-2 bg-brand-cyan/10 border border-brand-cyan/30 rounded-xl text-brand-cyan font-bold text-xs hover:bg-brand-cyan/20 transition"
+                      className="w-full text-center py-2 bg-brand-indigo/10 border border-royal/20 rounded-xl text-brand-indigo font-bold text-xs hover:bg-brand-indigo/10 transition"
                     >
                       Configure LeetCode Account
                     </button>
@@ -672,15 +672,15 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
           </div>
         </>
       ) : (
-        <div className="glass-panel p-12 rounded-2xl border border-slate-700 text-center space-y-4">
-          <ShieldCheck className="w-16 h-16 text-brand-cyan mx-auto animate-pulse-slow" />
-          <h2 className="text-2xl font-bold text-slate-100">Welcome to CP Tracker</h2>
-          <p className="text-slate-400 max-w-md mx-auto">
+        <div className="bg-[#110e1b] border border-slate-800/80 p-12 rounded-2xl border border-slate-800/80 text-center space-y-4">
+          <ShieldCheck className="w-16 h-16 text-brand-indigo mx-auto animate-pulse-slow" />
+          <h2 className="text-2xl font-bold text-slate-100">Welcome to CP Pulse</h2>
+          <p className="text-slate-500 max-w-md mx-auto">
             Please register a new competitive programming profile or select an existing one to begin aggregating statistics, syncing history, and analyzing code performance.
           </p>
           <button
             onClick={() => setShowReg(true)}
-            className="bg-gradient-to-r from-brand-indigo to-brand-purple hover:opacity-95 text-slate-100 px-6 py-2.5 rounded-xl font-bold transition inline-block"
+            className="bg-brand-indigo text-white hover:opacity-95 text-slate-100 px-6 py-2.5 rounded-xl font-bold transition inline-block"
           >
             Create Profile Handle
           </button>

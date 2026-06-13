@@ -9,6 +9,7 @@ import aiRoutes from './routes/aiRoutes.js';
 import contestRoutes from './routes/contestRoutes.js';
 import simulatorRoutes from './routes/simulatorRoutes.js';
 import sheetRoutes from './routes/sheetRoutes.js';
+import potdRoutes from './routes/potdRoutes.js';
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ app.use('/api/ai', aiRoutes);
 app.use('/api/contests', contestRoutes);
 app.use('/api/simulator', simulatorRoutes);
 app.use('/api/sheet', sheetRoutes);
+app.use('/api/potd', potdRoutes);
 
 import { dbHelper } from './config/dbHelper.js';
 import { apiService } from './services/apiService.js';

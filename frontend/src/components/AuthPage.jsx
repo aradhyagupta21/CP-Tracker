@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Terminal, KeyRound, UserPlus, LogIn, AlertCircle, Sparkles } from 'lucide-react';
+import { Shield, Activity, Terminal, KeyRound, UserPlus, LogIn, AlertCircle, Sparkles } from 'lucide-react';
 import axios from 'axios';
 
 const BACKEND_URL = 'http://localhost:5000/api';
@@ -75,7 +75,7 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
   };
 
   return (
-    <div className="min-h-screen bg-dark-950 flex flex-col justify-center items-center p-6 relative overflow-hidden font-sans transition-colors duration-300">
+    <div className="min-h-screen bg-slate-50 flex flex-col justify-center items-center p-6 relative overflow-hidden font-sans transition-colors duration-300">
       {/* Background Elements for Glassmorphic Glow */}
       <div className="glow-bg glow-bg-1"></div>
       <div className="glow-bg glow-bg-2"></div>
@@ -84,13 +84,14 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
       <div className="w-full max-w-md space-y-6 z-10">
         {/* Brand Header */}
         <div className="text-center space-y-2">
-          <div className="inline-flex p-3 bg-gradient-to-tr from-brand-cyan to-brand-purple rounded-2xl text-dark-950 glow-indigo mb-2">
-            <Terminal className="w-8 h-8" />
+          <div className="relative inline-flex p-3 bg-brand-indigo text-white rounded-2xl text-blue-950 shadow-sm mb-2">
+            <Shield className="w-8 h-8" />
+            <Activity className="w-4 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" strokeWidth={4} />
           </div>
-          <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-purple bg-clip-text text-transparent">
-            CP Tracker & AI Coach
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-100 ">
+            CP Pulse & AI Coach
           </h1>
-          <p className="text-sm text-slate-400">Secure entry to competitive programming analytics.</p>
+          <p className="text-sm text-slate-500">Secure entry to competitive programming analytics.</p>
         </div>
 
         {/* Connection Error Banner */}
@@ -99,7 +100,7 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
             <p className="flex items-center gap-1.5"><AlertCircle className="w-4 h-4" /> Local Backend Express Server Offline</p>
             <button 
               onClick={onRetryConnection}
-              className="py-1 bg-amber-500 text-dark-950 font-bold rounded-lg hover:opacity-90 transition"
+              className="py-1 bg-amber-500 text-blue-950 font-bold rounded-lg hover:opacity-90 transition"
             >
               Retry Connection
             </button>
@@ -107,18 +108,18 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
         )}
 
         {/* Auth Panel Card */}
-        <div className="glass-panel p-8 rounded-3xl border border-slate-700 glow-indigo space-y-6">
+        <div className="bg-[#110e1b] border border-slate-800/80 p-8 rounded-3xl border border-slate-800/80 shadow-sm space-y-6">
           {/* Tab Selector */}
-          <div className="flex bg-dark-905 border border-slate-800 p-1.5 rounded-xl">
+          <div className="flex bg-dark-905 border border-slate-800/80 p-1.5 rounded-xl">
             <button
               onClick={() => { setIsLogin(true); setError(''); }}
-              className={`flex-1 py-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 ${isLogin ? 'bg-gradient-to-r from-brand-indigo to-brand-purple text-slate-100 shadow' : 'text-slate-400 hover:text-slate-200'}`}
+              className={`flex-1 py-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 ${isLogin ? 'bg-brand-indigo text-white text-slate-100 shadow' : 'text-slate-500 hover:text-brand-indigo'}`}
             >
               <LogIn className="w-3.5 h-3.5" /> Sign In
             </button>
             <button
               onClick={() => { setIsLogin(false); setError(''); }}
-              className={`flex-1 py-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 ${!isLogin ? 'bg-gradient-to-r from-brand-indigo to-brand-purple text-slate-100 shadow' : 'text-slate-400 hover:text-slate-200'}`}
+              className={`flex-1 py-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 ${!isLogin ? 'bg-brand-indigo text-white text-slate-100 shadow' : 'text-slate-500 hover:text-brand-indigo'}`}
             >
               <UserPlus className="w-3.5 h-3.5" /> Sign Up
             </button>
@@ -134,18 +135,18 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-1">
-              <label className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Username</label>
+              <label className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Username</label>
               <input
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="e.g. aradhya"
-                className="w-full bg-dark-900/80 border border-slate-700 px-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-brand-indigo text-sm"
+                className="w-full bg-[#110e1b] border border-slate-800/80 px-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-royal/20 text-sm"
               />
             </div>
 
             <div className="space-y-1">
-              <label className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Password</label>
+              <label className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Password</label>
               <div className="relative">
                 <KeyRound className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
                 <input
@@ -153,7 +154,7 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-dark-900/80 border border-slate-700 pl-10 pr-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-brand-indigo text-sm"
+                  className="w-full bg-[#110e1b] border border-slate-800/80 pl-10 pr-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-royal/20 text-sm"
                 />
               </div>
             </div>
@@ -168,21 +169,21 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
                     value={cfHandle}
                     onChange={(e) => setCfHandle(e.target.value)}
                     placeholder="Codeforces Handle"
-                    className="w-full bg-dark-900/40 border border-slate-850 px-4 py-2.5 rounded-xl text-slate-200 outline-none focus:border-brand-indigo text-xs"
+                    className="w-full bg-[#110e1b] border border-slate-800 px-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-royal/20 text-xs"
                   />
                   <input
                     type="text"
                     value={ccHandle}
                     onChange={(e) => setCcHandle(e.target.value)}
                     placeholder="CodeChef Handle"
-                    className="w-full bg-dark-900/40 border border-slate-850 px-4 py-2.5 rounded-xl text-slate-200 outline-none focus:border-brand-purple text-xs"
+                    className="w-full bg-[#110e1b] border border-slate-800 px-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-brand-indigo/20 text-xs"
                   />
                   <input
                     type="text"
                     value={lcHandle}
                     onChange={(e) => setLcHandle(e.target.value)}
                     placeholder="LeetCode Handle"
-                    className="w-full bg-dark-900/40 border border-slate-850 px-4 py-2.5 rounded-xl text-slate-200 outline-none focus:border-brand-cyan text-xs"
+                    className="w-full bg-[#110e1b] border border-slate-800 px-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-royal/20 text-xs"
                   />
                 </div>
               </div>
@@ -191,7 +192,7 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-brand-indigo to-brand-purple text-slate-100 py-3 rounded-xl font-bold transition hover:opacity-95 shadow-md shadow-brand-indigo/10 disabled:opacity-50 mt-2 flex items-center justify-center gap-2"
+              className="w-full bg-brand-indigo text-white text-slate-100 py-3 rounded-xl font-bold transition hover:opacity-95 shadow-md shadow-brand-indigo/10 disabled:opacity-50 mt-2 flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>
@@ -203,17 +204,17 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
           </form>
 
           {/* Social Separator */}
-          <div className="flex items-center gap-3 py-1 text-slate-600">
-            <div className="h-px bg-slate-800/80 flex-1"></div>
+          <div className="flex items-center gap-3 py-1 text-slate-400">
+            <div className="h-px bg-slate-50 flex-1"></div>
             <span className="text-[10px] uppercase font-bold tracking-widest text-slate-500">or</span>
-            <div className="h-px bg-slate-800/80 flex-1"></div>
+            <div className="h-px bg-slate-50 flex-1"></div>
           </div>
 
           {/* Google SSO Login */}
           <button
             onClick={handleGoogleMock}
             disabled={loading}
-            className="w-full bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 py-2.5 rounded-xl text-sm font-semibold transition flex items-center justify-center gap-2"
+            className="w-full bg-slate-100 hover:bg-slate-50 border border-slate-800/80 text-slate-400 py-2.5 rounded-xl text-sm font-semibold transition flex items-center justify-center gap-2"
           >
             <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
               <path fill="#EA4335" d="M12 5.04c1.67 0 3.2.58 4.38 1.69l3.27-3.27C17.68 1.54 14.98 1 12 1 7.35 1 3.37 3.65 1.42 7.5l3.92 3.04C6.27 7.42 8.92 5.04 12 5.04z"/>
@@ -228,7 +229,7 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
             <button
               type="button"
               onClick={onCancel}
-              className="w-full bg-slate-950 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-slate-350 py-2 rounded-xl text-xs font-semibold transition mt-3 flex items-center justify-center"
+              className="w-full bg-slate-950 border border-slate-800/80 hover:border-slate-800/80 text-slate-500 hover:text-slate-350 py-2 rounded-xl text-xs font-semibold transition mt-3 flex items-center justify-center"
             >
               Cancel and Return
             </button>

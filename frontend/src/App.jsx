@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight, Sun, Moon, BookOpen } from 'lucide-react';
+import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight, Sun, Moon, BookOpen, Shield, Activity } from 'lucide-react';
 import axios from 'axios';
 import Dashboard from './components/Dashboard';
 import AuthPage from './components/AuthPage';
@@ -10,6 +10,7 @@ import Leaderboard from './components/Leaderboard';
 import AiAnalyzer from './components/AiAnalyzer';
 import ContestSimulator from './components/ContestSimulator';
 import PatternSheet from './components/PatternSheet';
+import Potd from './components/Potd';
 
 const BACKEND_URL = 'http://localhost:5000/api';
 
@@ -289,6 +290,8 @@ export default function App() {
         return <AiAnalyzer currentUser={currentUser} stats={stats} />;
       case 'sheet':
         return <PatternSheet currentUser={currentUser} />;
+      case 'potd':
+        return <Potd currentUser={currentUser} />;
       default:
         return <div className="text-slate-400">Section not found.</div>;
     }
@@ -331,11 +334,12 @@ export default function App() {
         <div className="space-y-8">
           {/* Logo Brand Header */}
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-tr from-brand-cyan to-brand-purple rounded-xl text-dark-950 glow-indigo">
-              <Terminal className="w-6 h-6" />
+            <div className="relative p-2 bg-gradient-to-tr from-brand-cyan to-brand-purple rounded-xl text-blue-950 glow-indigo">
+              <Shield className="w-6 h-6" />
+              <Activity className="w-3 h-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" strokeWidth={4} />
             </div>
             <div>
-              <h2 className="font-extrabold text-slate-100 text-lg leading-tight tracking-wide">CP Tracker</h2>
+              <h2 className="font-extrabold text-slate-100 text-lg leading-tight tracking-wide">CP Pulse</h2>
               <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-widest bg-dark-800 border border-slate-700/60 px-1.5 py-0.5 rounded-md">V1.0.0</span>
             </div>
           </div>
@@ -345,11 +349,12 @@ export default function App() {
             {[
               { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
               { id: 'analytics', label: 'Analytics', icon: BarChart3 },
-              { id: 'goals', label: 'Target Goals', icon: Target },
-              { id: 'contests', label: 'Contest Tracker', icon: Flame },
-              { id: 'leaderboard', label: 'Leaderboard', icon: Users },
-              { id: 'simulator', label: 'Simulator', icon: Terminal },
+              { id: 'contests', label: 'Contest', icon: Flame },
               { id: 'sheet', label: 'Pattern Sheet', icon: BookOpen },
+              { id: 'potd', label: 'Problem of the day', icon: CalendarRange },
+              { id: 'simulator', label: 'Virtual Contest', icon: Terminal },
+              { id: 'goals', label: 'Target Goals', icon: Target },
+              { id: 'leaderboard', label: 'Leaderboard', icon: Users },
               { id: 'coach', label: 'AI Coach', icon: Sparkles },
             ].map(tab => {
               const Icon = tab.icon;
@@ -414,7 +419,7 @@ export default function App() {
             <span>The local backend Express server seems to be offline. Please run the server in another terminal (`node src/server.js` or `npm run dev` in `/backend`).</span>
             <button 
               onClick={fetchUsers}
-              className="px-3 py-1 bg-amber-500 text-dark-950 font-bold rounded-lg hover:opacity-90"
+              className="px-3 py-1 bg-amber-500 text-blue-950 font-bold rounded-lg hover:opacity-90"
             >
               Retry Connection
             </button>
@@ -436,11 +441,12 @@ export default function App() {
           {[
             { id: 'dashboard', label: 'Dashboard' },
             { id: 'analytics', label: 'Analytics' },
-            { id: 'goals', label: 'Goals' },
-            { id: 'contests', label: 'Contests' },
-            { id: 'leaderboard', label: 'Social' },
-            { id: 'simulator', label: 'Simulator' },
+            { id: 'contests', label: 'Contest' },
             { id: 'sheet', label: 'Pattern Sheet' },
+            { id: 'potd', label: 'Problem of the day' },
+            { id: 'simulator', label: 'Virtual Contest' },
+            { id: 'goals', label: 'Goals' },
+            { id: 'leaderboard', label: 'Social' },
             { id: 'coach', label: 'AI Coach' },
           ].map(tab => (
             <button
