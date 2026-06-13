@@ -5,6 +5,8 @@ import { checkMongoConnection } from './db.js';
 import User from '../models/User.js';
 import Statistics from '../models/Statistics.js';
 import Goal from '../models/Goal.js';
+import SimulationRecord from '../models/SimulationRecord.js';
+import SheetProgress from '../models/SheetProgress.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,6 +20,8 @@ if (!fs.existsSync(DATA_DIR)) {
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
 const STATS_FILE = path.join(DATA_DIR, 'statistics.json');
 const GOALS_FILE = path.join(DATA_DIR, 'goals.json');
+const SIMULATIONS_FILE = path.join(DATA_DIR, 'simulations.json');
+const SHEET_FILE = path.join(DATA_DIR, 'sheet.json');
 
 // Initialize files if they don't exist
 const initFile = (filePath) => {
@@ -28,6 +32,8 @@ const initFile = (filePath) => {
 initFile(USERS_FILE);
 initFile(STATS_FILE);
 initFile(GOALS_FILE);
+initFile(SIMULATIONS_FILE);
+initFile(SHEET_FILE);
 
 const readJSON = (filePath) => {
   try {
@@ -240,6 +246,83 @@ export const dbHelper = {
       const deleted = goals.splice(index, 1)[0];
       writeJSON(GOALS_FILE, goals);
       return deleted;
+    }
+  },
+
+  // --- SIMULATION METHODS ---
+  async getSimulationRecords(userId) {
+    const idStr = userId.toString();
+    if (checkMongoConnection()) {
+      return await SimulationRecord.find({ userId }).sort({ createdAt: -1 });
+    } else {
+      const records = readJSON(SIMULATIONS_FILE);
+      return records.filter(r => r.userId === idStr).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    }
+  },
+
+  async createSimulationRecord(userId, recordData) {
+    const idStr = userId.toString();
+    if (checkMongoConnection()) {
+      const newRecord = new SimulationRecord({ ...recordData, userId });
+      return await newRecord.save();
+    } else {
+      const records = readJSON(SIMULATIONS_FILE);
+      const newRecord = {
+        _id: 'sim_' + Date.now().toString(36) + Math.random().toString(36).substr(2, 5),
+        userId: idStr,
+        division: recordData.division,
+        targetRating: recordData.targetRating,
+        solvedCount: Number(recordData.solvedCount || 0),
+        totalScore: Number(recordData.totalScore || 0),
+        predictedRatingChange: Number(recordData.predictedRatingChange || 0),
+        performanceRating: Number(recordData.performanceRating || 0),
+        createdAt: new Date()
+      };
+      records.push(newRecord);
+      writeJSON(SIMULATIONS_FILE, records);
+      return newRecord;
+    }
+  },
+
+  // --- SHEET PROGRESS METHODS ---
+  async getSheetProgress(userId) {
+    const idStr = userId.toString();
+    if (checkMongoConnection()) {
+      return await SheetProgress.find({ userId });
+    } else {
+      const records = readJSON(SHEET_FILE);
+      return records.filter(r => r.userId === idStr);
+    }
+  },
+
+  async upsertSheetProgress(userId, problemId, patternId, status) {
+    const idStr = userId.toString();
+    if (checkMongoConnection()) {
+      return await SheetProgress.findOneAndUpdate(
+        { userId, problemId },
+        { userId, problemId, patternId, status, updatedAt: new Date() },
+        { new: true, upsert: true }
+      );
+    } else {
+      const records = readJSON(SHEET_FILE);
+      const index = records.findIndex(r => r.userId === idStr && r.problemId === problemId);
+      
+      const updatedRecord = {
+        _id: index !== -1 ? records[index]._id : 'sheet_' + Date.now().toString(36) + Math.random().toString(36).substr(2, 5),
+        userId: idStr,
+        problemId,
+        patternId,
+        status,
+        updatedAt: new Date()
+      };
+
+      if (index !== -1) {
+        records[index] = updatedRecord;
+      } else {
+        records.push(updatedRecord);
+      }
+      writeJSON(SHEET_FILE, records);
+      return updatedRecord;
     }
   }
 };

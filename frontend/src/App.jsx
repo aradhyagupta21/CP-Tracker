@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight, Sun, Moon } from 'lucide-react';
+import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight, Sun, Moon, BookOpen } from 'lucide-react';
 import axios from 'axios';
 import Dashboard from './components/Dashboard';
 import AuthPage from './components/AuthPage';
@@ -8,6 +8,8 @@ import Goals from './components/Goals';
 import ContestTracker from './components/ContestTracker';
 import Leaderboard from './components/Leaderboard';
 import AiAnalyzer from './components/AiAnalyzer';
+import ContestSimulator from './components/ContestSimulator';
+import PatternSheet from './components/PatternSheet';
 
 const BACKEND_URL = 'http://localhost:5000/api';
 
@@ -74,9 +76,10 @@ export default function App() {
           axios.get(`${BACKEND_URL}/users/${activeUser.username}`).then(res => {
             const updatedUser = res.data;
             setCurrentUser(updatedUser);
-            const updatedAccounts = parsedAccounts.map(acc => acc._id === updatedUser._id ? updatedUser : acc);
+            const updatedAccounts = parsedAccounts.map(acc => acc.username === updatedUser.username ? updatedUser : acc);
             setAccounts(updatedAccounts);
             localStorage.setItem('cp_tracker_accounts', JSON.stringify(updatedAccounts));
+            localStorage.setItem('cp_tracker_active_id', updatedUser._id);
           }).catch((err) => {
             if (err.response && err.response.status === 404) {
               console.warn('Active user not found on backend. Clearing stale account.');
@@ -280,8 +283,12 @@ export default function App() {
             onFriendRemove={handleFriendRemove} 
           />
         );
+      case 'simulator':
+        return <ContestSimulator currentUser={currentUser} />;
       case 'coach':
         return <AiAnalyzer currentUser={currentUser} stats={stats} />;
+      case 'sheet':
+        return <PatternSheet currentUser={currentUser} />;
       default:
         return <div className="text-slate-400">Section not found.</div>;
     }
@@ -341,6 +348,8 @@ export default function App() {
               { id: 'goals', label: 'Target Goals', icon: Target },
               { id: 'contests', label: 'Contest Tracker', icon: Flame },
               { id: 'leaderboard', label: 'Leaderboard', icon: Users },
+              { id: 'simulator', label: 'Simulator', icon: Terminal },
+              { id: 'sheet', label: 'Pattern Sheet', icon: BookOpen },
               { id: 'coach', label: 'AI Coach', icon: Sparkles },
             ].map(tab => {
               const Icon = tab.icon;
@@ -430,6 +439,8 @@ export default function App() {
             { id: 'goals', label: 'Goals' },
             { id: 'contests', label: 'Contests' },
             { id: 'leaderboard', label: 'Social' },
+            { id: 'simulator', label: 'Simulator' },
+            { id: 'sheet', label: 'Pattern Sheet' },
             { id: 'coach', label: 'AI Coach' },
           ].map(tab => (
             <button

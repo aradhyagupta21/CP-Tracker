@@ -11,6 +11,7 @@ router.get('/:userId', async (req, res) => {
     const stats = await dbHelper.getStatistics(userId);
     res.json(stats);
   } catch (error) {
+    console.error('Stats fetch error for userId', req.params.userId, error);
     res.status(500).json({ error: error.message });
   }
 });
@@ -131,6 +132,7 @@ router.get('/leaderboard/:userId', async (req, res) => {
     results.sort((a, b) => b.totalSolved - a.totalSolved);
     res.json(results);
   } catch (error) {
+    console.error('Leaderboard error for userId', req.params.userId, error);
     res.status(500).json({ error: error.message });
   }
 });

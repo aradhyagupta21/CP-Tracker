@@ -10,6 +10,7 @@ router.get('/:userId', async (req, res) => {
     const goals = await dbHelper.getGoals(userId);
     res.json(goals);
   } catch (error) {
+    console.error('Goals error for userId', req.params.userId, error);
     res.status(500).json({ error: error.message });
   }
 });

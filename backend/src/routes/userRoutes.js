@@ -54,7 +54,7 @@ router.post('/signup', async (req, res) => {
       friends: []
     });
 
-    const userResponse = { ...newUser };
+    const userResponse = newUser.toObject ? newUser.toObject() : { ...newUser };
     delete userResponse.password;
 
     res.status(201).json(userResponse);
@@ -85,7 +85,7 @@ router.post('/register', async (req, res) => {
       friends: []
     });
 
-    const userResponse = { ...newUser };
+    const userResponse = newUser.toObject ? newUser.toObject() : { ...newUser };
     delete userResponse.password;
 
     res.status(201).json(userResponse);
@@ -111,7 +111,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid username or password.' });
     }
 
-    const userResponse = { ...user };
+    const userResponse = user.toObject ? user.toObject() : { ...user };
     delete userResponse.password;
 
     res.json(userResponse);
