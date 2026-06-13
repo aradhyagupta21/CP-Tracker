@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RefreshCw, UserCheck, Flame, BookOpen, Award, Target, Plus, ShieldCheck } from 'lucide-react';
+import { RefreshCw, UserCheck, Flame, BookOpen, Award, Target, Plus, ShieldCheck, MapPin, GraduationCap, Edit, Share2 } from 'lucide-react';
 import axios from 'axios';
 
 const BACKEND_URL = 'http://localhost:5000/api';
@@ -12,6 +12,10 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
   const [editCfHandle, setEditCfHandle] = useState('');
   const [editCcHandle, setEditCcHandle] = useState('');
   const [editLcHandle, setEditLcHandle] = useState('');
+  const [editUsername, setEditUsername] = useState('');
+  const [editFullName, setEditFullName] = useState('');
+  const [editLocation, setEditLocation] = useState('');
+  const [editCollege, setEditCollege] = useState('');
   const [isSavingHandles, setIsSavingHandles] = useState(false);
 
   // States for simulated secure authentication linking
@@ -131,6 +135,10 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
     setEditCfHandle(currentUser?.codeforcesHandle || '');
     setEditCcHandle(currentUser?.codechefHandle || '');
     setEditLcHandle(currentUser?.leetcodeHandle || '');
+    setEditUsername(currentUser?.username || '');
+    setEditFullName(currentUser?.fullName || '');
+    setEditLocation(currentUser?.location || '');
+    setEditCollege(currentUser?.college || '');
     setError('');
     setShowEditHandles(true);
   };
@@ -141,6 +149,10 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
     setIsSavingHandles(true);
     try {
       const res = await axios.put(`${BACKEND_URL}/users/${currentUser._id}`, {
+        username: editUsername.trim(),
+        fullName: editFullName.trim(),
+        location: editLocation.trim(),
+        college: editCollege.trim(),
         codeforcesHandle: editCfHandle.trim(),
         codechefHandle: editCcHandle.trim(),
         leetcodeHandle: editLcHandle.trim()
@@ -212,12 +224,45 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
       {/* Upper Navigation and User selection */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-slate-100 ">
-            Developer Dashboard
-          </h1>
-          <p className="text-slate-500 mt-1">
-            Track and optimize your competitive programming handles.
-          </p>
+          {!currentUser ? (
+            <>
+              <h1 className="text-4xl font-extrabold tracking-tight text-slate-100 ">
+                Developer Dashboard
+              </h1>
+              <p className="text-slate-500 mt-1">
+                Track and optimize your competitive programming handles.
+              </p>
+            </>
+          ) : (
+            <div className="flex items-center gap-6">
+              {/* Profile Avatar */}
+              <div className="w-24 h-24 rounded-2xl bg-brand-indigo flex items-center justify-center text-white text-3xl font-black shadow-lg">
+                {(currentUser.fullName || currentUser.username).substring(0, 2).toUpperCase()}
+              </div>
+              
+              {/* Profile Details */}
+              <div className="space-y-1.5">
+                <h1 className="text-3xl font-extrabold tracking-tight text-slate-100 flex items-center gap-3">
+                  {currentUser.fullName || currentUser.username}
+                </h1>
+                
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                  <span className="font-semibold text-brand-indigo">@{currentUser.username}</span>
+                  {currentUser.location && (
+                    <span className="flex items-center gap-1 text-slate-400">
+                      <MapPin className="w-3.5 h-3.5" /> {currentUser.location}
+                    </span>
+                  )}
+                </div>
+                
+                {currentUser.college && (
+                  <div className="flex items-center gap-1.5 text-sm text-slate-500 mt-1">
+                    <GraduationCap className="w-4 h-4" /> {currentUser.college}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* User Selection Panel */}
@@ -243,29 +288,25 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
 
           <button
             onClick={onAddAccount}
-            className="flex items-center gap-2 bg-brand-indigo text-white hover:opacity-95 text-slate-100 px-4 py-2 rounded-xl text-sm font-semibold transition"
+            className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-100 px-4 py-2 rounded-xl text-sm font-semibold transition"
           >
-            <Plus className="w-4 h-4" /> Add Account
+            <Plus className="w-4 h-4" /> Account
           </button>
 
           {currentUser && (
-            <button
-              onClick={handleStartEdit}
-              className="flex items-center gap-2 bg-[#110e1b] border border-slate-800/80 hover:border-brand-indigo/20 hover:bg-brand-indigo/20 text-slate-400 hover:text-brand-indigo px-4 py-2 rounded-xl text-sm font-semibold transition"
-            >
-              Configure Handles
-            </button>
-          )}
-
-          {currentUser && (
-            <button
-              onClick={onSync}
-              disabled={isLoading}
-              className={`flex items-center gap-2 bg-[#110e1b] border border-slate-800/80 px-4 py-2 rounded-xl text-sm font-semibold text-brand-indigo border border-royal/20 transition-all duration-300 hover:bg-brand-indigo/10 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
-            >
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
-              {isLoading ? 'Syncing...' : 'Sync Profiles'}
-            </button>
+            <>
+              <button
+                onClick={handleStartEdit}
+                className="flex items-center gap-2 bg-brand-indigo text-white hover:opacity-95 px-4 py-2 rounded-xl text-sm font-semibold transition shadow-md shadow-brand-indigo/20"
+              >
+                <Edit className="w-4 h-4" /> Edit Profile
+              </button>
+              <button
+                className="flex items-center justify-center bg-[#110e1b] border border-slate-800/80 hover:border-brand-indigo/20 text-slate-400 hover:text-brand-indigo w-9 h-9 rounded-xl transition"
+              >
+                <Share2 className="w-4 h-4" />
+              </button>
+            </>
           )}
         </div>
       </div>
@@ -274,7 +315,7 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
       {showEditHandles && (
         <div className="bg-[#110e1b] border border-slate-800/80 p-6 rounded-2xl border border-slate-800/80 max-w-xl mx-auto space-y-5 shadow-sm">
           <div className="flex justify-between items-center pb-3 border-b border-slate-800/80">
-            <h2 className="text-xl font-bold text-slate-100">Configure Platform Linking for {currentUser.username}</h2>
+            <h2 className="text-xl font-bold text-slate-100">Edit Profile & Platforms</h2>
             <div className="flex gap-2">
               <button
                 type="button"
@@ -297,7 +338,49 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
 
           {activeLinkTab === 'quick' ? (
             <form onSubmit={handleEditSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="space-y-4">
+                <p className="text-xs font-bold text-brand-indigo uppercase tracking-wider border-b border-slate-800/80 pb-2">Personal Details</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-slate-500">Username</label>
+                    <input 
+                      type="text" 
+                      value={editUsername} 
+                      onChange={(e) => setEditUsername(e.target.value)}
+                      className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-royal/20"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-slate-500">Full Name</label>
+                    <input 
+                      type="text" 
+                      value={editFullName} 
+                      onChange={(e) => setEditFullName(e.target.value)}
+                      className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-royal/20"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-slate-500">Location</label>
+                    <input 
+                      type="text" 
+                      value={editLocation} 
+                      onChange={(e) => setEditLocation(e.target.value)}
+                      className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-royal/20"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-slate-500">College</label>
+                    <input 
+                      type="text" 
+                      value={editCollege} 
+                      onChange={(e) => setEditCollege(e.target.value)}
+                      className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-royal/20"
+                    />
+                  </div>
+                </div>
+
+                <p className="text-xs font-bold text-brand-indigo uppercase tracking-wider border-b border-slate-800/80 pb-2 mt-4">Platform Handles</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="space-y-1">
                   <label className="text-xs font-semibold text-slate-500">Codeforces Handle</label>
                   <input 
@@ -328,6 +411,7 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
                     className="w-full bg-[#110e1b] border border-slate-800/80 px-3 py-2 rounded-lg text-slate-100 outline-none focus:border-royal/20"
                   />
                 </div>
+                </div>
               </div>
               <div className="flex justify-end gap-3 pt-2 border-t border-slate-800/80">
                 <button 
@@ -342,7 +426,7 @@ export default function Dashboard({ currentUser, stats, goals, onSync, isLoading
                   disabled={isSavingHandles}
                   className="px-4 py-2 bg-brand-indigo text-white rounded-lg text-slate-100 text-sm font-semibold transition hover:opacity-95 disabled:opacity-50"
                 >
-                  {isSavingHandles ? 'Saving...' : 'Save Handles'}
+                  {isSavingHandles ? 'Saving...' : 'Save Changes'}
                 </button>
               </div>
             </form>

@@ -5,7 +5,8 @@ import axios from 'axios';
 const BACKEND_URL = 'http://localhost:5000/api';
 
 export default function ContestSimulator({ currentUser }) {
-  const [selectedDivision, setSelectedDivision] = useState('Div 2');
+  const [customRating, setCustomRating] = useState(1200);
+  const [questionCount, setQuestionCount] = useState(4);
   const [activeContest, setActiveContest] = useState(null);
   const [results, setResults] = useState([]);
   const [evaluation, setEvaluation] = useState(null);
@@ -51,7 +52,7 @@ export default function ContestSimulator({ currentUser }) {
     setIsLoading(true);
     setError('');
     try {
-      const res = await axios.get(`${BACKEND_URL}/simulator/generate?division=${encodeURIComponent(selectedDivision)}`);
+      const res = await axios.get(`${BACKEND_URL}/simulator/generate?targetRating=${customRating}&questionCount=${questionCount}&division=Custom`);
       const contest = res.data;
       
       setActiveContest(contest);
@@ -100,7 +101,7 @@ export default function ContestSimulator({ currentUser }) {
     try {
       const res = await axios.post(`${BACKEND_URL}/simulator/evaluate`, {
         targetRating: activeContest.targetRating,
-        division: activeContest.division || selectedDivision,
+        division: activeContest.division || 'Custom',
         userId: currentUser?._id,
         results: cleanResults
       });
@@ -143,20 +144,35 @@ export default function ContestSimulator({ currentUser }) {
         <div className="bg-[#110e1b] border border-slate-800/80 p-8 rounded-2xl border border-slate-800/80 shadow-sm max-w-xl mx-auto mt-12 text-center space-y-6">
           <Target className="w-16 h-16 text-brand-indigo mx-auto animate-bounce-slow" />
           <h2 className="text-2xl font-bold text-slate-100">Configure Your Contest</h2>
-          <p className="text-slate-500 text-sm">Select your division to generate 4 problems with an appropriate difficulty curve (A, B, C, D).</p>
+          <p className="text-slate-500 text-sm">Select your target rating and the number of questions to generate a custom uniform-difficulty contest.</p>
           
-          <div className="space-y-3 text-left">
-            <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Difficulty Level</label>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {['Div 1', 'Div 2', 'Div 3', 'Div 4'].map(div => (
-                <button
-                  key={div}
-                  onClick={() => setSelectedDivision(div)}
-                  className={`py-3 rounded-xl font-bold text-sm transition border ${selectedDivision === div ? 'bg-brand-indigo/10 border-royal/20 text-brand-indigo shadow-[0_0_15px_rgba(99,102,241,0.2)]' : 'bg-[#110e1b] border-slate-800/80 text-slate-500 hover:border-slate-500 hover:text-brand-indigo'}`}
-                >
-                  {div}
-                </button>
-              ))}
+          <div className="space-y-6 text-left">
+            <div>
+              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Target Rating</label>
+              <input 
+                type="number" 
+                min="800" 
+                max="3500" 
+                step="100"
+                value={customRating}
+                onChange={(e) => setCustomRating(e.target.value)}
+                className="w-full bg-[#110e1b] border border-slate-800/80 px-4 py-3 rounded-xl text-slate-100 focus:border-brand-indigo outline-none transition"
+              />
+            </div>
+            
+            <div>
+              <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider flex justify-between mb-2">
+                <span>Number of Questions</span>
+                <span className="text-brand-indigo font-bold">{questionCount}</span>
+              </label>
+              <input 
+                type="range" 
+                min="3" 
+                max="8" 
+                value={questionCount}
+                onChange={(e) => setQuestionCount(e.target.value)}
+                className="w-full accent-brand-indigo cursor-pointer"
+              />
             </div>
           </div>
 
@@ -207,7 +223,7 @@ export default function ContestSimulator({ currentUser }) {
                     </span>
                   </div>
                   <div className="flex items-center gap-4 text-sm font-medium">
-                    <span className="text-slate-400">{r.solvedCount} / 4 Solved</span>
+                    <span className="text-slate-400">Solved: {r.solvedCount}</span>
                     <span className={r.predictedRatingChange >= 0 ? 'text-emerald-400' : 'text-red-400'}>
                       {r.predictedRatingChange > 0 ? '+' : ''}{r.predictedRatingChange}
                     </span>

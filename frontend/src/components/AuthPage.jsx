@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Activity, Terminal, KeyRound, UserPlus, LogIn, AlertCircle, Sparkles } from 'lucide-react';
+import { Shield, Activity, KeyRound, UserPlus, LogIn, AlertCircle, User, MapPin, GraduationCap } from 'lucide-react';
 import axios from 'axios';
 
 const BACKEND_URL = 'http://localhost:5000/api';
@@ -8,9 +8,9 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [cfHandle, setCfHandle] = useState('');
-  const [ccHandle, setCcHandle] = useState('');
-  const [lcHandle, setLcHandle] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [location, setLocation] = useState('');
+  const [college, setCollege] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -31,9 +31,9 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
         : { 
             username: username.trim(), 
             password: password.trim(),
-            codeforcesHandle: cfHandle.trim(),
-            codechefHandle: ccHandle.trim(),
-            leetcodeHandle: lcHandle.trim()
+            fullName: fullName.trim(),
+            location: location.trim(),
+            college: college.trim()
           };
 
       const res = await axios.post(`${BACKEND_URL}/users/${endpoint}`, payload);
@@ -159,32 +159,41 @@ export default function AuthPage({ onAuthSuccess, connError, onRetryConnection, 
               </div>
             </div>
 
-            {/* Custom handles settings on Signup */}
+            {/* Profile fields on Signup */}
             {!isLogin && (
               <div className="space-y-3 pt-3 border-t border-slate-800/80">
-                <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Competitive Programming Handles (Optional)</p>
+                <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Profile Information</p>
                 <div className="grid grid-cols-1 gap-3">
-                  <input
-                    type="text"
-                    value={cfHandle}
-                    onChange={(e) => setCfHandle(e.target.value)}
-                    placeholder="Codeforces Handle"
-                    className="w-full bg-[#110e1b] border border-slate-800 px-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-royal/20 text-xs"
-                  />
-                  <input
-                    type="text"
-                    value={ccHandle}
-                    onChange={(e) => setCcHandle(e.target.value)}
-                    placeholder="CodeChef Handle"
-                    className="w-full bg-[#110e1b] border border-slate-800 px-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-brand-indigo/20 text-xs"
-                  />
-                  <input
-                    type="text"
-                    value={lcHandle}
-                    onChange={(e) => setLcHandle(e.target.value)}
-                    placeholder="LeetCode Handle"
-                    className="w-full bg-[#110e1b] border border-slate-800 px-4 py-2.5 rounded-xl text-slate-100 outline-none focus:border-royal/20 text-xs"
-                  />
+                  <div className="relative">
+                    <User className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
+                    <input
+                      type="text"
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      placeholder="Full Name"
+                      className="w-full bg-[#110e1b] border border-slate-800 px-4 pl-10 py-2.5 rounded-xl text-slate-100 outline-none focus:border-royal/20 text-xs"
+                    />
+                  </div>
+                  <div className="relative">
+                    <MapPin className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
+                    <input
+                      type="text"
+                      value={location}
+                      onChange={(e) => setLocation(e.target.value)}
+                      placeholder="Location (e.g. Lucknow, India)"
+                      className="w-full bg-[#110e1b] border border-slate-800 px-4 pl-10 py-2.5 rounded-xl text-slate-100 outline-none focus:border-brand-indigo/20 text-xs"
+                    />
+                  </div>
+                  <div className="relative">
+                    <GraduationCap className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
+                    <input
+                      type="text"
+                      value={college}
+                      onChange={(e) => setCollege(e.target.value)}
+                      placeholder="College / Organization"
+                      className="w-full bg-[#110e1b] border border-slate-800 px-4 pl-10 py-2.5 rounded-xl text-slate-100 outline-none focus:border-royal/20 text-xs"
+                    />
+                  </div>
                 </div>
               </div>
             )}

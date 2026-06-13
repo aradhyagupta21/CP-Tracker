@@ -123,17 +123,30 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Update user handles
+// Update user handles and profile
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const { codeforcesHandle, codechefHandle, leetcodeHandle } = req.body;
+    const { username, fullName, location, college, codeforcesHandle, codechefHandle, leetcodeHandle } = req.body;
     
-    const updated = await dbHelper.updateUser(id, {
-      codeforcesHandle: codeforcesHandle !== undefined ? codeforcesHandle : '',
-      codechefHandle: codechefHandle !== undefined ? codechefHandle : '',
-      leetcodeHandle: leetcodeHandle !== undefined ? leetcodeHandle : ''
-    });
+    // Validate username uniqueness if it's being updated
+    if (username !== undefined) {
+      const existing = await dbHelper.getUserByUsername(username);
+      if (existing && existing._id.toString() !== id) {
+        return res.status(400).json({ error: 'Username already taken.' });
+      }
+    }
+
+    const updateData = {};
+    if (codeforcesHandle !== undefined) updateData.codeforcesHandle = codeforcesHandle;
+    if (codechefHandle !== undefined) updateData.codechefHandle = codechefHandle;
+    if (leetcodeHandle !== undefined) updateData.leetcodeHandle = leetcodeHandle;
+    if (username !== undefined) updateData.username = username;
+    if (fullName !== undefined) updateData.fullName = fullName;
+    if (location !== undefined) updateData.location = location;
+    if (college !== undefined) updateData.college = college;
+
+    const updated = await dbHelper.updateUser(id, updateData);
 
     if (!updated) {
       return res.status(404).json({ error: 'User not found' });

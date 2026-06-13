@@ -7,21 +7,26 @@ const router = express.Router();
 // Generate a contest
 router.get('/generate', async (req, res) => {
   try {
-    const { division } = req.query;
-    if (!division) {
-      return res.status(400).json({ error: 'Division is required' });
-    }
-    
-    // Map division to target rating
-    let rating = 1400; // default
-    if (division === 'Div 1') rating = 2100;
-    else if (division === 'Div 2') rating = 1700;
-    else if (division === 'Div 3') rating = 1400;
-    else if (division === 'Div 4') rating = 1000;
+    const { targetRating, questionCount, division } = req.query;
+    let rating = 1400;
+    let count = 4;
+    let divStr = division || 'Custom';
 
-    const contest = await simulatorService.generateContest(rating);
+    if (targetRating && questionCount) {
+      rating = parseInt(targetRating, 10);
+      count = parseInt(questionCount, 10);
+    } else if (division) {
+      if (division === 'Div 1') rating = 2100;
+      else if (division === 'Div 2') rating = 1700;
+      else if (division === 'Div 3') rating = 1400;
+      else if (division === 'Div 4') rating = 1000;
+    } else {
+      return res.status(400).json({ error: 'Target rating and question count are required' });
+    }
+
+    const contest = await simulatorService.generateContest(rating, count);
     // Add the division to the response so the frontend knows what was generated
-    contest.division = division;
+    contest.division = divStr;
     res.json(contest);
   } catch (error) {
     res.status(500).json({ error: error.message });

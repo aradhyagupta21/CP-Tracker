@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight, Sun, Moon, BookOpen, Shield, Activity } from 'lucide-react';
+import { LayoutDashboard, BarChart3, CalendarRange, Target, Flame, Users, Sparkles, Terminal, LogOut, ChevronRight, Sun, Moon, BookOpen, Shield, Activity, Layers, CheckCircle } from 'lucide-react';
 import axios from 'axios';
 import Dashboard from './components/Dashboard';
 import AuthPage from './components/AuthPage';
@@ -9,8 +9,9 @@ import ContestTracker from './components/ContestTracker';
 import Leaderboard from './components/Leaderboard';
 import AiAnalyzer from './components/AiAnalyzer';
 import ContestSimulator from './components/ContestSimulator';
-import PatternSheet from './components/PatternSheet';
 import Potd from './components/Potd';
+import TopicwiseSheet from './components/TopicwiseSheet';
+import Cp31Sheet from './components/Cp31Sheet';
 
 const BACKEND_URL = 'http://localhost:5000/api';
 
@@ -288,8 +289,10 @@ export default function App() {
         return <ContestSimulator currentUser={currentUser} />;
       case 'coach':
         return <AiAnalyzer currentUser={currentUser} stats={stats} />;
-      case 'sheet':
-        return <PatternSheet currentUser={currentUser} />;
+      case 'topics':
+        return <TopicwiseSheet currentUser={currentUser} />;
+      case 'cp31':
+        return <Cp31Sheet />;
       case 'potd':
         return <Potd currentUser={currentUser} />;
       default:
@@ -350,8 +353,9 @@ export default function App() {
               { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
               { id: 'analytics', label: 'Analytics', icon: BarChart3 },
               { id: 'contests', label: 'Contest', icon: Flame },
-              { id: 'sheet', label: 'Pattern Sheet', icon: BookOpen },
               { id: 'potd', label: 'Problem of the day', icon: CalendarRange },
+              { id: 'topics', label: 'Topicwise Problems', icon: Layers },
+              { id: 'cp31', label: 'CP-31 Sheet', icon: CheckCircle },
               { id: 'simulator', label: 'Virtual Contest', icon: Terminal },
               { id: 'goals', label: 'Target Goals', icon: Target },
               { id: 'leaderboard', label: 'Leaderboard', icon: Users },
@@ -442,8 +446,9 @@ export default function App() {
             { id: 'dashboard', label: 'Dashboard' },
             { id: 'analytics', label: 'Analytics' },
             { id: 'contests', label: 'Contest' },
-            { id: 'sheet', label: 'Pattern Sheet' },
             { id: 'potd', label: 'Problem of the day' },
+            { id: 'topics', label: 'Topicwise Problems' },
+            { id: 'cp31', label: 'CP-31 Sheet' },
             { id: 'simulator', label: 'Virtual Contest' },
             { id: 'goals', label: 'Goals' },
             { id: 'leaderboard', label: 'Social' },
